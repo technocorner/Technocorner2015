@@ -6,22 +6,38 @@ body, html {
 h1 {
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    font-size: 3em;
+    font-size: 5em;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
     font-weight: 100;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
 }
 
 section {
     height: 100%;
     width: 100%;
-    padding: 0;
+}
+
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.l-box {
+    padding: 5px;
 }
 
 #landing {
-    padding-top: 3em;
+    padding-top: 2em;
     background-color: white;
     text-align: center;
 }
@@ -33,6 +49,7 @@ section {
 }
 
 #excerpt {
+    padding-top: 2em;
     background-color: #ed6333;
     text-align: center;
     color: white;
@@ -47,10 +64,18 @@ section {
 
 #penutup h1 {
     padding-top: 3.5em;
-    font-size: 5em;
+}
+@media screen and (max-width: 300px) {
+    #penutup h1 {
+        font-size: 18px;
+    }
 }
 
 .slogan {
     font-family: 'Lato', sans-serif;
     font-style: italic;
+}
+
+.pure-g {
+    margin: 20px 5px;
 }
