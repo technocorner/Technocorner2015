@@ -55,6 +55,10 @@ section {
     color: white;
 }
 
+.logo-hr {
+    width: 200px;
+}
+
 #penutup {
     background-image: url("../img/TEXTURE1.jpg");
     background-size: cover;
