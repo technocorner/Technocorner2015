@@ -21,9 +21,14 @@ p {
     font-weight: 200;
 }
 
+<<<<<<< HEAD
 section {
     height: 100%;
     width: 100%;
+=======
+.section {
+    padding-right: 40px;
+>>>>>>> gh-pages
 }
 
 .pure-g > div {
@@ -37,7 +42,10 @@ section {
 }
 
 #landing {
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+>>>>>>> gh-pages
     background-color: white;
     text-align: center;
 }
@@ -49,12 +57,18 @@ section {
 }
 
 #excerpt {
+<<<<<<< HEAD
     padding-top: 2em;
+=======
+>>>>>>> gh-pages
     background-color: #ed6333;
     text-align: center;
     color: white;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> gh-pages
 #penutup {
     background-image: url("../img/TEXTURE1.jpg");
     background-size: cover;
@@ -63,8 +77,13 @@ section {
 }
 
 #penutup h1 {
+<<<<<<< HEAD
     padding-top: 3.5em;
 }
+=======
+}
+
+>>>>>>> gh-pages
 @media screen and (max-width: 300px) {
     #penutup h1 {
         font-size: 18px;
@@ -74,8 +93,20 @@ section {
 .slogan {
     font-family: 'Lato', sans-serif;
     font-style: italic;
+<<<<<<< HEAD
 }
 
 .pure-g {
     margin: 20px 5px;
+=======
+    font-size: 1.3em;
+}
+
+.logo-penutup {
+    width: 80px;
+    padding: 0.2em;
+}
+.ico-sosmed {
+    width: 24px;
+>>>>>>> gh-pages
 }

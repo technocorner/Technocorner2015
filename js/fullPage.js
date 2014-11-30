@@ -51,7 +51,11 @@
 			'responsive': 0,
 
 			//Custom selectors
+<<<<<<< HEAD
 			'sectionSelector': 'section',
+=======
+			'sectionSelector': '.section',
+>>>>>>> gh-pages
 			'slideSelector': '.slide',
 
 
