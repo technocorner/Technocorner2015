@@ -1,0 +1,88 @@
+Folder Usage -*- mode: org; -*-
+
+
+
+* Hierarchy Overview
+** ROOT :
++ doc      : Folder dokumen yg berhubungan dengan rencana, timeline, desain, tutorial, dll.
+  + tutorial  : Folder tutorial dari manapun, pastikan tidak dicatat oleh `git`.
+  + project.org : File ini, berisi deskripsi project dan aturan.
++ style    : Folder file styling misal CSS, SCSS, dll.
++ script   : Folder file script misal javascript dan turunannya.
++ lib      : Folder lib dari orang lain, biasanya dengan file js dan css dalam satu folder.
++ img      : Folder file gambar.
++ index.html        : File utama.
++ comingsoon.html   : Halaman Coming soon, cuma digunakan di awal saja.
+
+
+
+* File Placement In Folder
+>> NB : Baca bagian DOC, LIB, dan IMG. Yang lain hanya rekomendasi.
+
+** DOC
++ tutorial
+File tutorial yang ada di sini untuk keperluan development dan hanya ada
+di komputer masing-masing, tidak di lacak oleh `git`.
+
++ project.org
+Siapapun boleh mengupdate isinya. Untuk update yang besar pengaruhnya, minta persetujuan
+dahulu kepada anggota lain lewat Chat Facebook.
+
+** LIB
+*** Untuk apa folder ini?
+Untuk library milik orang lain (open source) yang kita pakai di web kita.
+
+*** Bagaimana menempatkan library?
+Karena memperhatikan biasanya library
+1. Di download dalam bentuk archive
+2. Berisi file Javascript dan CSS, bahkan PHP
+3. Kalau dicampur dengan file-file kita membuat berantakan
+
+Maka, ikuti langkah
+1. Download --- library, taruh di folder tertentu, boleh di dalam 'doc/resource/'
+1. Ekstrak  --- archive
+2. Copy     --- folder ekstrakan ke folder ini
+3. Namai    --- folder dengan sesuai
+4. Hapus    --- file yang tidak terpakai.
+Note : Jangan hapus archive-nya. Sebagai backup
+
+** IMG
+*** Untuk apa folder ini?
+Sudah jelas : image / gambar.
+
+*** Bagaimana menempatkan gambar?
+Gambar umum berada di 'img/', sedangkan gambar khusus milik setiap file HTML
+dibuatkan folder sesuai nama file HTML-nya.
+Misal gambar milik 'comingsoon.html' ditempatkan di 'img/comingsoon/' sedangkan logo
+ditempatkan di 'img/'.
+
+** SCRIPT
+*** Namanya kok script?
+Sekedar pengetahuan:
+Bahasa script standar pada web adalah Javascript, tetapi banyak yang mencoba menambah dan
+mengembangkan fungsinya, sehingga banyak bahasa script "turunan" javascript,
+baca https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js.
+Nah, karena itu, nama foldernya 'SCRIPT' yang umum. Semua script buatan kita
+dimasukkan ke sini.
+
+*** Kapan buat file script baru?
++ Ketika ada halaman web baru, butuh script yang berbeda dari yang sudah ada.
++ Ketika ada fitur yang dipakai di banyak bagian halaman web (dipakai berkali-kali).
++ Ketika ada fitur yang besar yang butuh untuk dipisahkan agar mudah diorganisir
+
+*** Kapan menggunakan style selain javascript?
+Sama seperti di atas.
+
+** STYLE
+*** Namanya kok style?
+Styling file pada web ada banyak macam selain Cascading Style Sheet (CSS),
+baca http://stackoverflow.com/questions/925653/is-there-an-alternative-to-css.
+Nah, karena itu, nama foldernya 'STYLE' yang umum. Semua style buatan project
+ini dimasukkan ke sini.
+
+*** Kapan buat file style baru?
+Buat file ketika ada halaman web baru yang punya style jauh berbeda dari yang lain.
+
+*** Kapan menggunakan style selain CSS?
+Sewaktu kita benar-benar butuh fitur style selain CSS tersebut. Sebab, style selain CSS
+menurunkan kecepatan load web kita.

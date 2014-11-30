@@ -1,0 +1,36 @@
+Mini Bug and Wishlist Tracker
+
+
+
+* Bug List
+Untuk kesalahan / keanehan / sesuatu yang perlu diperbaiki dari fitur
+yang sudah ada.
+
+  + [X] Deskripsi singkat. Ini contoh sebagai template.
+    - Assignee : (Siapa yang garap)
+    - Status : (Delayed, In-Progress, Done)
+    - Solving Method :
+      (Bagaimana menyelesaikan, pakai library apa)
+
+  + [ ]
+    - Assignee : (Siapa yang garap)
+    - Status : (Delayed, In-Progress, Done)
+    - Solving Method :
+      (Bagaimana menyelesaikan, pakai library apa)
+
+
+* Wish List
+Untuk fitur yang masih belum diimplementasi.
+
+  + [X] Deskripsi singkat. Ini contoh sebagai template.
+    - Assignee : (Siapa yang garap)
+    - Status : (Delayed, In-Progress, Done)
+    - Solving Method :
+      (Bagaimana menyelesaikan, pakai library apa, dll)
+
+  + [X] Ganti dengan Official Font : OpenSans
+    - Assignee : Abdillah
+    - Status : In-Progress
+    - Solving Method :
+      Untuk sementara dengan font offline, nantinya dengan font
+di http://www.google.com/fonts.

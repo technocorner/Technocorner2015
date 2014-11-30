@@ -1,28 +1,48 @@
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('font/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans Bold';
+    src: url('font/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans Light';
+    src: url('font/OpenSans-Light.ttf');
+}
+
 body, html {
     min-height: 100%;
     margin: 0;
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'OpenSans', sans-serif;
     margin: 0;
     font-size: 5em;
     font-weight: 100;
 }
 
 h2 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'OpenSans', sans-serif;
     font-size: 1.5em;
     font-weight: 100;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'OpenSans', sans-serif;
     font-weight: 200;
 }
 
 .section {
     padding-right: 40px;
+}
+
+.pure-g {
+    padding: 0 2em;
 }
 
 .pure-g > div {
@@ -32,7 +52,7 @@ p {
 }
 
 .l-box {
-    padding: 5px;
+    padding: 0.5em;
 }
 
 #landing {
@@ -68,7 +88,7 @@ p {
 }
 
 .slogan {
-    font-family: 'Lato', sans-serif;
+    font-family: 'OpenSans', sans-serif;
     font-style: italic;
     font-size: 1.3em;
 }
