@@ -1,0 +1,121 @@
+body, html {
+    min-height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    font-size: 6em;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+
+<<<<<<< HEAD
+section {
+    height: 100%;
+    width: 100%;
+=======
+.section {
+    padding-right: 40px;
+>>>>>>> gh-pages
+}
+
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.l-box {
+    padding: 5px;
+}
+
+#landing {
+<<<<<<< HEAD
+    padding-top: 2em;
+=======
+>>>>>>> gh-pages
+    background-color: white;
+    text-align: center;
+}
+
+#landing img {
+}
+
+#excerpt {
+<<<<<<< HEAD
+    padding-top: 2em;
+=======
+>>>>>>> gh-pages
+    background-color: #ed6333;
+    text-align: center;
+    color: white;
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> gh-pages
+#penutup {
+    background-image: url("../img/bg-3.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#penutup h1 {
+<<<<<<< HEAD
+    padding-top: 3.5em;
+}
+=======
+}
+
+>>>>>>> gh-pages
+@media screen and (max-width: 300px) {
+    #penutup h1 {
+        font-size: 18px;
+    }
+}
+
+.slogan {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+.pure-g {
+    margin: 20px 5px;
+=======
+    font-size: 1.3em;
+=======
+    font-size: 1.5em;
+    padding-top: 0;
+>>>>>>> gh-pages
+}
+
+
+.logo-header {
+    margin: 0 auto;
+    display: block;
+    width: 900px;
+}
+.logo-org {
+    margin: 2em auto 0 auto;
+    width: 80px;
+    padding: 0.2em;
+}
+.ico-sosmed {
+    width: 24px;
+>>>>>>> gh-pages
+}
