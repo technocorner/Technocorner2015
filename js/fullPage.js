@@ -51,7 +51,7 @@
 			'responsive': 0,
 
 			//Custom selectors
-			'sectionSelector': 'section',
+			'sectionSelector': '.section',
 			'slideSelector': '.slide',
 
 

@@ -21,9 +21,8 @@ p {
     font-weight: 200;
 }
 
-section {
-    height: 100%;
-    width: 100%;
+.section {
+    padding-right: 40px;
 }
 
 .pure-g > div {
@@ -37,7 +36,6 @@ section {
 }
 
 #landing {
-    padding-top: 2em;
     background-color: white;
     text-align: center;
 }
@@ -49,16 +47,10 @@ section {
 }
 
 #excerpt {
-    padding-top: 2em;
     background-color: #ed6333;
     text-align: center;
     color: white;
 }
-
-.logo-hr {
-    width: 200px;
-}
-
 #penutup {
     background-image: url("../img/TEXTURE1.jpg");
     background-size: cover;
@@ -67,8 +59,8 @@ section {
 }
 
 #penutup h1 {
-    padding-top: 3.5em;
 }
+
 @media screen and (max-width: 300px) {
     #penutup h1 {
         font-size: 18px;
@@ -78,8 +70,13 @@ section {
 .slogan {
     font-family: 'Lato', sans-serif;
     font-style: italic;
+    font-size: 1.3em;
 }
 
-.pure-g {
-    margin: 20px 5px;
+.logo-penutup {
+    width: 80px;
+    padding: 0.2em;
+}
+.ico-sosmed {
+    width: 24px;
 }
