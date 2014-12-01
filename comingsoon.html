@@ -20,7 +20,27 @@
 
     <script>
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+            navigation: true,
+            navigationPosition: 'right',
+            /* navigationTooltips: ['firstSlide', 'secondSlide'] */
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom',
+            loopHorizontal: true,
+
+            anchors: ['a-landing', 'a-excerpt', 'a-closing'],
+
+            afterSlideLoad:  function (anchorLink, index, slideAnchor, slideIndex) {
+                if (anchorLink == 'excerpt') {
+                    setInterval(function () {
+                        $.fn.fullpage.moveSlideRight();
+                    }, 10000);
+                }
+            }
+        });
+
+        // Hide slide nav arrows
+        /* $('.fp-controlArrow').hide(); */
     });
     </script>
   </head>
@@ -40,36 +60,59 @@
 
 
       <div class="section" id="excerpt">
-        <div class="pure-g">
-          <div class="pure-u-1"><h1>What's Inside</h1></div>
+        <div class="slide" data-anchor="contest-event">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1>Find Inside</h1>
+            </div>
+          </div>
+          <div class="pure-g">
+            <div class="pure-u-1-3 l-box">
+              <h2>Electrical Engineering Competition</h2>
+              <p>Kompetisi dengan ruang lingkup Teknik Elektro yang diselenggarakan untuk tingkat SMA dan sederajat. </p>
+            </div>
+            <div class="pure-u-1-3 l-box">
+              <h2>Line Follower Contest</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque maiores est accusantium repudiandae doloremque, rerum mollitia voluptates beatae, voluptatibus harum consequatur, cum a itaque dolore id molestiae perspiciatis tempore. Dolorum!</p>
+            </div>
+            <div class="pure-u-1-3 l-box">
+              <h2>Software Development Competition</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dignissimos perferendis enim voluptas aliquam consequatur veniam dolorem necessitatibus doloribus labore dolor similique voluptatem laudantium aut, perspiciatis. Hic id, illo nemo?</p>
+            </div>
+          </div>
         </div>
-        <div class="pure-g">
-          <div class="pure-u-1-3 l-box">
-            <h2>Semnas</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veritatis voluptatibus eligendi voluptates consequatur quas illum facere non harum nam numquam impedit architecto soluta a, dolorem tempora saepe! Magnam, nemo.</p>
+
+        <div class="slide" data-anchor="other-event">
+          <div class="pure-g">
+            <div class="pure-u-1"><h1>Find Even More...</h1></div>
           </div>
-          <div class="pure-u-1-3 l-box">
-            <h2>Contest</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque maiores est accusantium repudiandae doloremque, rerum mollitia voluptates beatae, voluptatibus harum consequatur, cum a itaque dolore id molestiae perspiciatis tempore. Dolorum!</p>
-          </div>
-          <div class="pure-u-1-3 l-box">
-            <h2>Pameran</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dignissimos perferendis enim voluptas aliquam consequatur veniam dolorem necessitatibus doloribus labore dolor similique voluptatem laudantium aut, perspiciatis. Hic id, illo nemo?</p>
+          <div class="pure-g">
+            <div class="pure-u-1-3 l-box">
+              <h2>Seminar Nasional</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veritatis voluptatibus eligendi voluptates consequatur quas illum facere non harum nam numquam impedit architecto soluta a, dolorem tempora saepe! Magnam, nemo.</p>
+            </div>
+            <div class="pure-u-1-3 l-box">
+              <h2>Exhibition</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque maiores est accusantium repudiandae doloremque, rerum mollitia voluptates beatae, voluptatibus harum consequatur, cum a itaque dolore id molestiae perspiciatis tempore. Dolorum!</p>
+            </div>
+            <div class="pure-u-1-3 l-box">
+              <h2>More Fun..</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dignissimos perferendis enim voluptas aliquam consequatur veniam dolorem necessitatibus doloribus labore dolor similique voluptatem laudantium aut, perspiciatis. Hic id, illo nemo?</p>
+            </div>
           </div>
         </div>
       </div>
 
-
-      <div class="section" id="penutup">
+      <div class="section" id="closing">
         <h1>#ComingSoon</h1>
         <p>March 2015</p>
         <br/>
         <p>Presented by:</p>
         <span>
-          <img class="logo-penutup" src="img/logo-ugm.png">
-          <img class="logo-penutup" src="img/logo-kmteti.png">
+          <img class="logo-closing" src="img/logo-ugm.png">
+          <img class="logo-closing" src="img/logo-kmteti.png">
         </span>
-        <br><br>
+        <br/><br/>
         <span>
           <img class="ico-sosmed" src="img/ico-fb.png">&nbsp;Technocorner2015 &nbsp;&nbsp;
           <img class="ico-sosmed" src="img/ico-tw.png">&nbsp;@Technocorner2015

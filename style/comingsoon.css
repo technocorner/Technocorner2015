@@ -1,17 +1,20 @@
 
+/*
+ * General Style
+ */
 @font-face {
     font-family: 'OpenSans';
-    src: url('font/OpenSans-Regular.ttf');
+    src: url('../font/OpenSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'OpenSans Bold';
-    src: url('font/OpenSans-Bold.ttf');
+    src: url('../font/OpenSans-Bold.ttf');
 }
 
 @font-face {
     font-family: 'OpenSans Light';
-    src: url('font/OpenSans-Light.ttf');
+    src: url('../font/OpenSans-Light.ttf');
 }
 
 body, html {
@@ -20,29 +23,28 @@ body, html {
 }
 
 h1 {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'OpenSans Light', sans-serif;
     margin: 0;
     font-size: 5em;
     font-weight: 100;
 }
 
 h2 {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'OpenSans Light', sans-serif;
     font-size: 1.5em;
     font-weight: 100;
 }
 
 p {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'OpenSans Light', sans-serif;
     font-weight: 200;
 }
 
-.section {
-    padding-right: 40px;
-}
-
+/*
+ * Pure Style
+ */
 .pure-g {
-    padding: 0 2em;
+    padding: 0 3em 0 5em;
 }
 
 .pure-g > div {
@@ -52,9 +54,37 @@ p {
 }
 
 .l-box {
-    padding: 0.5em;
+    padding: 1em;
 }
 
+.l-box > p {
+    text-align: justify;
+}
+
+/*
+ * fullPage Style
+ */
+.section {
+    padding-right: 40px;
+}
+
+.fp-controlArrow {
+    top: 99% !important;
+}
+
+.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent #222 !important;
+    border-width: 10px 0px 10px 15px !important;
+    right: 45% !important;
+}
+
+.fp-controlArrow.fp-prev {
+    border-color: transparent #FFF transparent transparent !important;
+    border-width: 10px 15px 10px 0px !important;
+    left: 45% !important;
+}
+
+/* Section Style */
 #landing {
     background-color: white;
     text-align: center;
@@ -71,29 +101,29 @@ p {
     text-align: center;
     color: white;
 }
-#penutup {
+#closing {
     background-image: url("../img/TEXTURE1.jpg");
     background-size: cover;
     color: white;
     text-align: center;
 }
 
-#penutup h1 {
+#closing h1 {
 }
 
 @media screen and (max-width: 300px) {
-    #penutup h1 {
+    #closing h1 {
         font-size: 18px;
     }
 }
 
 .slogan {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
     font-size: 1.3em;
 }
 
-.logo-penutup {
+.logo-closing {
     width: 80px;
     padding: 0.2em;
 }
