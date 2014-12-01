@@ -130,3 +130,12 @@ p {
 .ico-sosmed {
     width: 24px;
 }
+
+.sosmed.text {
+    color: white;
+    font-family: monospace;
+}
+
+.sosmed.link {
+    text-decoration: none;
+}
