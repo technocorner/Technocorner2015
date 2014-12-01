@@ -16,11 +16,11 @@
     font-family: 'OpenSans Light';
     src: url('../font/OpenSans-Light.ttf');
 }
-@import "responsive-font-size"
+
 body, html {
     min-height: 100%;
     margin: 0;
-    @include responsive-font-size (1.8em, 3.7em, 640px, 1200px, 0.3em);
+    
 }
 
 h1 {
