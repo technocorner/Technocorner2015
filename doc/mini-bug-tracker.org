@@ -6,23 +6,23 @@ Mini Bug and Wishlist Tracker
 Untuk kesalahan / keanehan / sesuatu yang perlu diperbaiki dari fitur
 yang sudah ada.
 
-  + [X] Deskripsi singkat. Ini contoh sebagai template.
+  + [ ] Deskripsi singkat. Ini contoh sebagai template.
     - Assignee : (Siapa yang garap)
     - Status : (Delayed, In-Progress, Done)
     - Solving Method :
       (Bagaimana menyelesaikan, pakai library apa)
 
-  + [ ]
-    - Assignee : (Siapa yang garap)
-    - Status : (Delayed, In-Progress, Done)
+  + [ ] Navigasi bagian kanan kurang terlihat untuk slide kedua
+    - Assignee : -
+    - Status : Delayed
     - Solving Method :
-      (Bagaimana menyelesaikan, pakai library apa)
+      Ubah menjadi lingkaran2 warna putih.
 
 
 * Wish List
 Untuk fitur yang masih belum diimplementasi.
 
-  + [X] Deskripsi singkat. Ini contoh sebagai template.
+  + [ ] Deskripsi singkat. Ini contoh sebagai template.
     - Assignee : (Siapa yang garap)
     - Status : (Delayed, In-Progress, Done)
     - Solving Method :
@@ -30,7 +30,7 @@ Untuk fitur yang masih belum diimplementasi.
 
   + [X] Ganti dengan Official Font : OpenSans
     - Assignee : Abdillah
-    - Status : In-Progress
+    - Status : Done
     - Solving Method :
       Untuk sementara dengan font offline, nantinya dengan font
 di http://www.google.com/fonts.
