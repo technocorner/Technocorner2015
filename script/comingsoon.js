@@ -1,5 +1,6 @@
 
 // Ready action
+var autoswitchSlide = false;
 $(document).ready(function() {
     $('#fullpage').fullpage({
         navigation: true,
@@ -13,7 +14,8 @@ $(document).ready(function() {
 
         afterSlideLoad:  function (anchorLink, index, slideAnchor, slideIndex) {
             console.log(anchorLink);
-            if (anchorLink == 'a-excerpt') {
+            if (anchorLink == 'a-excerpt' && autoswitchSlide == false) {
+                autoswitchSlide = true;
                 setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
                 }, 10000);
