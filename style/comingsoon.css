@@ -73,13 +73,13 @@ p {
 }
 
 .fp-controlArrow.fp-next {
-    border-color: transparent transparent transparent #222 !important;
+    border-color: transparent transparent transparent #fff !important;
     border-width: 10px 0px 10px 15px !important;
     right: 45% !important;
 }
 
 .fp-controlArrow.fp-prev {
-    border-color: transparent #FFF transparent transparent !important;
+    border-color: transparent #fff transparent transparent !important;
     border-width: 10px 15px 10px 0px !important;
     left: 45% !important;
 }
