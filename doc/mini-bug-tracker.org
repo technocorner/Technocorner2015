@@ -12,11 +12,12 @@ yang sudah ada.
     - Solving Method :
       (Bagaimana menyelesaikan, pakai library apa)
 
-  + [ ] Navigasi bagian kanan kurang terlihat untuk slide kedua
+  + [ ] Navigasi bagian kanan kurang terlihat untuk halaman ketiga
     - Assignee : -
     - Status : Delayed
     - Solving Method :
       Ubah menjadi lingkaran2 warna putih.
+
 
 
 * Wish List
@@ -34,3 +35,12 @@ Untuk fitur yang masih belum diimplementasi.
     - Solving Method :
       Untuk sementara dengan font offline, nantinya dengan font
 di http://www.google.com/fonts.
+
+  + [X] Autoswitch halaman kedua kurang interaktif tanpa sliderbar (kayak slider di website official 2014)
+    - Assignee : Abdillah
+    - Status : Done - Beta
+    - Detail :
+      Di slide kedua, setelah 10 detik, tiba-tiba saja slide berganti tanpa tanda2.
+      Nah, gimana caranya nambahin tanda-tanda. Misalnya dengan cara di bawah.
+    - Solving Method :
+      Tambahkan timer slidebar (kayak progressbar) dengan library 'NProgress'.
