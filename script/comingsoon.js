@@ -12,7 +12,8 @@ $(document).ready(function() {
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
 
         afterSlideLoad:  function (anchorLink, index, slideAnchor, slideIndex) {
-            if (anchorLink == 'excerpt') {
+            console.log(anchorLink);
+            if (anchorLink == 'a-excerpt') {
                 setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
                 }, 10000);
