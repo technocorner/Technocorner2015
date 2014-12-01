@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="lib/yahoo.pure/pure-min.css" />
     <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
 
-    <!-- Script -->
+    <!-- Library Script -->
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,31 +18,8 @@
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/jquery.fullpage/jquery.fullPage.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            navigation: true,
-            navigationPosition: 'right',
-            /* navigationTooltips: ['firstSlide', 'secondSlide'] */
-            slidesNavigation: true,
-            slidesNavPosition: 'bottom',
-            loopHorizontal: true,
-
-            anchors: ['a-landing', 'a-excerpt', 'a-closing'],
-
-            afterSlideLoad:  function (anchorLink, index, slideAnchor, slideIndex) {
-                if (anchorLink == 'excerpt') {
-                    setInterval(function () {
-                        $.fn.fullpage.moveSlideRight();
-                    }, 10000);
-                }
-            }
-        });
-
-        // Hide slide nav arrows
-        /* $('.fp-controlArrow').hide(); */
-    });
-    </script>
+    <!-- Our Script -->
+    <script src="script/comingsoon.js"></script>
   </head>
 
   <body>
