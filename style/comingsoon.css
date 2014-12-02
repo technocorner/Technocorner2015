@@ -20,6 +20,7 @@
 body, html {
     min-height: 100%;
     margin: 0;
+    font-size: 12pt;
 }
 
 h1 {
@@ -61,6 +62,13 @@ p {
     text-align: justify;
 }
 
+/* responsive mode */
+@media screen and (max-width: 500px) {
+    .l-box {
+        width: 100% !important;
+    }
+}
+
 /*
  * fullPage Style
  */
@@ -75,14 +83,24 @@ p {
 .fp-controlArrow.fp-next {
     border-color: transparent transparent transparent #fff !important;
     border-width: 10px 0px 10px 15px !important;
-    right: 45% !important;
+    right: calc(50% - 56px) !important;
 }
 
 .fp-controlArrow.fp-prev {
     border-color: transparent #fff transparent transparent !important;
     border-width: 10px 15px 10px 0px !important;
-    left: 45% !important;
+    left: calc(50% - 56px) !important;
 }
+
+@media screen and (max-width: 640px) {
+    .section {
+        height: auto !important;
+        padding-bottom: 56px;
+    }
+
+    
+}
+
 
 /* Section Style */
 #landing {
@@ -111,12 +129,6 @@ p {
 #closing h1 {
 }
 
-@media screen and (max-width: 300px) {
-    #closing h1 {
-        font-size: 18px;
-    }
-}
-
 .slogan {
     font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
@@ -138,4 +150,17 @@ p {
 
 .sosmed.link {
     text-decoration: none;
+}
+
+@media screen and (max-width: 640px) {
+    #landing img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+
+    #closing h1 {
+        font-size: 18px;
+    }
+
 }

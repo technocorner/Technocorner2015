@@ -20,7 +20,7 @@ function sliderTimerStart() {
         NProgress.set(1.0)
         NProgress.remove();
         $.fn.fullpage.moveSlideRight();
-        console.log("switch slide");
+        /* console.log("switch slide"); */
 
         // Restart
         NProgress.set(0.0);
@@ -28,7 +28,7 @@ function sliderTimerStart() {
         console.log(NProgress.status);
     }
     sliderTimerCount++;
-    console.log(sliderTimerCount);
+    /* console.log(sliderTimerCount); */
 }
 
 function sliderTimerPause() {
@@ -59,15 +59,17 @@ $(document).ready(function() {
 
         easingcss3: 'linear',
         easing: 'linear',
+        responsive: 640,
+        resize: false,
 
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
 
         afterLoad: function (anchorLink, index) {
-            console.log(anchorLink);
+            /* console.log(anchorLink); */
             if (anchorLink == 'a-excerpt') {
                 /* sliderTimerResume(); */
                 NProgress.set(0.0);
-                console.log("setInterval");
+                /* console.log("setInterval"); */
                 if (!sliderTimer) {
                     sliderTimer = setInterval(sliderTimerStart, 100);
                 }
@@ -75,11 +77,25 @@ $(document).ready(function() {
         },
         onLeave: function (index, nextIndex, direction) {
             if (index == 2) {
-                console.log("Leave");
+                /* console.log("Leave"); */
                 clearInterval(sliderTimer);
                 sliderTimer = null;
                 NProgress.set(1.0)
                 NProgress.remove();
+            }
+        },
+        afterResize: function () {
+            console.log($('html').width());
+            if ($('html').width() < 640) {
+                // Change 3-column into one
+                $('.pure-u-1-3')
+                         .addClass('pure-u-1-1').addClass('mobile')
+                         .removeClass('pure-u-1-3');
+            } else {
+                // Restore column
+                $('.pure-u-1-1.mobile')
+                         .addClass('pure-u-1-3')
+                         .removeClass('pure-u-1-1').removeClass('mobile');
             }
         }
     });
