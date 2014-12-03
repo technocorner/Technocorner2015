@@ -18,6 +18,11 @@ yang sudah ada.
     - Solving Method :
       Ubah menjadi lingkaran2 warna putih.
 
+  + [ ] Optimisasi gambar dan script
+    - Assignee : -
+    - Status : Delayed
+    - Solving Method :
+      Link script ke Google CDN / CDN yang lain, kompres gambar.
 
 
 * Wish List
