@@ -129,6 +129,7 @@ p {
 }
 .ico-sosmed {
     width: 24px;
+	vertical-align: middle;
 }
 
 .sosmed.text {
