@@ -155,13 +155,13 @@ p {
         font-size: 1.1em;
     }
     .section {
-        padding : 5px 0 5px 0;
-    }
-    .slide {
-        padding-bottom: 10px;
+        padding : 50px 0 50px 0;
     }
     .slogan {
         font-size: 1em
+    }
+    .mobile-slide {
+        padding-top: 50px;
     }
     #landing img {
         margin: 0 auto;
