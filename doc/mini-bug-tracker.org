@@ -18,6 +18,11 @@ yang sudah ada.
     - Solving Method :
       Ubah menjadi lingkaran2 warna putih.
 
+  + [ ] Icon sosmed Twitter dan FB di halaman 3 tidak tampil JIKA dilihat secara online, offline keliatan.
+    - Assignee : -
+    - Status : Delayed
+    - Solving Method :
+      Mungkin file icon corrupt? butuh di upload ulang
 
 
 * Wish List
@@ -33,8 +38,7 @@ Untuk fitur yang masih belum diimplementasi.
     - Assignee : Abdillah
     - Status : Done
     - Solving Method :
-      Untuk sementara dengan font offline, nantinya dengan font
-di http://www.google.com/fonts.
+      Untuk sementara dengan font offline, nantinya dengan font di http://www.google.com/fonts.
 
   + [X] Autoswitch halaman kedua kurang interaktif tanpa sliderbar (kayak slider di website official 2014)
     - Assignee : Abdillah

@@ -25,7 +25,7 @@ body, html {
 h1 {
     font-family: 'OpenSans Light', sans-serif;
     margin: 0;
-    font-size: 5em;
+    font-size: 6em;
     font-weight: 100;
 }
 
@@ -111,11 +111,6 @@ p {
 #closing h1 {
 }
 
-@media screen and (max-width: 300px) {
-    #closing h1 {
-        font-size: 18px;
-    }
-}
 
 .slogan {
     font-family: 'OpenSans Light', sans-serif;
