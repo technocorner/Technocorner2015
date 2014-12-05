@@ -56,7 +56,6 @@ $(document).ready(function() {
         navigationPosition: 'right',
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
-        scrollOverflow:'true',
 
         easingcss3: 'ease-in-out',
         easing: 'easeInQuart',
