@@ -56,11 +56,14 @@ $(document).ready(function() {
         navigationPosition: 'right',
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
+        scrollOverflow:'true',
 
-        easingcss3: 'linear',
-        easing: 'linear',
+        easingcss3: 'ease-in-out',
+        easing: 'easeInQuart',
 
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
+
+        responsive: 400,
 
         afterLoad: function (anchorLink, index) {
             console.log(anchorLink);
