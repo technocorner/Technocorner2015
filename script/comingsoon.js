@@ -62,7 +62,7 @@ $(document).ready(function() {
 
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
 
-        responsive: 400,
+        responsive: 768,
 
         afterLoad: function (anchorLink, index) {
             console.log(anchorLink);
