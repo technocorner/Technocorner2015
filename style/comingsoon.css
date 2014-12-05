@@ -149,18 +149,24 @@ p {
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 1.5em;
+        font-weight: 300;
     }
     h2 {
         font-size: 1.1em;
     }
-    .pure-g {
-        padding: 0;
+    .section {
+        padding : 5px 0 5px 0;
+    }
+    .slide {
+        padding-bottom: 10px;
     }
     .slogan {
         font-size: 1em
     }
-    .section {
-        padding-right: 0;
+    #landing img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
     }
     #tag-closing h1 {
         font-size: 1.5em;
