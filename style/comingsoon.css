@@ -24,7 +24,7 @@
 body, html {
     min-height: 100%;
     margin: 0;
-    
+
 }
 
 h1 {
@@ -43,6 +43,27 @@ p {
     font-family: 'OpenSans Light', sans-serif;
     font-weight: 200;
 }
+
+
+/*
+ * Small mobile Style
+ */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .slogan {
+        font-size: 1em
+    }
+    .section {
+        padding-right: 0;
+    }
+}
+
 
 /*
  * Pure Style
@@ -70,12 +91,6 @@ p {
  */
 .section {
     padding-right: 40px;
-}
-
-@media screen and (max-width: 768px) {
-    .section {
-        padding-right: 0;
-    }
 }
 .fp-controlArrow {
     top: 99% !important;
