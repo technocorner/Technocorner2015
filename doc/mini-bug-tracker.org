@@ -24,6 +24,13 @@ yang sudah ada.
     - Solving Method :
       Mungkin file icon corrupt? butuh di upload ulang
 
+  + [X] Ukuran font h tidak dapat diubah.
+    - Assignee : -
+    - Status : Delayed
+    - Solving Method :
+      Mungkin ada library js yang meng-overwrite pengaturan ukuran font.
+      Fixed: css style kita diubah posisinya ke paling bawah, biar ngeoverwrite css dari library.
+
 
 * Wish List
 Untuk fitur yang masih belum diimplementasi.

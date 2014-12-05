@@ -25,7 +25,7 @@ body, html {
 h1 {
     font-family: 'OpenSans Light', sans-serif;
     margin: 0;
-    font-size: 6em;
+    font-size: 4em;
     font-weight: 100;
 }
 
@@ -108,14 +108,20 @@ p {
     text-align: center;
 }
 
-#closing h1 {
+#tag-closing h1 {
+    font-size: 6em;
+}
+
+#tag-closing p {
+    font-size: 1.5em;
+    font-style: bolder;
 }
 
 
 .slogan {
     font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .logo-closing {
