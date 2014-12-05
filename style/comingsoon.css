@@ -20,6 +20,7 @@
 body, html {
     min-height: 100%;
     margin: 0;
+    
 }
 
 h1 {
@@ -129,7 +130,6 @@ p {
 }
 .sosmed-text {
     color: white;
-    font-family: monospace;
 }
 .sosmed-link {
     text-decoration: none;
