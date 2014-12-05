@@ -57,10 +57,12 @@ $(document).ready(function() {
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
-        easingcss3: 'linear',
-        easing: 'linear',
+        easingcss3: 'ease-in-out',
+        easing: 'easeInQuart',
 
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
+
+        responsive: 400,
 
         afterLoad: function (anchorLink, index) {
             console.log(anchorLink);
