@@ -24,7 +24,6 @@
 body, html {
     min-height: 100%;
     margin: 0;
-
 }
 
 h1 {
@@ -45,32 +44,10 @@ p {
 }
 
 
-/*
- * Small mobile Style
- */
-
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-    }
-    h2 {
-        font-size: 1.1em;
-    }
-    .slogan {
-        font-size: 1em
-    }
-    .section {
-        padding-right: 0;
-    }
-}
-
 
 /*
  * Pure Style
  */
-.pure-g {
-    padding: 0 10px 0 50px;
-}
 
 .pure-g > div {
     -webkit-box-sizing: border-box;
@@ -90,7 +67,7 @@ p {
  * fullPage Style
  */
 .section {
-    padding-right: 40px;
+    padding: 0 40px 0 10px;
 }
 .fp-controlArrow {
     top: 99% !important;
@@ -162,4 +139,35 @@ p {
 }
 .sosmed-link {
     text-decoration: none;
+}
+
+
+/*
+ * Small mobile Style
+ */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .pure-g {
+        padding: 0;
+    }
+    .slogan {
+        font-size: 1em
+    }
+    .section {
+        padding-right: 0;
+    }
+    #tag-closing h1 {
+        font-size: 1.5em;
+    }
+
+    #tag-closing p {
+        font-size: 1em;
+        font-style: bolder;
+    }
 }
