@@ -18,11 +18,11 @@ yang sudah ada.
     - Solving Method :
       Ubah menjadi lingkaran2 warna putih.
 
-  + [ ] Icon sosmed Twitter dan FB di halaman 3 tidak tampil JIKA dilihat secara online, offline keliatan.
+  + [X] Icon sosmed Twitter dan FB di halaman 3 tidak tampil JIKA dilihat secara online, offline keliatan.
     - Assignee : -
     - Status : Delayed
     - Solving Method :
-      Mungkin file icon corrupt? butuh di upload ulang
+      Tiba tiba bener sendiri
 
   + [X] Ukuran font h tidak dapat diubah.
     - Assignee : -
