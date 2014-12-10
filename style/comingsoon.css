@@ -134,10 +134,15 @@ p {
     padding: 0.2em;
 }
 
-.sosmed-ico {
+.sosmed-ico-1 {
     width: 24px;
 	vertical-align: middle;
 }
+.sosmed-ico-2 {
+    width: 24px;
+	vertical-align: middle;
+}
+
 .sosmed-text {
     color: white;
 }
