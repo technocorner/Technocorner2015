@@ -137,23 +137,29 @@ p {
 .sosmed-ico-1 {
     width: 24px;
 	vertical-align: middle;
+	transition: ease 300ms;
 }
 .sosmed-ico-2 {
     width: 24px;
 	vertical-align: middle;
+	transition: ease 300ms;
 }
 .hover-ico {
 	border-radius:12px;
+	transition: ease 300ms;
 }
 
 .sosmed-text-1 {
     color: white;
+	transition: ease 300ms;
 }
 .sosmed-text-2 {
     color: white;
+	transition: ease 300ms;
 }
 .hover-text {
 	color: rgba(255,255,255,0.5);
+	transition: ease 300ms;
 }
 
 .sosmed-link-1 {
