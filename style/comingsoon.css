@@ -152,6 +152,9 @@ p {
 .sosmed-text-2 {
     color: white;
 }
+.hover-text {
+	color: rgba(255,255,255,0.5);
+}
 
 .sosmed-link-1 {
     text-decoration: none;
