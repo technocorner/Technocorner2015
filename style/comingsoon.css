@@ -142,6 +142,9 @@ p {
     width: 24px;
 	vertical-align: middle;
 }
+.hover-ico {
+	border-radius:12px;
+}
 
 .sosmed-text-1 {
     color: white;
