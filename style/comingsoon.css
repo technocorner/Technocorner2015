@@ -141,7 +141,11 @@ p {
 .sosmed-text {
     color: white;
 }
-.sosmed-link {
+
+.sosmed-link-1 {
+    text-decoration: none;
+}
+.sosmed-link-2 {
     text-decoration: none;
 }
 
