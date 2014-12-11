@@ -133,6 +133,11 @@ p {
     width: 80px;
     padding: 0.2em;
 }
+.logo-closing:hover {
+    width: 80px;
+    padding: 0.2em;
+    opacity: 0.5;
+}
 
 .sosmed-ico-1 {
     width: 24px;
