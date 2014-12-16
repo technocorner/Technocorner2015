@@ -17,27 +17,35 @@
     src: url('../font/OpenSans-Light.ttf');
 }
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body, html {
     min-height: 100%;
     margin: 0;
     font-size: 12pt;
 }
 
-h1 {
+h1, h2, h3,
+p {
     font-family: 'OpenSans Light', sans-serif;
+}
+
+h1 {
     margin: 0;
     font-size: 5em;
     font-weight: 100;
 }
 
 h2 {
-    font-family: 'OpenSans Light', sans-serif;
     font-size: 1.5em;
     font-weight: 100;
 }
 
 p {
-    font-family: 'OpenSans Light', sans-serif;
     font-weight: 200;
 }
 
@@ -49,16 +57,14 @@ p {
 }
 
 .pure-g > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+
 }
 
 .l-box {
-    padding: 1em;
+    padding: 0.5em;
 }
 
-.l-box > p {
+.l-box p {
     text-align: justify;
 }
 
@@ -92,13 +98,20 @@ p {
     left: calc(50% - 56px) !important;
 }
 
+.fp-slidesNav ul li a span {
+    border: 1px solid #832c43 !important;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.fp-slidesNav ul li a.active span {
+    background: none repeat scroll 0% 0% #f88637  !important;
+}
+
 @media screen and (max-width: 640px) {
     .section {
         height: auto !important;
         padding-bottom: 56px;
     }
-
-
 }
 
 
@@ -115,10 +128,21 @@ p {
 }
 
 #excerpt {
+    background-image: url('../img/photo/lf14-1.jpg');
+    background-size: cover;
     background-color: #ed6333;
     text-align: center;
-    color: white;
+    color: #f0f0f0;
 }
+
+.slide#competition {
+
+}
+
+.slide#nextevent {
+
+}
+
 #closing {
     background-image: url("../img/comingsoon/official-texture-blurred.jpg");
     background-size: cover;
@@ -127,6 +151,16 @@ p {
 }
 
 #closing h1 {
+}
+
+.title {
+    color: #832c43;
+}
+
+.overlay {
+    background-color: rgba(131, 44, 67, 0.7);
+    /* text-shadow: 1px 1px #333; */
+    padding: 0.5em 1em;
 }
 
 .slogan {
