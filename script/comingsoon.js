@@ -57,6 +57,14 @@ function sliderTimerResume() {
     sliderTimerPaused = false;
 }
 
+/*
+ * @brief Function called on Document Ready to setup elements
+ *        using jQuery or other function.
+ */
+function DomSetup() {
+    
+}
+
 $(document).ready(function() {
     NProgress.configure({
         showSpinner: false
@@ -74,13 +82,12 @@ $(document).ready(function() {
         navigationPosition: 'right',
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
-
-        easingcss3: 'linear',
-        easing: 'linear',
-        responsive: 640,
-        resize: false,
-
+        easingcss3: 'ease-in-out',
+        easing: 'easeInQuart',
         anchors: ['a-landing', 'a-excerpt', 'a-closing'],
+
+        responsive: 768,
+        resize:false,
 
         afterLoad: function (anchorLink, index) {
             /* console.log(anchorLink); */
@@ -117,4 +124,6 @@ $(document).ready(function() {
             }
         }
     });
+
+    DomSetup();
 });

@@ -24,6 +24,19 @@ yang sudah ada.
     - Solving Method :
       Link script ke Google CDN / CDN yang lain, kompres gambar.
 
+  + [X] Icon sosmed Twitter dan FB di halaman 3 tidak tampil JIKA dilihat secara online, offline keliatan.
+    - Assignee : -
+    - Status : Delayed
+    - Solving Method :
+      Tiba tiba bener sendiri
+
+  + [X] Ukuran font h tidak dapat diubah.
+    - Assignee : -
+    - Status : Delayed
+    - Solving Method :
+      Mungkin ada library js yang meng-overwrite pengaturan ukuran font.
+      Fixed: css style kita diubah posisinya ke paling bawah, biar ngeoverwrite css dari library.
+
 
 * Wish List
 Untuk fitur yang masih belum diimplementasi.
@@ -38,8 +51,7 @@ Untuk fitur yang masih belum diimplementasi.
     - Assignee : Abdillah
     - Status : Done
     - Solving Method :
-      Untuk sementara dengan font offline, nantinya dengan font
-di http://www.google.com/fonts.
+      Untuk sementara dengan font offline, nantinya dengan font di http://www.google.com/fonts.
 
   + [X] Autoswitch halaman kedua kurang interaktif tanpa sliderbar (kayak slider di website official 2014)
     - Assignee : Abdillah

@@ -2,6 +2,9 @@
 /*
  * General Style
  */
+
+/* This font is not used by anything
+
 @font-face {
     font-family: 'OpenSans';
     src: url('../font/OpenSans-Regular.ttf');
@@ -11,6 +14,7 @@
     font-family: 'OpenSans Bold';
     src: url('../font/OpenSans-Bold.ttf');
 }
+*/
 
 @font-face {
     font-family: 'OpenSans Light';
@@ -36,18 +40,20 @@ p {
 
 h1 {
     margin: 0;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 100;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 100;
 }
 
 p {
     font-weight: 200;
 }
+
+
 
 /*
  * Pure Style
@@ -60,18 +66,13 @@ p {
 
 }
 
-.l-box {
-    padding: 0.5em;
-}
-
-.l-box p {
-    text-align: justify;
-}
-
 /* responsive mode */
 @media screen and (max-width: 500px) {
     .l-box {
         width: 100% !important;
+    }
+    .j-box {
+        padding: 1em;
     }
 }
 
@@ -79,9 +80,8 @@ p {
  * fullPage Style
  */
 .section {
-    padding-right: 40px;
+    padding: 0 40px 0 10px;
 }
-
 .fp-controlArrow {
     top: 99% !important;
 }
@@ -135,13 +135,9 @@ p {
     color: #f0f0f0;
 }
 
-.slide#competition {
+.slide#competition {}
 
-}
-
-.slide#nextevent {
-
-}
+.slide#nextevent {}
 
 #closing {
     background-image: url("../img/comingsoon/official-texture-blurred.jpg");
@@ -150,7 +146,12 @@ p {
     text-align: center;
 }
 
-#closing h1 {
+#tag-closing h1 {
+    font-size: 6em;
+}
+
+.event-box {
+    padding: 1em;
 }
 
 .title {
@@ -163,15 +164,37 @@ p {
     padding: 0.5em 1em;
 }
 
+.overlay p {
+    text-align: justify;
+}
+
+#tag-closing p {
+    font-size: 1.5em;
+    font-style: bolder;
+}
+
 .slogan {
     font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .logo-closing {
     width: 80px;
     padding: 0.2em;
+    transition: ease 300ms;
+}
+.logo-closing:hover {
+    width: 80px;
+    padding: 0.2em;
+    opacity: 0.5;
+    transition: ease 300ms;
+}
+
+.sosmed-ico {
+    width: 24px;
+	vertical-align: middle;
+	transition: ease 300ms;
 }
 
 .sosmed.container {
@@ -180,28 +203,83 @@ p {
     vertical-align: center;
 }
 
-.ico-sosmed {
-    width: 24px;
-}
-
-.sosmed.text {
-    color: white;
-    font-family: monospace;
-}
-
-.sosmed.link {
+.sosmed-link {
     text-decoration: none;
 }
 
-@media screen and (max-width: 640px) {
+.sosmed-text {
+    color: white;
+	transition: ease 300ms;
+}
+
+.sosmed-link:hover .sosmed-ico {
+	border-radius:12px;
+	transition: ease 300ms;
+}
+
+.sosmed-link:hover .sosmed-text {
+	color: rgba(255,255,255,0.5);
+	transition: ease 300ms;
+}
+
+.sos-right {
+    text-align: right;
+}
+.sos-left {
+    text-align: left;
+}
+
+/*
+ * Small mobile Style
+ */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        font-weight: 300;
+        font-style: bold;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .section {
+        padding : 50px 0 50px 0;
+    }
+    .slogan {
+        font-size: 1em
+    }
+    .mobile-slide {
+        padding-top: 50px;
+    }
+
+    #landing {
+        min-width: 100%
+    }
+
     #landing img {
         margin: 0 auto;
         display: block;
         width: 100%;
     }
 
-    #closing h1 {
-        font-size: 18px;
+    #closing {
+        min-width: 100%;
     }
 
+    #tag-closing h1 {
+        font-size: 2.5em;
+    }
+
+    #tag-closing p {
+        font-size: 1em;
+        font-style: bolder;
+    }
+    .sos-kanan {
+        text-align: center;
+        padding: 5px;
+    }
+    .sos-kiri {
+        text-align: center;
+        padding: 5px;
+    }
 }
