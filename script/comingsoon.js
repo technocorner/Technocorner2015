@@ -7,6 +7,22 @@ var sliderTimerPaused = false;
 
 var pauseElement = '[class^=pure-u-]';
 
+var wallpaperPath = 'img/photo/'
+var wallpaperList = ['lf14-1.jpg'];
+var wallpaperIdx = 0;
+
+function changeBackground(element, path) {
+    $(element).css({
+        backgroundImage: 'url(' + path + ')'
+    });
+}
+
+function nextSliderBackground() {
+    wallpaperIdx++;
+    wallpaperIdx = wallpaperIdx % wallpaperList.length;
+    changeBackground('#excerpt', wallpaperPath + wallpaperList[wallpaperIdx]);
+}
+
 function sliderTimerStart() {
     if (sliderTimerPaused) {
         return;
@@ -21,6 +37,8 @@ function sliderTimerStart() {
         NProgress.remove();
         $.fn.fullpage.moveSlideRight();
         /* console.log("switch slide"); */
+
+        // nextSliderBackground();
 
         // Restart
         NProgress.set(0.0);
