@@ -204,6 +204,7 @@ p {
 }
 
 .sosmed-link {
+    padding: 1em;
     text-decoration: none;
 }
 
@@ -222,11 +223,11 @@ p {
 	transition: ease 300ms;
 }
 
-.sos-right {
-    text-align: right;
-}
-.sos-left {
+#sos-right {
     text-align: left;
+}
+#sos-left {
+    text-align: right;
 }
 
 /*
