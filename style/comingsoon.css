@@ -67,7 +67,10 @@ p {
 }
 
 /* responsive mode */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
+    .pure-g {
+        letter-spacing: -0.05em;
+    }
     .l-box {
         width: 100% !important;
     }
