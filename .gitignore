@@ -6,3 +6,6 @@ doc/tutorial/
 trash
 *.zip
 *.tar.*
+*.sh
+*.py
+*.pyc
