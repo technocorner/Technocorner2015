@@ -1,74 +1,158 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>TechnoCorner 2015 - The Biggest Technology War</title>
-    <link rel="stylesheet" href="css/pure-min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>Technocorner 2015 </title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
+    <!-- Style -->
+    <link rel="stylesheet" href="lib/jquery.fullpage/jquery.fullPage.css" />
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css" />
+    <link rel="stylesheet" href="lib/yahoo.pure/pure-min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
 
-    <link rel="stylesheet" type="text/css" href="css/fullPage.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
-    <script type="text/javascript" src="js/fullPage.js"></script>
-    <script type="text/javascript" src='js/fullPage-init.js'></script>
+    <!-- Library Script -->
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-old-ie-min.css">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery/jquery.easings.min.js"></script>
+    <script src="lib/jquery/jquery.slimscroll.min.js"></script>
+    <script src="lib/jquery.fullpage/jquery.fullPage.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>
 
+    <!-- Our Stlye -->
+    <link rel="stylesheet" href="style/index.css" />
+    <!-- Our Script -->
+    <script src="script/comingsoon.js"></script>
+  </head>
 
-    <link href='https://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <body>
+    <div id="fullpage">
+      <div class="section" id="landing">
+        <div class="pure-g">
+          <div class="pure-u-1">
+            <img src="img/Logo-TC.png" alt="logo technocorner 2014" class="landing-img">
+            <!-- <h1>TechnoCorner 2015</h1> -->
+          </div>
+        </div>	
+      </div>
+      
+      <div class="section" id="news">
+        <div class="pure-g">
+          <div class="pure-u-1">
+            
+          </div>
+        </div>	
+      </div>
+      
+      <div class="section" id="bideo">
+		<div id="video" class="slide" data-anchor="video-1">
+		  <div class="pure-g">
+			<div class="pure-u-1">
+				<video width=70% height=70% controls="controls"><br />
+				<source src="VID-20140513-WA0000.mp4" type="video/mp4"><br />
+			</div>
+		  </div>
+		</div>
+		<div id="video" class="slide" data-anchor="video-2">
+		  <div class="pure-g">
+			<div class="pure-u-1">
+				<video width=70% height=70% controls="controls"><br />
+				<source src="VID-20140513-WA0000.mp4" type="video/mp4"><br />
+			</div>
+		  </div>
+		</div>
+		<div id="video" class="slide" data-anchor="video-3">
+		  <div class="pure-g">
+			<div class="pure-u-1">
+				<video width=70% height=70% controls="controls"><br />
+				<source src="VID-20140513-WA0000.mp4" type="video/mp4"><br />
+			</div>
+		  </div>
+		</div>
+	  </div>
 
-    <script>
-    document.location = 'comingsoon.html';
-    </script>
-
-</head>
-<body>
-    <div id="main">
-        <div class="section" id='landing'>
-            <div class="pure-g">
-                <div class="pure-u-1">
-                    <p>KMTETI FT UGM proudly present:</p>
-                    <img src="img/logo-header.png" alt="logo technocorner 2014" class="logo-header pure-img">
-                    <p class="slogan">"The Biggest Technology War"</p>
-                    <span>
-                        <img class="logo-org" src="img/logo-ugm.png">
-                        <img class="logo-org" src="img/logo-kmteti.png">
-                    </span>
-                </div>
+      <div class="section" id="excerpt">
+        <div id="competition" class="slide" data-anchor="LC">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 class="title">LINE FOLLOWER COMPETITION</h1>
+              <p> Bisa membuat robot pintar penelusur garis yang berani diadu kecepatan dan keluwesannya? Nantikan kontesnya di Technocorner. <br/><br/>
+                  Ikuti kontesnya dan jadilah juara! Wuzzz..!
+                </p>
             </div>
+          </div>
         </div>
-
-
-        <div class="section" id="excerpt">
-            <div class="pure-g">
-                <div class="pure-u-1"><h1>What's Inside</h1></div>
+		<div id="competition" class="slide" data-anchor="SDC">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 class="title">SOFTWARE DEVLOPMENT COMPETITION</h1>
+              <p>Punya ide kreatif yang dapat diimplementasikan dalam bentuk software? Nah, yang satu ini cocok buat kamu. Kompetisikan ide dan software buatanmu dengan yang lain. Jangan mau kalah!
+              </p>
             </div>
-            <div class="pure-g">
-                <div class="pure-u-1-3 l-box">
-                    <h2>Semnas</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veritatis voluptatibus eligendi voluptates consequatur quas illum facere non harum nam numquam impedit architecto soluta a, dolorem tempora saepe! Magnam, nemo.</p>
-                </div>
-                <div class="pure-u-1-3 l-box">
-                    <h2>Contest</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque maiores est accusantium repudiandae doloremque, rerum mollitia voluptates beatae, voluptatibus harum consequatur, cum a itaque dolore id molestiae perspiciatis tempore. Dolorum!</p>
-                </div>
-                <div class="pure-u-1-3 l-box">
-                    <h2>Pameran</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dignissimos perferendis enim voluptas aliquam consequatur veniam dolorem necessitatibus doloribus labore dolor similique voluptatem laudantium aut, perspiciatis. Hic id, illo nemo?</p>
-                </div>
+          </div>
+        </div>
+        <div id="competition" class="slide" data-anchor="EEC">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 class="title">ELECTRICAL ENGINEERING COMPETITION</h1>
+              <p>Merupakan kompetisi Olimpiade Matematika dan Fisika tingkat SMA bidang kelistrikan yang diikuti oleh berbagai sekolah dari penjuru Indonesia. Buktikan pengetahuanmu dengan bersaing bersama teman-teman dari berbagai daerah!
+              </p>
             </div>
+          </div>
         </div>
-
-
-        <div class="section" id="penutup">
-            <h1>#ComingSoon</h1>
-            <p>February 2015</p>
-            &nbsp;&nbsp;
-            <p>Just stay up to date</p>
-            <span>
-                <img class="ico-sosmed" src="img/ico_fb.png">&nbsp;Technocorner2015 &nbsp;&nbsp;
-                <img class="ico-sosmed" src="img/ico_tw.png">&nbsp;@Technocorner2015
-            </span>
+        <div id="nextevent" class="slide" data-anchor="EXPO">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 class="title">TECHNOEXPO</h1>
+              <p>Bosen dengan keseharian dan pengen refreshing? Nantikan TechnoExpo di Technocorner 2015 yang seru!
+              </p>
+            </div>
+          </div>
         </div>
+        <div id="nextevent" class="slide" data-anchor="SEMNAS">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 class="title">SEMINAR NASIONAL</h1>
+              <p>Demam dengan teknologi terbaru? Mau update ilmu tentang teknologi yang lebih canggih? Ingin tahu dan bersiap soal masalah perkembangan teknologi? Pas deh, Seminar Nasional adalah acara yang tepat!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="closing">
+        <div id="tag-closing">
+          <h1>#ComingSoon</h1>
+          <p>March 2015</p>
+        </div>
+        <p class="slogan">"Mempersatukan intelektual muda bangsa dalam kompetisi teknologi dunia"<p>
+          <br/>
+          <p>Presented by:</p>
+          <span>
+            <a href="http://ugm.ac.id"><img class="logo-closing" src="img/logo-ugm.png"></a>
+            <a href="http://kmteti.ft.ugm.ac.id"><img class="logo-closing" src="img/logo-kmteti.png"></a>
+          </span>
+          <br/><br/>
+          <div class="pure-g">
+            <div id="sos-left" class="pure-u-1 pure-u-md-1-2 j-box">
+              <a id="fb-link" class="sosmed-link" href="https://www.facebook.com/TechnocornerUGM">
+                <img id="fb-ico" class="sosmed-ico" src="img/icon-sosmedf.png">
+                <span id="fb-text" class="sosmed-text">TechnocornerUGM</span>
+              </a>
+            </div>
+            <div id="sos-right" class="pure-u-1 pure-u-md-1-2 j-box">
+              <a id="tweet-link" class="sosmed-link" href="https://www.twitter.com/TechnocornerUGM">
+                <img id="tweet-ico" class="sosmed-ico" src="img/icon-sosmedt.png">
+                <span id="tweet-text" class="sosmed-text">@TechnocornerUGM</span>
+              </a>
+            </div>
+          </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
