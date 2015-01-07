@@ -1,0 +1,316 @@
+
+/*
+ * General Style
+ */
+
+/* This font is not used by anything
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans Bold';
+    src: url('../font/OpenSans-Bold.ttf');
+}
+*/
+
+@font-face {
+    font-family: 'OpenSans Light';
+    src: url('../font/OpenSans-Light.ttf');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100%;
+    margin: 0;
+    font-size: 12pt;
+}
+
+h1, h2, h3,
+p {
+    font-family: 'OpenSans Light', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: 100;
+}
+
+p {
+    font-weight: 200;
+}
+
+
+
+/*
+ * Pure Style
+ */
+.pure-g {
+    padding: 0 1em 0 3em;
+}
+
+.pure-g > div {
+
+}
+
+/* responsive mode */
+@media screen and (max-width: 780px) {
+    .pure-g {
+        letter-spacing: -0.05em;
+    }
+    .l-box {
+        width: 100% !important;
+    }
+    .j-box {
+        padding: 1em;
+    }
+}
+
+/*
+ * fullPage Style
+ */
+.section {
+    padding: 0 40px 0 10px;
+}
+.fp-controlArrow {
+    top: 99% !important;
+}
+
+.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent #fff !important;
+    border-width: 10px 0px 10px 15px !important;
+    right: calc(50% - 56px) !important;
+}
+
+.fp-controlArrow.fp-prev {
+    border-color: transparent #fff transparent transparent !important;
+    border-width: 10px 15px 10px 0px !important;
+    left: calc(50% - 56px) !important;
+}
+
+.fp-slidesNav ul li a span {
+    border: 1px solid #832c43 !important;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.fp-slidesNav ul li a.active span {
+    background: none repeat scroll 0% 0% #f88637  !important;
+}
+
+@media screen and (max-width: 640px) {
+    .section {
+        height: auto !important;
+        padding-bottom: 56px;
+    }
+}
+
+
+/* Section Style */
+#landing {
+    background: url('../img/Background-Awal.jpg'); 
+    background-size: 100% 100% ;
+}
+
+#landing img {
+    margin: 0 auto;
+    display: block;
+    size: 100% 100%;
+}
+
+#bideo {
+    background-color: #323232;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+#excerpt {
+    background-size: cover;
+    background-color: #ed6333;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.slide#video
+
+.slide#competition {}
+
+.slide#nextevent {}
+
+#closing {
+    background-image: url("../img/comingsoon/official-texture-blurred.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#tag-closing h1 {
+    font-size: 6em;
+}
+
+.event-box {
+    padding: 1em;
+}
+
+.title {
+    color: #832c43;
+}
+
+.overlay {
+    background-color: rgba(131, 44, 67, 0.7);
+    /* text-shadow: 1px 1px #333; */
+    padding: 0.5em 1em;
+}
+
+.overlay p {
+    text-align: justify;
+}
+
+#tag-closing p {
+    font-size: 1.5em;
+    font-style: bolder;
+}
+
+.slogan {
+    font-family: 'OpenSans Light', sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.logo-closing {
+    width: 80px;
+    padding: 0.2em;
+    transition: ease 300ms;
+}
+.logo-closing:hover {
+    width: 80px;
+    padding: 0.2em;
+    opacity: 0.5;
+    transition: ease 300ms;
+}
+
+.sosmed-ico {
+    width: 24px;
+	vertical-align: middle;
+	transition: ease 300ms;
+}
+
+.sosmed.container {
+    display:inline-block;
+    margin: 0 20px 0 20px;
+    vertical-align: center;
+}
+
+.sosmed-link {
+    padding: 1em;
+    text-decoration: none;
+}
+
+.sosmed-text {
+    color: white;
+	transition: ease 300ms;
+}
+
+.sosmed-link:hover .sosmed-ico {
+	border-radius:12px;
+	transition: ease 300ms;
+}
+
+.sosmed-link:hover .sosmed-text {
+	color: rgba(255,255,255,0.5);
+	transition: ease 300ms;
+}
+
+#sos-right {
+    text-align: left;
+}
+#sos-left {
+    text-align: right;
+}
+
+/*
+ * Small mobile Style
+ */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        font-weight: 300;
+        font-style: bold;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .section {
+        padding : 50px 0 50px 0;
+    }
+    .slogan {
+        font-size: 1em
+    }
+    .mobile-slide {
+        padding-top: 50px;
+    }
+
+    #landing {
+        min-width: 100%
+    }
+
+    #landing img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+
+    #closing {
+        min-width: 100%;
+    }
+
+    #tag-closing h1 {
+        font-size: 2.5em;
+    }
+
+    #tag-closing p {
+        font-size: 1em;
+        font-style: bolder;
+    }
+    .sos-kanan {
+        text-align: center;
+        padding: 5px;
+    }
+    .sos-kiri {
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+#news {
+	background-color: #323232;
+}
+
+#LF {
+	background-image: url('../img/background-lf.jpg');
+}
+
+#SDC {
+	background-image: url('../img/background-sdc.jpg');
+}
+
+#EEC {
+	background-image: url('../img/background-eec.jpg');
+}
+
+#SEMNAS {
+	background-image: url('../img/background-semnas.jpg');
+}
