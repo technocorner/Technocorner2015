@@ -19,6 +19,9 @@ body{
 
 #header{
     height: 32%;
+    background-image: url(../img/background-eec-ori.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
