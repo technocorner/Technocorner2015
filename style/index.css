@@ -119,8 +119,46 @@ p {
 
 
 /* Section Style */
+header {
+    background-color: #365;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+#head-inner {
+    with: 100%;
+    height: 100%;
+}
+
+#head-menu, #head-logo {
+    height: 100%;
+}
+
+#head-logo {
+    float: left;
+}
+
+#head-menu {
+    float: right;
+    text-align: right;
+}
+
+.menu-list {
+    height: 100%;
+    padding: 2%;
+    margin: 0 30% 0 0;
+}
+.menu-listitem {
+    display: inline-block;
+    height: 100%;
+    padding: 2%;
+}
+
 #landing {
-    background: url('../img/Background-Awal.jpg'); 
+    background: url('../img/Background-Awal.jpg');
     background-size: 100% 100% ;
 }
 
