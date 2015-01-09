@@ -10,33 +10,33 @@ body{
 /* MENU STYLE */
 
 #menu{
-    
+    height: 4%;
 }
 
 
 /* HEADER STYLE */
 
 #header{
-    
+    height: 32%;
 }
 
 
 /* QUOTE STYLE */
 
 #quote{
-    
+    height: 4%;
 }
 
 
 /* LOMBA STYLE */
 
 #lomba{
-   
+    height: 50%;
 }
 
 
 /* FOOTER STYLE */
 
 #footer{
-    
+    height: 24%;
 }
