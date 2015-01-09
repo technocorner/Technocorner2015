@@ -1,12 +1,8 @@
 Technocorner2015
 ================
 
-TODO Summary
-------------
-- File icon sosmed di block sama AdBlock karena namanya "fb" dan "tw"
-- Tampilan layar kecil, dah bagus?
-- Optimize ukuran file-file, terutama image.
+Karena fullpage js kayaknya fungsi slide nya agak terbatas, gimana kalau diganti pake...
+http://owlgraphic.com/owlcarousel/
 
-Web Official
-------------
-1. 
+
+Urutan halaman : landing -> news (hitam) -> event (foto) -> video (hitam) -> quote (cerah) -> galeri (cerah) -> footer | sponsor (hitam)
