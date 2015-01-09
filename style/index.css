@@ -90,7 +90,7 @@ p {
 }
 
 .fp-controlArrow.fp-next {
-    border-color: transparent transparent transparent #fff !important;
+    border-oor: transparent transparent transparent #fff !important;
     border-width: 10px 0px 10px 15px !important;
     right: calc(50% - 56px) !important;
 }
@@ -129,7 +129,7 @@ header {
 }
 
 #head-inner {
-    with: 100%;
+    width: 100%;
     height: 100%;
 }
 
@@ -334,8 +334,16 @@ header {
     }
 }
 
+.background-hitam {
+    background-color: #323232;
+}
+.background-cerah {
+    background-color: #ed6333;
+}
+
 #news {
-	background-color: #323232;
+	/* @dhika : warna background aku pindah ke class .background-hitam
+                Ngasih warna ke section pake class .background-hitam/cerah */
 }
 
 #LF {
