@@ -22,8 +22,19 @@ body{
     background-image: url(../img/background-eec-ori.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+}
+#header div{
+    flex: 1;
+}
+#header1{
+    text-align: center;
 }
 
+#header-pict{
+    width: 80%;
+}
 
 /* QUOTE STYLE */
 
