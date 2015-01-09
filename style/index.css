@@ -9,12 +9,13 @@
     font-family: 'OpenSans';
     src: url('../font/OpenSans-Regular.ttf');
 }
+ */
 
 @font-face {
     font-family: 'OpenSans Bold';
     src: url('../font/OpenSans-Bold.ttf');
 }
-*/
+
 
 @font-face {
     font-family: 'OpenSans Light';
@@ -120,12 +121,13 @@ p {
 
 /* Section Style */
 header {
-    background-color: #365;
-    position: fixed;
+    background-color: #343434;
+    color: white;
+    height: 70px;
     left: 0;
     top: 0;
+    position: fixed;
     width: 100%;
-    height: 70px;
 }
 
 #head-inner {
@@ -139,6 +141,12 @@ header {
 
 #head-logo {
     float: left;
+    text-align: center;
+    padding: 0.1% 1%;
+}
+
+.head-logo-text {
+    font-family: 'OpenSans Bold';
 }
 
 #head-menu {
@@ -148,18 +156,25 @@ header {
 
 .menu-list {
     height: 100%;
-    padding: 2%;
+    padding: 0;
     margin: 0 30% 0 0;
 }
+
 .menu-listitem {
     display: inline-block;
     height: 100%;
-    padding: 2%;
+    padding: 5% 4%;
+    transition: 300ms;
+}
+
+.menu-listitem:hover {
+    background-color: #252525;
 }
 
 #landing {
     background-color: #BF423C;
     background-size: 100% 100% ;
+    margin-top: 70px;
 }
 
 #landing img {
