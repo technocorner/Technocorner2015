@@ -11,6 +11,7 @@ body{
 
 #menu{
     height: 4%;
+    background-color: black;
 }
 
 
@@ -25,6 +26,7 @@ body{
 
 #quote{
     height: 4%;
+    background-color: black;
 }
 
 
@@ -32,6 +34,7 @@ body{
 
 #lomba{
     height: 50%;
+    background-color: #A2353A;
 }
 
 
@@ -39,4 +42,5 @@ body{
 
 #footer{
     height: 24%;
+    background-color: grey;
 }
