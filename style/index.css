@@ -343,7 +343,7 @@ header {
 
 #news {
 	/* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
+                Ngasih warna ke section pake class .background-hitam/cerah */ 
 }
 
 #LF {
@@ -360,4 +360,9 @@ header {
 
 #SEMNAS {
 	background-image: url('../img/background-semnas.jpg');
+}
+
+#font {
+	color: white;
+	font-weight: bold;
 }
