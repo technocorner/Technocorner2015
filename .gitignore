@@ -3,6 +3,7 @@
 *~
 .*
 doc/tutorial/
+doc/design/
 trash
 *.zip
 *.tar.*
