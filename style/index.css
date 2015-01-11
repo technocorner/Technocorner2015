@@ -4,12 +4,12 @@
  */
 
 /* This font is not used by anything
-
+*/
 @font-face {
     font-family: 'OpenSans';
     src: url('../font/OpenSans-Regular.ttf');
 }
- */
+
 
 @font-face {
     font-family: 'OpenSans Bold';
@@ -34,23 +34,21 @@ body, html {
     font-size: 12pt;
 }
 
-h1, h2, h3,
-p {
+h1, h2, h3, {
     font-family: 'OpenSans Light', sans-serif;
+}
+p {
+    font-family: 'OpenSans', sans-serif;
 }
 
 h1 {
     margin: 0;
     font-size: 4em;
-    font-weight: 100;
+    font-weight: 150;
 }
 
 h2 {
     font-size: 1.25em;
-    font-weight: 100;
-}
-
-p {
     font-weight: 200;
 }
 
@@ -199,7 +197,6 @@ header.fixed-mode {
 
 #excerpt {
     background-size: cover;
-    background-color: #ed6333;
     text-align: center;
     color: #f0f0f0;
 }
@@ -211,10 +208,36 @@ header.fixed-mode {
 .slide#nextevent {}
 
 #closing {
-    background-color: #323232;
-    text-align: center;
+    color: white;
+    text-align: left;
+    padding: 1em 0;
 }
 
+#closing h1 {
+    font-size: 2em;
+}
+
+#closing p {
+    margin: 5px 0;
+}
+
+#closing a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#closing .ico-footer {
+    width: 16px;
+    height: 16px;
+}
+
+#closing img {
+    display: inline-block;
+}
+
+#copyright {
+    color: white;
+}
 
 .event-box {
     padding: 1em;
@@ -238,57 +261,6 @@ header.fixed-mode {
     font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
     font-size: 1.2em;
-}
-
-.logo-closing {
-    width: 80px;
-    padding: 0.2em;
-    transition: ease 300ms;
-}
-.logo-closing:hover {
-    width: 80px;
-    padding: 0.2em;
-    opacity: 0.5;
-    transition: ease 300ms;
-}
-
-.sosmed-ico {
-    width: 24px;
-	vertical-align: middle;
-	transition: ease 300ms;
-}
-
-.sosmed.container {
-    display:inline-block;
-    margin: 0 20px 0 20px;
-    vertical-align: center;
-}
-
-.sosmed-link {
-    padding: 1em;
-    text-decoration: none;
-}
-
-.sosmed-text {
-    color: white;
-	transition: ease 300ms;
-}
-
-.sosmed-link:hover .sosmed-ico {
-	border-radius:12px;
-	transition: ease 300ms;
-}
-
-.sosmed-link:hover .sosmed-text {
-	color: rgba(255,255,255,0.5);
-	transition: ease 300ms;
-}
-
-#sos-right {
-    text-align: left;
-}
-#sos-left {
-    text-align: right;
 }
 
 /*
@@ -343,12 +315,20 @@ header.fixed-mode {
     background-color: #323232;
 }
 .background-cerah {
-    background-color: #ed6333;
+    background-color: #BF423C;
 }
 
 #news {
 	/* @dhika : warna background aku pindah ke class .background-hitam
                 Ngasih warna ke section pake class .background-hitam/cerah */
+    color: white;
+}
+
+#news h2 {
+    font-size: 2em;
+}
+#news p {
+
 }
 
 #LF {
