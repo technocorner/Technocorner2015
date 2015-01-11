@@ -95,7 +95,11 @@ body{
         margin-bottom: 15px;
         margin-top: 15px;
     }
-
+    .lomba-menu:hover{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
 #isi{
     background-color: white;
     width: 900px;
