@@ -105,6 +105,7 @@ body {
         transition: ease 300ms;
         color: #A2353A;
     }
+
 .isi{
     background-color: white;
     width: 900px;
@@ -131,14 +132,14 @@ body {
     table{
         margin-top: 15px;
         border-collapse: collapse;
-        
+
     }
     table, td, td {
         border: 1px solid black;
         padding: 8px
     }
-    
-    
+
+
 /* FOOTER STYLE */
 
 #footer{
