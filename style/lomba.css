@@ -1,3 +1,8 @@
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+
 /* GENERAL STYLE */
 
 body{
@@ -65,6 +70,13 @@ body{
     #logo-lomba{
         width: inherit;
         text-align: center;
+    }
+    #nama-lomba{
+        font-family: OpenSans-Bold;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        padding-bottom: 50px;
     }
 
 #isi{
