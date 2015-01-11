@@ -49,8 +49,24 @@ body{
 #lomba{
     height: 50%;
     background-color: #A2353A;
+    display: flex;
+    align-items: flex-start;
 }
 
+#lomba div{
+    flex: 1;
+}
+
+#menu-lomba{
+    background-color: transparent;
+    padding-top: 40px;
+}
+
+#isi{
+    background-color: white;
+    width: 900px;
+    height: 850px;
+}
 
 /* FOOTER STYLE */
 
