@@ -78,6 +78,23 @@ body{
         text-align: center;
         padding-bottom: 50px;
     }
+    .lomba-menu{
+        background-color: transparent;
+        width: 300px;
+        height: 50px;
+        text-align: left;
+        text-indent: 10px;
+        padding: 8px;
+        cursor: pointer;
+        font-family: OpenSans-Bold;
+        font-size: 40px;
+        color: white;
+        align-items: center;
+        transition: ease 300ms;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
 
 #isi{
     background-color: white;
