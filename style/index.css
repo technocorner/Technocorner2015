@@ -2,9 +2,6 @@
 /*
  * General Style
  */
-
-/* This font is not used by anything
-*/
 @font-face {
     font-family: 'OpenSans';
     src: url('../font/OpenSans-Regular.ttf');
@@ -37,6 +34,7 @@ body, html {
 h1, h2, h3, {
     font-family: 'OpenSans Light', sans-serif;
 }
+
 p {
     font-family: 'OpenSans', sans-serif;
 }
@@ -59,10 +57,6 @@ h2 {
  */
 .pure-g {
     padding: 0 1em 0 3em;
-}
-
-.pure-g > div {
-
 }
 
 /* responsive mode */
@@ -177,6 +171,8 @@ header.fixed-mode {
     background-color: #252525;
 }
 
+
+
 #landing {
     background-color: #BF423C;
     background-size: 100% 100%;
@@ -189,11 +185,15 @@ header.fixed-mode {
     size: 100% 100%;
 }
 
+
+
 #bideo {
     background-color: #323232;
     text-align: center;
     color: #f0f0f0;
 }
+
+
 
 #excerpt {
     background-size: cover;
@@ -207,6 +207,44 @@ header.fixed-mode {
 
 .slide#nextevent {}
 
+
+
+
+#news {
+    /* @dhika : warna background aku pindah ke class .background-hitam
+                Ngasih warna ke section pake class .background-hitam/cerah */
+    color: white;
+}
+
+#news h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#news h2 {
+    font-size: 2em;
+}
+#news p {
+
+}
+
+#LF {
+    background-image: url('../img/background-lf.jpg');
+}
+
+#SDC {
+    background-image: url('../img/background-sdc.jpg');
+}
+
+#EEC {
+    background-image: url('../img/background-eec.jpg');
+}
+
+#SEMNAS {
+    background-image: url('../img/background-semnas.jpg');
+}
+
+
 #closing {
     color: white;
     text-align: left;
@@ -215,6 +253,7 @@ header.fixed-mode {
 
 #closing h1 {
     font-size: 2em;
+    margin: 8px 0;
 }
 
 #closing p {
@@ -256,6 +295,7 @@ header.fixed-mode {
 #copyright {
     color: white;
 }
+
 
 .event-box {
     padding: 1em;
@@ -334,35 +374,6 @@ header.fixed-mode {
 }
 .background-cerah {
     background-color: #BF423C;
-}
-
-#news {
-	/* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
-    color: white;
-}
-
-#news h2 {
-    font-size: 2em;
-}
-#news p {
-
-}
-
-#LF {
-	background-image: url('../img/background-lf.jpg');
-}
-
-#SDC {
-	background-image: url('../img/background-sdc.jpg');
-}
-
-#EEC {
-	background-image: url('../img/background-eec.jpg');
-}
-
-#SEMNAS {
-	background-image: url('../img/background-semnas.jpg');
 }
 
 #font {
