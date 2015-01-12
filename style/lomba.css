@@ -2,6 +2,10 @@
     font-family: OpenSans-Bold;
     src: url(../font/OpenSans-Bold.ttf);
 }
+@font-face {
+    font-family: OpenSans-Light;
+    src: url(../font/OpenSans-Light.ttf);
+}
 
 /* GENERAL STYLE */
 
@@ -105,11 +109,11 @@ body{
     #isi ul{
         font-family: OpenSans-Bold;
         font-size: 30pt;
-        text-indent: 15px;
-        line-height: 170%;
+        text-indent: -22px;
+        line-height: 200%;
     }
     #isi ul li{
-        font-family: OpenSans-Bold;
+        font-family: OpenSans-Light;
         font-size: 15pt;
         text-indent: 15px;
         line-height: 140%;
