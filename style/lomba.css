@@ -120,8 +120,17 @@ body{
         text-indent: 0px;
         line-height: 140%;
         margin-bottom: 15px;
+    }
+    table{
+        margin-top: 15px;
+        border-collapse: collapse;
         
     }
+    table, td, td {
+        border: 1px solid black;
+        padding: 8px
+    }
+    
     
 /* FOOTER STYLE */
 
