@@ -104,7 +104,8 @@ body{
     height: 850px;
     text-align: left;
     padding:5%;
-    max-width: 90%
+    max-width: 90%;
+    overflow-y: scroll;
 }
     #isi ul{
         font-family: OpenSans-Bold;
