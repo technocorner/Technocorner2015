@@ -51,7 +51,6 @@ h2 {
 }
 
 
-
 /*
  * Pure Style
  */
@@ -192,7 +191,37 @@ header.fixed-mode {
     color: #f0f0f0;
 }
 
+#quote {
+    padding: 10px 20px 30px 20px;
+    color: white;
+}
 
+#quote h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#quote blockquote {
+    font: italic 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
+    background: url(../img/close.png) no-repeat right bottom;
+    padding-left: 0px;
+    text-indent: -18px;
+}
+
+#quote blockquote:first-letter {
+  background: url(../img/open.png) no-repeat left top;
+  padding-left: 18px;
+  font: italic 1.4em Georgia, "Times New Roman", Times, serif;
+}
+
+#quote blockquote:first-word {
+    font: bold;
+}
+
+#quote small {
+    padding-left: 22px;
+    font-size: 1em;
+}
 
 #excerpt {
     background-size: cover;
