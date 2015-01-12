@@ -96,9 +96,13 @@ body{
     }
 #isi{
     background-color: white;
-    width: 900px;
+    width: auto;
     height: 850px;
+    text-align: left;
+    padding:5%;
+    max-width: 90%
 }
+
 
 /* FOOTER STYLE */
 
