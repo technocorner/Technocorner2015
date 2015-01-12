@@ -48,4 +48,9 @@ $(document).ready(function() {
             $('header').css('opacity', 0).animate({opacity: 1}, 500);
         }
     });
+
+    $('#galeri-photobox').photobox('a', {
+        time:0,
+        thumbs:false,
+    });
 });

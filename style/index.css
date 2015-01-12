@@ -3,20 +3,20 @@
  * General Style
  */
 @font-face {
-    font-family: 'OpenSans';
-    src: url('../font/OpenSans-Regular.ttf');
+    font-family: "OpenSans";
+    src: url("../font/OpenSans-Regular.ttf");
 }
 
 
 @font-face {
-    font-family: 'OpenSans Bold';
-    src: url('../font/OpenSans-Bold.ttf');
+    font-family: "OpenSans Bold";
+    src: url("../font/OpenSans-Bold.ttf");
 }
 
 
 @font-face {
-    font-family: 'OpenSans Light';
-    src: url('../font/OpenSans-Light.ttf');
+    font-family: "OpenSans Light";
+    src: url("../font/OpenSans-Light.ttf");
 }
 
 * {
@@ -29,19 +29,20 @@ body, html {
     min-height: 100%;
     margin: 0;
     font-size: 12pt;
+    font-family: "OpenSans";
 }
 
 h1, h2, h3, {
-    font-family: 'OpenSans Light', sans-serif;
+    font-family: "OpenSans Light", sans-serif;
 }
 
 p {
-    font-family: 'OpenSans', sans-serif;
+    font-family: "OpenSans", sans-serif;
 }
 
 h1 {
     margin: 0;
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 150;
 }
 
@@ -148,7 +149,7 @@ header a, a:link, a:visited {
 }
 
 .head-logo-text {
-    font-family: 'OpenSans Bold';
+    font-family: "OpenSans Bold";
 }
 
 #head-menu {
@@ -201,11 +202,6 @@ header a, a:link, a:visited {
     color: white;
 }
 
-#quote h2 {
-    text-align: center;
-    font-size: 2em;
-}
-
 #quote blockquote {
     font: italic 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
     background: url(../img/close.png) no-repeat right bottom;
@@ -219,8 +215,8 @@ header a, a:link, a:visited {
   font: italic 1.4em Georgia, "Times New Roman", Times, serif;
 }
 
-#quote blockquote:first-word {
-    font: bold;
+#quote h1 {
+    text-align: center;
 }
 
 #quote small {
@@ -250,7 +246,6 @@ header a, a:link, a:visited {
 }
 
 #news h1 {
-    font-size: 2.5em;
     text-align: center;
 }
 
@@ -277,6 +272,31 @@ header a, a:link, a:visited {
     background-image: url('../img/background-semnas.jpg');
 }
 
+
+#galeri {
+    padding: 20px 20px;
+    color : white;
+    text-align: center;
+}
+
+#galeri h1 {
+    text-align: center;
+}
+
+#galeri .pure-u-1-3 {
+    padding: 20px 0;
+}
+
+#galeri .see-button {
+    padding: 0.5em;
+    border: 1px solid white;
+    transition: all 200ms ease;
+}
+
+#galeri .see-button:hover {
+    background-color: white;
+    color: #323232;
+}
 
 #closing {
     color: white;
