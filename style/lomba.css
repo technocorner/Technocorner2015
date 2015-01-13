@@ -9,10 +9,12 @@
 
 /* GENERAL STYLE */
 
-body{
+body {
     height: 1700px;
     padding: 0px;
     margin: 0px;
+
+    font-size: 12pt;
 }
 
 
@@ -73,7 +75,7 @@ body{
     }
     #nama-lomba{
         font-family: OpenSans-Bold;
-        font-size: 30px;
+        font-size: 1.5em;
         color: white;
         text-align: center;
         padding-bottom: 50px;
@@ -85,7 +87,7 @@ body{
         text-indent: 10px;
         cursor: pointer;
         font-family: OpenSans-Bold;
-        font-size: 40px;
+        font-size: 1.5em;
         color: white;
         align-items: center;
         transition: ease 300ms;
@@ -113,14 +115,14 @@ body{
 }
     .isi ul{
         font-family: OpenSans-Bold;
-        font-size: 30pt;
+        font-size: 1.5em;
         text-indent: -43px;
         line-height: 300%;
         list-style-image: url("../img/bullet.gif");
     }
     .isi ul li{
         font-family: OpenSans-Light;
-        font-size: 20pt;
+        font-size: 1em;
         text-indent: 0px;
         line-height: 140%;
         margin-bottom: 15px;
