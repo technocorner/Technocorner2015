@@ -111,72 +111,6 @@ h2 {
 
 
 /* Section Style */
-header {
-    background-color: #343434;
-    color: white;
-    height: 70px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-header.fixed-mode {
-    position: fixed;
-    box-shadow: 0px 2px 3px #000;
-    z-index: 1000;
-}
-
-header a, a:link, a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-#head-inner {
-    width: 100%;
-    height: 100%;
-}
-
-#head-menu, #head-logo {
-    height: 100%;
-}
-
-#head-logo {
-    float: left;
-    text-align: center;
-    padding: 0.1% 1%;
-}
-
-.head-logo-text {
-    font-family: "OpenSans Bold";
-}
-
-#head-menu {
-    float: right;
-    text-align: right;
-}
-
-.menu-list {
-    height: 100%;
-    padding: 0;
-    margin: 0 30% 0 0;
-}
-
-.menu-listitem {
-    cursor: pointer;
-    display: inline-block;
-    height: 100%;
-    padding: 6% 4%;
-    transition: 300ms;
-}
-
-.menu-listitem:hover {
-    background-color: #252525;
-}
-
-
-
 #landing {
     background-color: #BF423C;
     background-size: 100% 100%;
@@ -315,58 +249,6 @@ header a, a:link, a:visited {
     background-color: white;
     color: #323232;
 }
-
-#closing {
-    color: white;
-    text-align: left;
-    padding: 1em 0;
-}
-
-#closing h1 {
-    font-size: 2em;
-    margin: 8px 0;
-}
-
-#closing p {
-    margin: 5px 0;
-}
-
-#closing a, a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-#closing .ico-footer {
-    width: 16px;
-    height: 16px;
-}
-
-#closing img {
-    display: inline-block;
-}
-
-#closing .closing-contact {
-    padding: 0 2em 0 0;
-}
-
-#closing .closing-medsos {
-    padding: 0 2em;
-}
-
-#closing .closing-sponsor {
-    padding: 0 0 0 2em;
-}
-
-#closing .make-footer-border {
-    border-right: solid;
-    border-left: solid;
-    border-color: white;
-}
-
-#copyright {
-    color: white;
-}
-
 
 .event-box {
     padding: 1em;

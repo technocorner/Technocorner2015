@@ -1,0 +1,53 @@
+/*
+ * Footer style section
+ */
+#closing {
+    color: white;
+    text-align: left;
+    padding: 1em 0;
+}
+
+#closing h1 {
+    font-size: 2em;
+    margin: 8px 0;
+}
+
+#closing p {
+    margin: 5px 0;
+}
+
+#closing a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#closing .ico-footer {
+    width: 16px;
+    height: 16px;
+}
+
+#closing img {
+    display: inline-block;
+}
+
+#closing .closing-contact {
+    padding: 0 2em 0 0;
+}
+
+#closing .closing-medsos {
+    padding: 0 2em;
+}
+
+#closing .closing-sponsor {
+    padding: 0 0 0 2em;
+}
+
+#closing .make-footer-border {
+    border-right: solid;
+    border-left: solid;
+    border-color: white;
+}
+
+#copyright {
+    color: white;
+}
