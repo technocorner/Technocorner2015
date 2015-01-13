@@ -1,3 +1,12 @@
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: OpenSans-Light;
+    src: url(../font/OpenSans-Light.ttf);
+}
+
 /* GENERAL STYLE */
 
 body{
@@ -9,11 +18,7 @@ body{
 
 /* MENU STYLE */
 
-#menu{
-    height: 4%;
-    background-color: black;
-}
-
+/* sudah ada di css yang lain */
 
 /* HEADER STYLE */
 
@@ -49,9 +54,88 @@ body{
 #lomba{
     height: 50%;
     background-color: #A2353A;
+    display: flex;
+    align-items: flex-start;
 }
 
+#lomba div{
+    flex: 1;
+}
 
+#menu-lomba{
+    background-color: transparent;
+    padding-top: 40px;
+}
+
+    #logo-lomba{
+        width: inherit;
+        text-align: center;
+    }
+    #nama-lomba{
+        font-family: OpenSans-Bold;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .lomba-menu{
+        background-color: transparent;
+        width: 300px;
+        text-align: left;
+        text-indent: 10px;
+        cursor: pointer;
+        font-family: OpenSans-Bold;
+        font-size: 40px;
+        color: white;
+        align-items: center;
+        transition: ease 300ms;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .lomba-menu:hover{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
+    .lomba-menu-click{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
+.isi{
+    background-color: white;
+    width: 900px;
+    height: 850px;
+    text-align: left;
+    padding:5%;
+    overflow-y: scroll;
+}
+    .isi ul{
+        font-family: OpenSans-Bold;
+        font-size: 30pt;
+        text-indent: -43px;
+        line-height: 300%;
+        list-style-image: url("../img/bullet.gif");
+    }
+    .isi ul li{
+        font-family: OpenSans-Light;
+        font-size: 20pt;
+        text-indent: 0px;
+        line-height: 140%;
+        margin-bottom: 15px;
+    }
+    table{
+        margin-top: 15px;
+        border-collapse: collapse;
+        
+    }
+    table, td, td {
+        border: 1px solid black;
+        padding: 8px
+    }
+    
+    
 /* FOOTER STYLE */
 
 #footer{

@@ -125,9 +125,16 @@ header {
     color: white;
     height: 70px;
     left: 0;
+    position: absolute;
     top: 0;
-    position: fixed;
     width: 100%;
+    z-index: 1000;
+}
+
+header.fixed-mode {
+    position: fixed;
+    box-shadow: 0px 2px 3px #000;
+    z-index: 1000;
 }
 
 #head-inner {
@@ -161,6 +168,7 @@ header {
 }
 
 .menu-listitem {
+    cursor: pointer;
     display: inline-block;
     height: 100%;
     padding: 5% 4%;
@@ -173,7 +181,7 @@ header {
 
 #landing {
     background-color: #BF423C;
-    background-size: 100% 100% ;
+    background-size: 100% 100%;
     margin-top: 70px;
 }
 
@@ -203,15 +211,10 @@ header {
 .slide#nextevent {}
 
 #closing {
-    background-image: url("../img/comingsoon/official-texture-blurred.jpg");
-    background-size: cover;
-    color: white;
+    background-color: #323232;
     text-align: center;
 }
 
-#tag-closing h1 {
-    font-size: 6em;
-}
 
 .event-box {
     padding: 1em;
@@ -229,11 +232,6 @@ header {
 
 .overlay p {
     text-align: justify;
-}
-
-#tag-closing p {
-    font-size: 1.5em;
-    font-style: bolder;
 }
 
 .slogan {
@@ -318,7 +316,7 @@ header {
 
     #landing {
         min-width: 100%
-        
+
     }
 
     #landing img {
@@ -331,14 +329,6 @@ header {
         min-width: 100%;
     }
 
-    #tag-closing h1 {
-        font-size: 2.5em;
-    }
-
-    #tag-closing p {
-        font-size: 1em;
-        font-style: bolder;
-    }
     .sos-kanan {
         text-align: center;
         padding: 5px;
@@ -358,7 +348,7 @@ header {
 
 #news {
 	/* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */ 
+                Ngasih warna ke section pake class .background-hitam/cerah */
 }
 
 #LF {
