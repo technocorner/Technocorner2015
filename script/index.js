@@ -49,7 +49,7 @@ $(document).ready(function() {
         }
     });
 
-    $('#galeri-photobox').photobox('a', {
+    $('.galeri-photobox').photobox('a', {
         time:0,
         thumbs:false,
     });
