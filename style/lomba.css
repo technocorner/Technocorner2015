@@ -110,7 +110,8 @@ body {
     width: 900px;
     height: 850px;
     text-align: left;
-    padding:5%;
+    padding:10%;
+    padding-top: 0%;
     overflow-y: scroll;
 }
     .isi ul{
