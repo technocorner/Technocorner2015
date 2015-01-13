@@ -26,4 +26,8 @@ $(document).ready(function() {
         $('#content').removeClass('lomba-menu-click');
         $('#download').addClass('lomba-menu-click');
     });
+
+    // Load navigator headbar and footer
+    $('nav#headbar').load('part.navigation.html #head-inner');
+    $('footer').load('part.footer.html #footer-inner');
 });
