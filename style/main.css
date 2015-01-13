@@ -46,6 +46,11 @@ h2 {
     font-size: 1.25em;
     font-weight: 200;
 }
+
+.pure-g {
+    padding: 0 1em 0 3em;
+}
+
 .background-hitam {
     background-color: #323232;
 }
