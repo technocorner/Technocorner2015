@@ -3,15 +3,16 @@
   <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <title>Technocorner 2015 </title>
+    <title>Technocorner 2015</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link type="text/plain" rel="author" href="humans.txt" />
 
     <!-- Style -->
     <link rel="stylesheet" href="lib/jquery.fullpage/jquery.fullPage.css" />
-    <link rel="stylesheet" href="lib/nprogress/nprogress.css" />
     <link rel="stylesheet" href="lib/yahoo.pure/pure-min.css" />
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
+    <link rel="stylesheet" type="text/css" href="lib/photobox/photobox.css">
 
     <!-- Library Script -->
     <!--[if IE]>
@@ -22,7 +23,8 @@
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/jquery.fullpage/jquery.fullPage.js"></script>
-    <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/photobox/photobox.js"></script>
+
 
     <!-- Our Stlye -->
     <link rel="stylesheet" href="style/index.css" />
@@ -40,10 +42,10 @@
         </div>
         <div id="head-menu" class="pure-u-1-2">
           <ul class="menu-list">
-            <li class="menu-listitem">Home</li>
-            <li class="menu-listitem">Competition</li>
-            <li class="menu-listitem">News</li>
-            <li class="menu-listitem">Gallery</li>
+            <a href="index.html"><li class="menu-listitem">Home</li></a>
+            <a href="index.html#excerpt"><li class="menu-listitem">Competition</li></a>
+            <a href="index.html#news"><li class="menu-listitem">News</li></a>
+            <a href="galeri.html"><li class="menu-listitem">Gallery</li></a>
           </ul>
         </div>
       </div>
@@ -67,6 +69,103 @@
 
       <!-- Landing selesai -->
 
+ <!--
+      #
+      # Ini adalah bagian news
+      #
+      -->
+
+      <div class="section background-hitam" id="news">
+        <h1>News</h1>
+        <div class="pure-g">
+          <div id="new-info-holder" class="pure-u-1-3">
+			<h2>Lorem Ipsum</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  </div>
+
+		  <div id="new-info-holder" class="pure-u-1-3">
+			<h2>Lorem Ipsum</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  </div>
+
+		  <div id="new-info-holder" class="pure-u-1-3">
+			<h2>Lorem Ipsum</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  </div>
+        </div>
+      </div>
+
+      <!-- News selesai -->
+
+      <!--
+      #
+      # Ini adalah bagian slide event-event
+      #
+      -->
+
+      <div class="section background-cerah" id="excerpt">
+        <div id="LF" class="slide" data-anchor="LF">
+          <div class="pure-g">
+            <div class="pure-u-1">
+				<img src="img/logo-LF-polygon.png"></img>
+              <h1 id="font" class="title">LINE FOLLOWER COMPETITION</h1>
+              <p id="font"> Bisa membuat robot pintar penelusur garis yang berani diadu kecepatan dan keluwesannya? Nantikan kontesnya di Technocorner. <br/><br/>
+                  Ikuti kontesnya dan jadilah juara! Wuzzz..!
+                </p>
+            </div>
+          </div>
+        </div>
+
+		<div id="SDC" class="slide" data-anchor="SDC">
+          <div class="pure-g">
+            <div class="pure-u-1">
+				<img src="img/logo-sdc-polygon.png"></img>
+              <h1 id="font" class="title">SOFTWARE DEVLOPMENT COMPETITION</h1>
+              <p id="font">Punya ide kreatif yang dapat diimplementasikan dalam bentuk software? Nah, yang satu ini cocok buat kamu. Kompetisikan ide dan software buatanmu dengan yang lain. Jangan mau kalah!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="EEC" class="slide" data-anchor="EEC">
+          <div class="pure-g">
+            <div class="pure-u-1">
+				<img src="img/logo-eec-polygon.png"></img>
+              <h1 id="font" class="title">ELECTRICAL ENGINEERING COMPETITION</h1>
+              <p id="font">Merupakan kompetisi Olimpiade Matematika dan Fisika tingkat SMA bidang kelistrikan yang diikuti oleh berbagai sekolah dari penjuru Indonesia. Buktikan pengetahuanmu dengan bersaing bersama teman-teman dari berbagai daerah!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="nextevent" class="slide" data-anchor="EXPO">
+          <div class="pure-g">
+            <div class="pure-u-1">
+              <h1 id="font" class="title">TECHNOEXPO</h1>
+              <p id="font">Bosen dengan keseharian dan pengen refreshing? Nantikan TechnoExpo di Technocorner 2015 yang seru!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="SEMNAS" class="slide" data-anchor="SEMNAS">
+          <div class="pure-g">
+            <div class="pure-u-1">
+				<img src="img/logo-semnas-polygon.png"></img>
+              <h1 id="font" class="title">SEMINAR NASIONAL</h1>
+              <p id="font">Demam dengan teknologi terbaru? Mau update ilmu tentang teknologi yang lebih canggih? Ingin tahu dan bersiap soal masalah perkembangan teknologi? Pas deh, Seminar Nasional adalah acara yang tepat!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event selesai -->
+
+
 	  <!--
       #
       # Ini adalah bagian Video
@@ -82,7 +181,7 @@
       		</div>
           </div>
     	</div>
-    	  
+
         <div id="video" class="slide" data-anchor="video-2">
     	  <div class="pure-g">
       		<div class="pure-u-1">
@@ -92,7 +191,7 @@
       		</div>
     	  </div>
     	</div>
-   
+
    		<div id="video" class="slide" data-anchor="video-3">
    		  <div class="pure-g">
    			<div class="pure-u-1">
@@ -112,127 +211,129 @@
 
       -->
 
-      <div class="section background-cerah" id="quote">
-        <h1>"TC keren"</h1>
-        <small>ceritanya quote</small>
-      </div>
-
-      <!--
-      #
-      # Ini adalah bagian news
-      #
-      -->
-
-      <div class="section background-hitam" id="news">
+      <div class="background-cerah" id="quote">
+        <h1>Quote</h1>
         <div class="pure-g">
-          <div id="new-info-holder" class="pure-u-1-3">
-			<h2 id="font">Lorem Ipsum</h2>
-			<p id="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		  </div>
-		  
-		  <div id="new-info-holder" class="pure-u-1-3">
-			<h2 id="font">Lorem Ipsum</h2>
-			<p id="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		  </div>
-		  
-		  <div id="new-info-holder" class="pure-u-1-3">
-			<h2 id="font">Lorem Ipsum</h2>
-			<p id="font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		  </div>	             
-        </div>	
+          <div class="pure-u-1-3">
+            <blockquote>Technocorner adalah acara yang paling menajubkan sepanjang tahun!</blockquote>
+            <small>Andi - Pemenang SDC 2014</small>
+          </div>
+          <div class="pure-u-1-3">
+            <blockquote>Saya tidak akan pernah melupakan teman-teman dan pengalaman yang saya alami selama Technocorner yang luar biasa ini.</blockquote>
+            <small>Budi - Peserta lomba EEC 2014</small>
+          </div>
+          <div class="pure-u-1-3">
+            <blockquote>Wow wow, sangat keren.</blockquote>
+            <small>Cumi - Panitia</small></div>
+        </div>
       </div>
 
-      <!-- News selesai -->
+     
 
       <!--
-      #
-      # Ini adalah bagian slide event-event
-      #
+
+      # Ini adalah bagian Galeri foto
+
       -->
 
-      <div class="section" id="excerpt">
-        <div id="LF" class="slide" data-anchor="LF">
+      <div id="galeri" class="background-hitam">
+        <h1>Galeri</h1>
+        <div id="galeri-photobox">
           <div class="pure-g">
-            <div class="pure-u-1">
-				<img src="img/logo-LF-polygon.png"></img>
-              <h1 id="font" class="title">LINE FOLLOWER COMPETITION</h1>
-              <p id="font"> Bisa membuat robot pintar penelusur garis yang berani diadu kecepatan dan keluwesannya? Nantikan kontesnya di Technocorner. <br/><br/>
-                  Ikuti kontesnya dan jadilah juara! Wuzzz..!
-                </p>               
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/1">
+                <img src="http://lorempixel.com/300/200/cats/1" alt="Foto ke 1">
+              </a>
+            </div>
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/2">
+                <img src="http://lorempixel.com/300/200/cats/2" alt="Foto ke 2">
+              </a>
+            </div>
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/3">
+                <img src="http://lorempixel.com/300/200/cats/3" alt="Foto ke 3">
+              </a>
+            </div>
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/4">
+                <img src="http://lorempixel.com/300/200/cats/4" alt="Foto ke 4">
+              </a>
+            </div>
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/5">
+                <img src="http://lorempixel.com/300/200/cats/5" alt="Foto ke 5">
+              </a>
+            </div>
+            <div class="pure-u-1-3">
+              <a href="http://lorempixel.com/800/500/cats/6">
+                <img src="http://lorempixel.com/300/200/cats/6" alt="Foto ke 6">
+              </a>
             </div>
           </div>
         </div>
-        
-		<div id="SDC" class="slide" data-anchor="SDC">
-          <div class="pure-g">
-            <div class="pure-u-1">
-				<img src="img/logo-sdc-polygon.png"></img>
-              <h1 id="font" class="title">SOFTWARE DEVLOPMENT COMPETITION</h1>
-              <p id="font">Punya ide kreatif yang dapat diimplementasikan dalam bentuk software? Nah, yang satu ini cocok buat kamu. Kompetisikan ide dan software buatanmu dengan yang lain. Jangan mau kalah!
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div id="EEC" class="slide" data-anchor="EEC">
-          <div class="pure-g">
-            <div class="pure-u-1">
-				<img src="img/logo-eec-polygon.png"></img>
-              <h1 id="font" class="title">ELECTRICAL ENGINEERING COMPETITION</h1>
-              <p id="font">Merupakan kompetisi Olimpiade Matematika dan Fisika tingkat SMA bidang kelistrikan yang diikuti oleh berbagai sekolah dari penjuru Indonesia. Buktikan pengetahuanmu dengan bersaing bersama teman-teman dari berbagai daerah!
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div id="nextevent" class="slide" data-anchor="EXPO">
-          <div class="pure-g">
-            <div class="pure-u-1">
-              <h1 id="font" class="title">TECHNOEXPO</h1>
-              <p id="font">Bosen dengan keseharian dan pengen refreshing? Nantikan TechnoExpo di Technocorner 2015 yang seru!
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div id="SEMNAS" class="slide" data-anchor="SEMNAS">
-          <div class="pure-g">
-            <div class="pure-u-1">
-				<img src="img/logo-semnas-polygon.png"></img>
-              <h1 id="font" class="title">SEMINAR NASIONAL</h1>
-              <p id="font">Demam dengan teknologi terbaru? Mau update ilmu tentang teknologi yang lebih canggih? Ingin tahu dan bersiap soal masalah perkembangan teknologi? Pas deh, Seminar Nasional adalah acara yang tepat!
-              </p>
-            </div>
-          </div>
-        </div>
+        <h2><a href="galeri.html" class="see-button">See more <strong>images</strong></a></h2>
       </div>
 
-      <!-- Event selesai -->
+      <!-- Galeri selesai -->
 
-
-      
       <!--
 
       # Ini adalah bagian penutup
 
-      -->      
-      <div class="section background-hitam" id="closing">
+      -->
+      <div class="sections background-cerah" id="closing">
         <div class="pure-g">
-          <div id="new-info-holder" class="pure-u-1-2">
-			<h1 id="font">FOOTER</h1>
-		  </div>
-		  
-		  <div id="new-info-holder" class="pure-u-1-2">
-			<h1 id="font">SPONSOR</h1>
-        </div>	
+          <div class="pure-u-1-3 closing-contact">
+            <h1>Kontak</h1>
+            <p>
+              <img src="img/icon-cp.png" alt="Kontak ketua" class="ico-footer"> Kristian Saragih (ketua) - 085762013010
+            </p>
+            <p>
+              <img src="img/icon-alamat.png" alt="Alamat kami" class="ico-footer"> Jalan Grafika No. 2 Yogyakarta 55281
+            </p>
+            <p>
+              <img src="img/icon-peta.png" alt="Peta" class="ico-footer"> <a href="https://www.google.co.id/maps/place/Teknik+Elektro+UGM/@-7.760601,110.3696769,15z/data=!4m2!3m1!1s0x2e7a585eaaaaaaab:0x3da1c96ae93e764d?hl=en" target="_blank">Lihat lokasi kampus di Google Map</a></p>
+  		    </div>
+
+          <div class="pure-u-1-3 closing-medsos make-footer-border">
+            <h1>Temui kami di</h1>
+            <p>
+              <a href="facebook.com/TechnocornerUGM" target="_blank"><img src="img/icon-sosmedf.png" alt="Facebook" class="ico-footer"> TechnocornerUGM</a>
+            </p>
+            <p>
+              <a href="twitter.com/TechnocornerUGM" target="_blank"><img src="img/icon-sosmedt.png" alt="Twitter" class="ico-footer"> @TechnocornerUGM</a>
+            </p>
+          </div>
+
+    		  <div class="pure-u-1-3 closing-sponsor">
+            <h1>Disponsori oleh</h1>
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/1/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/2/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/3/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/4/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/5/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/6/Sponsor" alt="">
+            <img class="pure-img" src="http://lorempixel.com/75/75/business/7/Sponsor" alt="">
+          </div>
+        </div>
       </div>
 
+    	 <!-- Penutup selesai -->
 
-	 <!-- Penutup selesai -->
+      <!--
 
+      #Ini adalah bagian Common... apa... yang ada lisensinya itu
+
+      -->
+
+      <div id="copyright" class="background-hitam">
+        <div class="pure-g">
+          <div class="pure-u-1-1">
+            <p>Hak cipta © 2015 | Tim Technocorner</p>
+          </div>
+        </div>
+      </div>
 
     </div> <!-- Tutup fullpage.js -->
 

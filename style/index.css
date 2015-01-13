@@ -2,24 +2,21 @@
 /*
  * General Style
  */
-
-/* This font is not used by anything
-
 @font-face {
-    font-family: 'OpenSans';
-    src: url('../font/OpenSans-Regular.ttf');
-}
- */
-
-@font-face {
-    font-family: 'OpenSans Bold';
-    src: url('../font/OpenSans-Bold.ttf');
+    font-family: "OpenSans";
+    src: url("../font/OpenSans-Regular.ttf");
 }
 
 
 @font-face {
-    font-family: 'OpenSans Light';
-    src: url('../font/OpenSans-Light.ttf');
+    font-family: "OpenSans Bold";
+    src: url("../font/OpenSans-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: "OpenSans Light";
+    src: url("../font/OpenSans-Light.ttf");
 }
 
 * {
@@ -32,28 +29,27 @@ body, html {
     min-height: 100%;
     margin: 0;
     font-size: 12pt;
+    font-family: "OpenSans";
 }
 
-h1, h2, h3,
+h1, h2, h3, {
+    font-family: "OpenSans Light", sans-serif;
+}
+
 p {
-    font-family: 'OpenSans Light', sans-serif;
+    font-family: "OpenSans", sans-serif;
 }
 
 h1 {
     margin: 0;
-    font-size: 4em;
-    font-weight: 100;
+    font-size: 2em;
+    font-weight: 150;
 }
 
 h2 {
     font-size: 1.25em;
-    font-weight: 100;
-}
-
-p {
     font-weight: 200;
 }
-
 
 
 /*
@@ -61,10 +57,6 @@ p {
  */
 .pure-g {
     padding: 0 1em 0 3em;
-}
-
-.pure-g > div {
-
 }
 
 /* responsive mode */
@@ -84,7 +76,6 @@ p {
  * fullPage Style
  */
 .section {
-    padding: 0 40px 0 10px;
 }
 .fp-controlArrow {
     top: 99% !important;
@@ -137,6 +128,11 @@ header.fixed-mode {
     z-index: 1000;
 }
 
+header a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 #head-inner {
     width: 100%;
     height: 100%;
@@ -153,7 +149,7 @@ header.fixed-mode {
 }
 
 .head-logo-text {
-    font-family: 'OpenSans Bold';
+    font-family: "OpenSans Bold";
 }
 
 #head-menu {
@@ -171,13 +167,15 @@ header.fixed-mode {
     cursor: pointer;
     display: inline-block;
     height: 100%;
-    padding: 5% 4%;
+    padding: 6% 4%;
     transition: 300ms;
 }
 
 .menu-listitem:hover {
     background-color: #252525;
 }
+
+
 
 #landing {
     background-color: #BF423C;
@@ -191,15 +189,43 @@ header.fixed-mode {
     size: 100% 100%;
 }
 
+
+
 #bideo {
     background-color: #323232;
     text-align: center;
     color: #f0f0f0;
 }
 
+#quote {
+    padding: 10px 20px 30px 20px;
+    color: white;
+}
+
+#quote blockquote {
+    font: italic 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
+    background: url(../img/close.png) no-repeat right bottom;
+    padding-left: 0px;
+    text-indent: -18px;
+}
+
+#quote blockquote:first-letter {
+  background: url(../img/open.png) no-repeat left top;
+  padding-left: 18px;
+  font: italic 1.4em Georgia, "Times New Roman", Times, serif;
+}
+
+#quote h1 {
+    text-align: center;
+}
+
+#quote small {
+    padding-left: 22px;
+    font-size: 1em;
+}
+
 #excerpt {
     background-size: cover;
-    background-color: #ed6333;
     text-align: center;
     color: #f0f0f0;
 }
@@ -210,9 +236,117 @@ header.fixed-mode {
 
 .slide#nextevent {}
 
-#closing {
-    background-color: #323232;
+
+
+
+#news {
+    /* @dhika : warna background aku pindah ke class .background-hitam
+                Ngasih warna ke section pake class .background-hitam/cerah */
+    color: white;
+}
+
+#news h1 {
     text-align: center;
+}
+
+#news h2 {
+    font-size: 2em;
+}
+#news p {
+
+}
+
+#LF {
+    background-image: url('../img/background-lf.jpg');
+}
+
+#SDC {
+    background-image: url('../img/background-sdc.jpg');
+}
+
+#EEC {
+    background-image: url('../img/background-eec.jpg');
+}
+
+#SEMNAS {
+    background-image: url('../img/background-semnas.jpg');
+}
+
+
+#galeri {
+    padding: 20px 20px;
+    color : white;
+    text-align: center;
+}
+
+#galeri h1 {
+    text-align: center;
+}
+
+#galeri .pure-u-1-3 {
+    padding: 20px 0;
+}
+
+#galeri .see-button {
+    padding: 0.5em;
+    border: 1px solid white;
+    transition: all 200ms ease;
+}
+
+#galeri .see-button:hover {
+    background-color: white;
+    color: #323232;
+}
+
+#closing {
+    color: white;
+    text-align: left;
+    padding: 1em 0;
+}
+
+#closing h1 {
+    font-size: 2em;
+    margin: 8px 0;
+}
+
+#closing p {
+    margin: 5px 0;
+}
+
+#closing a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#closing .ico-footer {
+    width: 16px;
+    height: 16px;
+}
+
+#closing img {
+    display: inline-block;
+}
+
+#closing .closing-contact {
+    padding: 0 2em 0 0;
+}
+
+#closing .closing-medsos {
+    padding: 0 2em;
+}
+
+#closing .closing-sponsor {
+    padding: 0 0 0 2em;
+}
+
+#closing .make-footer-border {
+    border-right: solid;
+    border-left: solid;
+    border-color: white;
+}
+
+#copyright {
+    color: white;
 }
 
 
@@ -238,57 +372,6 @@ header.fixed-mode {
     font-family: 'OpenSans Light', sans-serif;
     font-style: italic;
     font-size: 1.2em;
-}
-
-.logo-closing {
-    width: 80px;
-    padding: 0.2em;
-    transition: ease 300ms;
-}
-.logo-closing:hover {
-    width: 80px;
-    padding: 0.2em;
-    opacity: 0.5;
-    transition: ease 300ms;
-}
-
-.sosmed-ico {
-    width: 24px;
-	vertical-align: middle;
-	transition: ease 300ms;
-}
-
-.sosmed.container {
-    display:inline-block;
-    margin: 0 20px 0 20px;
-    vertical-align: center;
-}
-
-.sosmed-link {
-    padding: 1em;
-    text-decoration: none;
-}
-
-.sosmed-text {
-    color: white;
-	transition: ease 300ms;
-}
-
-.sosmed-link:hover .sosmed-ico {
-	border-radius:12px;
-	transition: ease 300ms;
-}
-
-.sosmed-link:hover .sosmed-text {
-	color: rgba(255,255,255,0.5);
-	transition: ease 300ms;
-}
-
-#sos-right {
-    text-align: left;
-}
-#sos-left {
-    text-align: right;
 }
 
 /*
@@ -343,28 +426,7 @@ header.fixed-mode {
     background-color: #323232;
 }
 .background-cerah {
-    background-color: #ed6333;
-}
-
-#news {
-	/* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
-}
-
-#LF {
-	background-image: url('../img/background-lf.jpg');
-}
-
-#SDC {
-	background-image: url('../img/background-sdc.jpg');
-}
-
-#EEC {
-	background-image: url('../img/background-eec.jpg');
-}
-
-#SEMNAS {
-	background-image: url('../img/background-semnas.jpg');
+    background-color: #BF423C;
 }
 
 #font {
