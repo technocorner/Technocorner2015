@@ -1,26 +1,27 @@
 $(document).ready(function() {
     $('#content-isi').hide();
     $('#download-isi').hide();
+    $('#peraturan').addClass('lomba-menu-click');
     $('#peraturan').click(function(){
-        $('#content-isi').hide();
-        $('#download-isi').hide();
-        $('#peraturan-isi').show();
+        $('#content-isi').hide(500);
+        $('#download-isi').hide(500);
+        $('#peraturan-isi').show(500);
         $('#content').removeClass('lomba-menu-click');
         $('#download').removeClass('lomba-menu-click');
         $('#peraturan').addClass('lomba-menu-click');
     });
     $('#content').click(function(){
-        $('#peraturan-isi').hide();
-        $('#download-isi').hide();
-        $('#content-isi').show();
+        $('#peraturan-isi').hide(500);
+        $('#download-isi').hide(500);
+        $('#content-isi').show(500);
         $('#download').removeClass('lomba-menu-click');
         $('#peraturan').removeClass('lomba-menu-click');
         $('#content').addClass('lomba-menu-click');
     });
     $('#download').click(function(){
-        $('#content-isi').hide();
-        $('#peraturan-isi').hide();
-        $('#download-isi').show();
+        $('#content-isi').hide(500);
+        $('#peraturan-isi').hide(500);
+        $('#download-isi').show(500);
         $('#peraturan').removeClass('lomba-menu-click');
         $('#content').removeClass('lomba-menu-click');
         $('#download').addClass('lomba-menu-click');
