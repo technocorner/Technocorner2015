@@ -98,23 +98,27 @@ body{
         transition: ease 300ms;
         color: #A2353A;
     }
-#isi{
+    .lomba-menu-click{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
+.isi{
     background-color: white;
-    width: auto;
+    width: 900px;
     height: 850px;
     text-align: left;
     padding:5%;
-    max-width: 90%;
     overflow-y: scroll;
 }
-    #isi ul{
+    .isi ul{
         font-family: OpenSans-Bold;
         font-size: 30pt;
         text-indent: -43px;
         line-height: 300%;
         list-style-image: url("../img/bullet.gif");
     }
-    #isi ul li{
+    .isi ul li{
         font-family: OpenSans-Light;
         font-size: 20pt;
         text-indent: 0px;
