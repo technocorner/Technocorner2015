@@ -115,7 +115,7 @@ h2 {
  */
 /* Landing */
 #landing {
-    background-color: #d4543b/* #BF423C */;
+    background-color: #d4543b; /* #BF423C */
     background-size: 100% 100%;
     margin-top: 70px;
 }
@@ -168,27 +168,25 @@ h2 {
     color: #f0f0f0;
 }
 
-#LF {
+#subevent-lf {
     background-image: url('../img/background-lf.jpg');
 }
 
-#SDC {
+#subevent-sdc {
     background-image: url('../img/background-sdc.jpg');
 }
 
-#EEC {
+#subevent-eec {
     background-image: url('../img/background-eec.jpg');
 }
 
-#SEMNAS {
+#subevent-expo {
     background-image: url('../img/background-semnas.jpg');
 }
 
-.slide#video
-
-.slide#competition {}
-
-.slide#nextevent {}
+#subevent-semnas {
+    background-image: url('../img/background-semnas.jpg');
+}
 
 /* News */
 #news {
