@@ -1,4 +1,51 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../font/OpenSans-Regular.ttf");
+}
 
+
+@font-face {
+    font-family: "OpenSans Bold";
+    src: url("../font/OpenSans-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: "OpenSans Light";
+    src: url("../font/OpenSans-Light.ttf");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100%;
+    margin: 0;
+    font-size: 12pt;
+    font-family: "OpenSans";
+}
+
+h1, h2, h3, {
+    font-family: "OpenSans Light", sans-serif;
+}
+
+p {
+    font-family: "OpenSans", sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 150;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: 200;
+}
 .background-hitam {
     background-color: #323232;
 }
