@@ -13,7 +13,6 @@ body {
     height: 1700px;
     padding: 0px;
     margin: 0px;
-
     font-size: 12pt;
 }
 
@@ -114,6 +113,7 @@ body {
     padding:10%;
     padding-top: 0%;
     overflow-y: scroll;
+    
 }
     .isi ul{
         font-family: OpenSans-Bold;
@@ -138,7 +138,23 @@ body {
         border: 1px solid black;
         padding: 8px
     }
-
+    #download-isi{
+        text-align: center;
+    }
+    #download-isi ul li{
+        list-style: none;
+    }
+    #download-here{
+        color: #A2353A;
+        line-height: 0%;
+        margin-top: 10%;
+    }
+    #download-here p{
+        font-family: OpenSans-Bold;
+    }
+    #download-pict{
+        width: 15%;
+    }
 
 /* FOOTER STYLE */
 
