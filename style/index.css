@@ -110,7 +110,10 @@ h2 {
 }
 
 
-/* Section Style */
+/*
+ * Section Style
+ */
+/* Landing */
 #landing {
     background-color: #d4543b/* #BF423C */;
     background-size: 100% 100%;
@@ -123,12 +126,14 @@ h2 {
     size: 100% 100%;
 }
 
+/* Video */
 #bideo {
     background-color: #323232;
     text-align: center;
     color: #f0f0f0;
 }
 
+/* Quote Strip */
 #quote {
     padding: 10px 20px 30px 20px;
     color: white;
@@ -156,33 +161,11 @@ h2 {
     font-size: 1em;
 }
 
+/* Competition */
 #excerpt {
     background-size: cover;
     text-align: center;
     color: #f0f0f0;
-}
-
-.slide#video
-
-.slide#competition {}
-
-.slide#nextevent {}
-
-#news {
-    /* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
-    color: white;
-}
-
-#news h1 {
-    text-align: center;
-}
-
-#news h2 {
-    font-size: 2em;
-}
-#news p {
-
 }
 
 #LF {
@@ -201,7 +184,31 @@ h2 {
     background-image: url('../img/background-semnas.jpg');
 }
 
+.slide#video
 
+.slide#competition {}
+
+.slide#nextevent {}
+
+/* News */
+#news {
+    /* @dhika : warna background aku pindah ke class .background-hitam
+                Ngasih warna ke section pake class .background-hitam/cerah */
+    color: white;
+}
+
+#news h1 {
+    text-align: center;
+}
+
+#news h2 {
+    font-size: 2em;
+}
+#news p {
+
+}
+
+/* Gallery */
 #galeri {
     padding: 20px 20px;
     color : white;
