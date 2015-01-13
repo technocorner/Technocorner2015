@@ -1,0 +1,32 @@
+body {
+    padding-top: 70px;
+}
+
+#headbar {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: 'OpenSans Light';
+}
+
+#galeri {
+    min-height: 100%;
+}
+
+.galeri-page img {
+    -webkit-transition: all 200ms ease; /* Safari and Chrome */
+    -moz-transition: all 200ms ease; /* Firefox */
+    -ms-transition: all 200ms ease; /* IE 9 */
+    -o-transition: all 200ms ease; /* Opera */
+    transition: all 200ms ease;
+}
+
+.galeri-page img:hover {
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+    transform:scale(1.1);
+
+    opacity: 1;
+}
