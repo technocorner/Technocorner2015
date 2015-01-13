@@ -112,7 +112,7 @@ h2 {
 
 /* Section Style */
 #landing {
-    background-color: #BF423C;
+    background-color: #d4543b/* #BF423C */;
     background-size: 100% 100%;
     margin-top: 70px;
 }
@@ -122,8 +122,6 @@ h2 {
     display: block;
     size: 100% 100%;
 }
-
-
 
 #bideo {
     background-color: #323232;
@@ -169,9 +167,6 @@ h2 {
 .slide#competition {}
 
 .slide#nextevent {}
-
-
-
 
 #news {
     /* @dhika : warna background aku pindah ke class .background-hitam
@@ -325,8 +320,9 @@ h2 {
 .background-hitam {
     background-color: #323232;
 }
+
 .background-cerah {
-    background-color: #BF423C;
+    background-color: #d4543b
 }
 
 #font {
