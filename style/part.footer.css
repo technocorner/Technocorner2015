@@ -43,6 +43,8 @@
 }
 
 #closing .make-footer-border {
+    height: 100%;
+    margin: 0 0 auto 0;
     border-right: solid;
     border-left: solid;
     border-color: white;
