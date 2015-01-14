@@ -15,16 +15,16 @@ $(document).ready(function() {
         // Threshold position to transform headbar menu
         if ($(this).scrollTop() < 500) {
             headbar.visible = false;
-            $('nav').removeClass('fixed-mode');
+            $('nav#headbar').removeClass('fixed-mode');
             return;
         }
 
-        $('nav').addClass('fixed-mode');
+        $('nav#headbar').addClass('fixed-mode');
 
         // Check it is already visible? If not, make it visible
         if (headbar.visible == false) {
             headbar.visible = true;
-            $('nav').css('opacity', 0).animate({opacity: 1}, 500);
+            $('nav#headbar').css('opacity', 0).animate({opacity: 1}, 500);
         }
     });
 });
