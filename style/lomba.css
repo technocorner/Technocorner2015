@@ -23,7 +23,7 @@ body {
 
 /* HEADER STYLE */
 
-#header{
+header{
     height: 32%;
     background-image: url(../img/background-eec-ori.jpg);
     background-repeat: no-repeat;
@@ -31,14 +31,13 @@ body {
     display: flex;
     align-items: center;
 }
-#header div{
-    flex: 1;
-}
-#header1{
+
+#header-inner{
+    margin: 15% 15% 0 15%;
     text-align: center;
 }
 
-#header-pict{
+#header-img{
     width: 80%;
 }
 
