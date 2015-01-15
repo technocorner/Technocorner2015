@@ -190,8 +190,8 @@ h2 {
 
 /* News */
 #news {
-    /* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
+    /* Color theme now using .dark / .light class, OK? */
+    /* Ok.. I see... light and dark forces */
     color: white;
 }
 
@@ -322,11 +322,11 @@ h2 {
     }
 }
 
-.background-hitam {
+.dark {
     background-color: #323232;
 }
 
-.background-cerah {
+.light {
     background-color: #d4543b
 }
 

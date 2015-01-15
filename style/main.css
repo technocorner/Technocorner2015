@@ -51,9 +51,9 @@ h2 {
     padding: 0 1em 0 3em;
 }
 
-.background-hitam {
+.dark {
     background-color: #323232;
 }
-.background-cerah {
+.light {
     background-color: #BF423C;
 }
