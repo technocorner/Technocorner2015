@@ -31,6 +31,9 @@ header{
     display: flex;
     align-items: center;
 }
+header div{
+    flex: 1;
+}
 
 #header-inner{
     margin: 15% 15% 0 15%;
