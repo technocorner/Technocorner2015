@@ -139,17 +139,20 @@ header{
     }
     #download-isi{
         text-align: center;
+        padding-top: 10%;
     }
     #download-isi ul li{
         list-style: none;
+        margin-bottom: 10%;
     }
     #download-here{
         color: #A2353A;
         line-height: 0%;
-        margin-top: 10%;
+        
     }
     #download-here p{
         font-family: OpenSans-Bold;
+        font-size: 1.5em;
     }
     #download-pict{
         width: 15%;
