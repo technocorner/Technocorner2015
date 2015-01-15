@@ -147,8 +147,11 @@ header{
     }
     #download-here{
         color: #A2353A;
-        line-height: 0%;
-        
+        line-height: 0%;        
+    }
+    #download-here:hover #download-pict{
+        width:16%;    
+        transition: ease 300ms;
     }
     #download-here p{
         font-family: OpenSans-Bold;
@@ -156,6 +159,7 @@ header{
     }
     #download-pict{
         width: 15%;
+        transition: ease 300ms;
     }
 
 /* FOOTER STYLE */
