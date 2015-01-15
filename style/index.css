@@ -250,6 +250,19 @@ h2 {
     color: #323232;
 }
 
+.see-button {
+	padding: 0.5em;
+    border: 1px solid white;
+    transition: all 200ms ease;
+}
+
+.see-button: hover {
+	background-color: white;
+    color: #323232;
+}
+
+
+
 .event-box {
     padding: 1em;
 }
