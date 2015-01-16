@@ -77,6 +77,11 @@ h2 {
  */
 .section {
 }
+
+.slide {
+    background-size: cover;
+}
+
 .fp-controlArrow {
     top: 99% !important;
 }
@@ -348,7 +353,7 @@ h2 {
 	font-weight: bold;
 }
 
-#box { 
+#box {
 	background: blue;
 	border-radius: 10px;
 	color: white;
