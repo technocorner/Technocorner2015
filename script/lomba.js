@@ -33,4 +33,6 @@ $(document).ready(function() {
         // Activate clicked menu-item
         $(this).addClass('lomba-menu-item-click');
     });
+    $('.article').hide();
+    $('.lomba-menu-item.eventdetail').click();
 });
