@@ -33,6 +33,10 @@ $(document).ready(function() {
         // Activate clicked menu-item
         $(this).addClass('lomba-menu-item-click');
     });
+
+    // Hide immediately on load
     $('.article').hide();
+
+    // Then simulate first time click
     $('.lomba-menu-item.eventdetail').click();
 });
