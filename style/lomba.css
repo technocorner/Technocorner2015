@@ -81,7 +81,7 @@ header div{
         text-align: center;
         padding-bottom: 50px;
     }
-    .lomba-menu{
+    .lomba-menu-item{
         background-color: transparent;
         width: 300px;
         text-align: left;
@@ -96,18 +96,18 @@ header div{
         margin-bottom: 15px;
         margin-top: 15px;
     }
-    .lomba-menu:hover{
+    .lomba-menu-item:hover{
         background-color: white;
         transition: ease 300ms;
         color: #A2353A;
     }
-    .lomba-menu-click{
+    .lomba-menu-item-click{
         background-color: white;
         transition: ease 300ms;
         color: #A2353A;
     }
 
-.isi{
+.article{
     background-color: white;
     width: 900px;
     height: 850px;
@@ -117,14 +117,14 @@ header div{
     overflow-y: scroll;
 }
 
-    .isi ul{
+    .article ul{
         font-family: OpenSans-Bold;
         font-size: 1.5em;
         text-indent: -43px;
         line-height: 300%;
         list-style-image: url("../img/bullet.gif");
     }
-    .isi ul li{
+    .article ul li{
         font-family: OpenSans-Light;
         font-size: 0.70em;
         text-indent: 0px;
@@ -150,10 +150,10 @@ header div{
     }
     #download-here{
         color: #A2353A;
-        line-height: 0%;        
+        line-height: 0%;
     }
     #download-here:hover #download-pict{
-        width:16%;    
+        width:16%;
         transition: ease 300ms;
     }
     #download-here p{

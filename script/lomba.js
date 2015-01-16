@@ -1,33 +1,36 @@
 $(document).ready(function() {
-    $('#content-isi').hide();
-    $('#download-isi').hide();
-    $('#peraturan').addClass('lomba-menu-click');
-    $('#peraturan').click(function(){
-        $('#content-isi').hide(500);
-        $('#download-isi').hide(500);
-        $('#peraturan-isi').show(500);
-        $('#content').removeClass('lomba-menu-click');
-        $('#download').removeClass('lomba-menu-click');
-        $('#peraturan').addClass('lomba-menu-click');
-    });
-    $('#content').click(function(){
-        $('#peraturan-isi').hide(500);
-        $('#download-isi').hide(500);
-        $('#content-isi').show(500);
-        $('#download').removeClass('lomba-menu-click');
-        $('#peraturan').removeClass('lomba-menu-click');
-        $('#content').addClass('lomba-menu-click');
-    });
-    $('#download').click(function(){
-        $('#content-isi').hide(500);
-        $('#peraturan-isi').hide(500);
-        $('#download-isi').show(500);
-        $('#peraturan').removeClass('lomba-menu-click');
-        $('#content').removeClass('lomba-menu-click');
-        $('#download').addClass('lomba-menu-click');
-    });
-
     // Load navigator headbar and footer
     $('nav#headbar').load('part.navigation.html #head-inner');
     $('footer').load('part.footer.html #footer-inner');
+
+    /*
+     * Technical README:
+     * Each page contains many section e.g. Description, Rules, Download, etc.
+     * Each section has menu-item (on the leftside of page, has class "lomba-menu-item section") and
+     * it's corresponding article <div> element (on the right of page, contains text, has class "article section").
+     * See the HTML for implementation.
+     */
+
+    /*
+     * Once one of menu-item is clicked, it does the following
+     */
+    $('.lomba-menu-item').click(function(){
+        // Detect what section class it is? e.g. download?
+        sectionClass = '.'                           // Add dot as class notation
+                     + $(this).attr('class')         // Get element class list e.g. "lomba-menu-item download"
+                     .replace('lomba-menu-item', '') // Remove .lomba-menu-item class from list e.g. " download"
+                     .replace(' ', '');              // Remove spaces remaining e.g. "download"
+
+        // Hide all article sections
+        $('.article').hide(500);
+
+        // Remove menuitem activate class
+        $('.lomba-menu-item').removeClass('lomba-menu-item-click');
+
+        // Show a section, the one we want
+        $('.article' + sectionClass).show(500);
+
+        // Activate clicked menu-item
+        $(this).addClass('lomba-menu-item-click');
+    });
 });
