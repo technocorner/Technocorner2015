@@ -112,12 +112,11 @@ header div{
  */
 /* Article Global style */
 .article{
-    background-color: white;
+    background-color: white;    
     width: 900px;
     height: 850px;
     text-align: left;
-    padding:10%;
-    padding-top: 0%;
+    padding:10%;    
     overflow-y: scroll;
 }
 
