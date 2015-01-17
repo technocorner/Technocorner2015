@@ -47,15 +47,15 @@
 .slides-pagination {
   position: absolute;
   z-index: 3;
-  bottom: 0;
+  bottom: 20px;
   text-align: center;
   width: 100%;
 }
 .slides-pagination a {
-  border: 2px solid #222;
+  border: 2px solid black;
   border-radius: 15px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -65,8 +65,8 @@
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
   margin: 2px;
   overflow: hidden;
-  text-indent: -100%;
+  text-indent: -9999%;
 }
 .slides-pagination a.current {
-  background: #222;
+  background: black;
 }
