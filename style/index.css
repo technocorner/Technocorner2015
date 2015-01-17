@@ -43,7 +43,7 @@ p {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    font-weight: 150;
+    font-weight: 300;
 }
 
 h2 {
@@ -80,31 +80,6 @@ h2 {
 
 .slide {
     background-size: cover;
-}
-
-.fp-controlArrow {
-    top: 99% !important;
-}
-
-.fp-controlArrow.fp-next {
-    border-oor: transparent transparent transparent #fff !important;
-    border-width: 10px 0px 10px 15px !important;
-    right: calc(50% - 56px) !important;
-}
-
-.fp-controlArrow.fp-prev {
-    border-color: transparent #fff transparent transparent !important;
-    border-width: 10px 15px 10px 0px !important;
-    left: calc(50% - 56px) !important;
-}
-
-.fp-slidesNav ul li a span {
-    border: 1px solid #832c43 !important;
-    background: none repeat scroll 0% 0% transparent;
-}
-
-.fp-slidesNav ul li a.active span {
-    background: none repeat scroll 0% 0% #f88637  !important;
 }
 
 @media screen and (max-width: 640px) {
@@ -381,5 +356,6 @@ h2 {
 }
 
 #new-info-holder {
+    margin-top: 2em;
 	overflow-y: scroll;
 }
