@@ -219,13 +219,13 @@ h2 {
     opacity: 0.6;
 }
 
-#galeri .see-button {
+.see-button {
     padding: 0.5em;
     border: 1px solid white;
     transition: all 200ms ease;
 }
 
-#galeri .see-button:hover {
+.see-button:hover {
     background-color: white;
     color: #323232;
 }
