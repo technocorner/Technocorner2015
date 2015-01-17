@@ -47,13 +47,36 @@ h2 {
     font-weight: 200;
 }
 
+<<<<<<< HEAD
+=======
+#landing {
+    background-color: #d4543b; /* #BF423C */
+    background-size: 100% 100%;
+    margin-top: 70px;
+}
+
+#landing img {
+    margin: 0 auto;
+    display: block;
+    size: 100% 100%;
+}
+
+>>>>>>> origin/master
 .pure-g {
     padding: 0 1em 0 3em;
 }
 
+<<<<<<< HEAD
 .background-hitam {
     background-color: #323232;
 }
 .background-cerah {
     background-color: #BF423C;
+=======
+.dark {
+    background-color: #323232;
+}
+.light {
+    background-color: #d4543b;
+>>>>>>> origin/master
 }

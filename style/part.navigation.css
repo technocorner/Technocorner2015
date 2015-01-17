@@ -64,3 +64,11 @@ nav a, a:link, a:visited {
 .menu-listitem:hover {
     background-color: #252525;
 }
+<<<<<<< HEAD
+=======
+
+/* Dhika: aku mau nambahin penanda menu yang lagi aktif... tapi gimana caranya nambahin class ke menu kalau menu nya diinclude otomatis pake javascript? */
+nav.menu-active {
+    background-color: #BF423C;
+}
+>>>>>>> origin/master
