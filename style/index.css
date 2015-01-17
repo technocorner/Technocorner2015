@@ -77,6 +77,11 @@ h2 {
  */
 .section {
 }
+
+.slide {
+    background-size: cover;
+}
+
 .fp-controlArrow {
     top: 99% !important;
 }
@@ -250,6 +255,19 @@ h2 {
     color: #323232;
 }
 
+.see-button {
+	padding: 0.5em;
+    border: 1px solid white;
+    transition: all 200ms ease;
+}
+
+.see-button: hover {
+	background-color: white;
+    color: #323232;
+}
+
+
+
 .event-box {
     padding: 1em;
 }
@@ -333,4 +351,35 @@ h2 {
 #font {
 	color: white;
 	font-weight: bold;
+}
+
+#box {
+	background: blue;
+	border-radius: 10px;
+	color: white;
+}
+
+#logo1 {
+	border: 0.5px solid #323232;
+	margin-left: 15em;
+	margin-top: 2em;
+}
+
+#logo2 {
+	border: 0.5px solid #323232;
+	margin-left: 5em;
+}
+
+#logo3 {
+	border: 0.5px solid #323232;
+	margin-left: 10em;
+}
+
+#logo4 {
+	border: 0.5px solid #323232;
+	margin-left: 15em;
+}
+
+#new-info-holder {
+	overflow-y: scroll;
 }
