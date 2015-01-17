@@ -43,7 +43,7 @@ p {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    font-weight: 150;
+    font-weight: 300;
 }
 
 h2 {
@@ -77,29 +77,9 @@ h2 {
  */
 .section {
 }
-.fp-controlArrow {
-    top: 99% !important;
-}
 
-.fp-controlArrow.fp-next {
-    border-oor: transparent transparent transparent #fff !important;
-    border-width: 10px 0px 10px 15px !important;
-    right: calc(50% - 56px) !important;
-}
-
-.fp-controlArrow.fp-prev {
-    border-color: transparent #fff transparent transparent !important;
-    border-width: 10px 15px 10px 0px !important;
-    left: calc(50% - 56px) !important;
-}
-
-.fp-slidesNav ul li a span {
-    border: 1px solid #832c43 !important;
-    background: none repeat scroll 0% 0% transparent;
-}
-
-.fp-slidesNav ul li a.active span {
-    background: none repeat scroll 0% 0% #f88637  !important;
+.slide {
+    background-size: cover;
 }
 
 @media screen and (max-width: 640px) {
@@ -110,9 +90,12 @@ h2 {
 }
 
 
-/* Section Style */
+/*
+ * Section Style
+ */
+/* Landing */
 #landing {
-    background-color: #BF423C;
+    background-color: #d4543b; /* #BF423C */
     background-size: 100% 100%;
     margin-top: 70px;
 }
@@ -123,14 +106,14 @@ h2 {
     size: 100% 100%;
 }
 
-
-
+/* Video */
 #bideo {
     background-color: #323232;
     text-align: center;
     color: #f0f0f0;
 }
 
+/* Quote Strip */
 #quote {
     padding: 10px 20px 30px 20px;
     color: white;
@@ -138,13 +121,13 @@ h2 {
 
 #quote blockquote {
     font: italic 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
-    background: url(../img/close.png) no-repeat right bottom;
+    background: url(../img/quote-close.png) no-repeat right bottom;
     padding-left: 0px;
     text-indent: -18px;
 }
 
 #quote blockquote:first-letter {
-  background: url(../img/open.png) no-repeat left top;
+  background: url(../img/quote-open.png) no-repeat left top;
   padding-left: 18px;
   font: italic 1.4em Georgia, "Times New Roman", Times, serif;
 }
@@ -158,24 +141,37 @@ h2 {
     font-size: 1em;
 }
 
+/* Competition */
 #excerpt {
     background-size: cover;
     text-align: center;
     color: #f0f0f0;
 }
 
-.slide#video
+#subevent-lf {
+    background-image: url('../img/background-lf.jpg');
+}
 
-.slide#competition {}
+#subevent-sdc {
+    background-image: url('../img/background-sdc.jpg');
+}
 
-.slide#nextevent {}
+#subevent-eec {
+    background-image: url('../img/background-eec.jpg');
+}
 
+#subevent-expo {
+    background-image: url('../img/background-semnas.jpg');
+}
 
+#subevent-semnas {
+    background-image: url('../img/background-semnas.jpg');
+}
 
-
+/* News */
 #news {
-    /* @dhika : warna background aku pindah ke class .background-hitam
-                Ngasih warna ke section pake class .background-hitam/cerah */
+    /* Color theme now using .dark / .light class, OK? */
+    /* Ok.. I see... light and dark forces */
     color: white;
 }
 
@@ -190,23 +186,7 @@ h2 {
 
 }
 
-#LF {
-    background-image: url('../img/background-lf.jpg');
-}
-
-#SDC {
-    background-image: url('../img/background-sdc.jpg');
-}
-
-#EEC {
-    background-image: url('../img/background-eec.jpg');
-}
-
-#SEMNAS {
-    background-image: url('../img/background-semnas.jpg');
-}
-
-
+/* Gallery */
 #galeri {
     padding: 20px 20px;
     color : white;
@@ -239,16 +219,29 @@ h2 {
     opacity: 0.6;
 }
 
-#galeri .see-button {
+.see-button {
     padding: 0.5em;
     border: 1px solid white;
     transition: all 200ms ease;
 }
 
-#galeri .see-button:hover {
+.see-button:hover {
     background-color: white;
     color: #323232;
 }
+
+.see-button {
+	padding: 0.5em;
+    border: 1px solid white;
+    transition: all 200ms ease;
+}
+
+.see-button: hover {
+	background-color: white;
+    color: #323232;
+}
+
+
 
 .event-box {
     padding: 1em;
@@ -322,14 +315,47 @@ h2 {
     }
 }
 
-.background-hitam {
+.dark {
     background-color: #323232;
 }
-.background-cerah {
-    background-color: #BF423C;
+
+.light {
+    background-color: #d4543b
 }
 
 #font {
 	color: white;
 	font-weight: bold;
+}
+
+#box {
+	background: blue;
+	border-radius: 10px;
+	color: white;
+}
+
+#logo1 {
+	border: 0.5px solid #323232;
+	margin-left: 15em;
+	margin-top: 2em;
+}
+
+#logo2 {
+	border: 0.5px solid #323232;
+	margin-left: 5em;
+}
+
+#logo3 {
+	border: 0.5px solid #323232;
+	margin-left: 10em;
+}
+
+#logo4 {
+	border: 0.5px solid #323232;
+	margin-left: 15em;
+}
+
+#new-info-holder {
+    margin-top: 2em;
+	overflow-y: scroll;
 }
