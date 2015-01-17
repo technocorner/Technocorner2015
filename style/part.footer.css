@@ -52,3 +52,8 @@
 #copyright {
     color: white;
 }
+
+
+#copyright img {
+    display: inline-block;
+}
