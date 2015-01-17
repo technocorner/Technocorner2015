@@ -141,13 +141,13 @@ h2 {
 
 #quote blockquote {
     font: italic 1.2em/1.6em Georgia, "Times New Roman", Times, serif;
-    background: url(../img/close.png) no-repeat right bottom;
+    background: url(../img/quote-close.png) no-repeat right bottom;
     padding-left: 0px;
     text-indent: -18px;
 }
 
 #quote blockquote:first-letter {
-  background: url(../img/open.png) no-repeat left top;
+  background: url(../img/quote-open.png) no-repeat left top;
   padding-left: 18px;
   font: italic 1.4em Georgia, "Times New Roman", Times, serif;
 }

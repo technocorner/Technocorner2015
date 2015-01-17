@@ -7,7 +7,7 @@
     padding: 1em 0;
 }
 
-#closing h1 {
+#closing h2 {
     font-size: 2em;
     margin: 8px 0;
 }
@@ -35,7 +35,7 @@
 }
 
 #closing .closing-medsos {
-    padding: 0 2em;
+    padding: 0 2em 0 2em;
 }
 
 #closing .closing-sponsor {
@@ -46,7 +46,6 @@
     height: 100%;
     margin: 0 0 auto 0;
     border-right: solid;
-    border-left: solid;
     border-color: white;
 }
 

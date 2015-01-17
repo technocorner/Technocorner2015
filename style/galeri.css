@@ -1,5 +1,4 @@
 body {
-    padding-top: 70px;
 }
 
 #heading {
@@ -7,6 +6,10 @@ body {
     text-align: center;
     padding: 1em;
     font-family: 'OpenSans Light';
+}
+
+#landing {
+    padding: 3em;
 }
 
 #galeri {
@@ -17,6 +20,7 @@ body {
 
 #galeri h1 {
     text-align: center;
+    margin-bottom: 1em;
 }
 
 #galeri .pure-u-1-3 {
@@ -30,12 +34,14 @@ body {
 }
 
 .galeri-page img {
-
     -webkit-transition: all 200ms ease; /* Safari and Chrome */
     -moz-transition: all 200ms ease; /* Firefox */
     -ms-transition: all 200ms ease; /* IE 9 */
     -o-transition: all 200ms ease; /* Opera */
     transition: all 200ms ease;
+    max-height: 225px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .galeri-page img:hover {
@@ -44,6 +50,4 @@ body {
     -ms-transform:scale(1.1); /* IE 9 */
     -o-transform:scale(1.1); /* Opera */
     transform:scale(1.1);
-
-    opacity: 1;
 }
