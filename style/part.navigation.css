@@ -14,7 +14,7 @@ nav#headbar {
 
 nav#headbar.fixed-mode {
     position: fixed;
-    box-shadow: 0px 2px 3px #000;
+    box-shadow: 0px 0.5px 1px #000;
     z-index: 1000;
 }
 
@@ -30,6 +30,7 @@ nav a, a:link, a:visited {
 
 #head-menu, #head-logo {
     height: 100%;
+    font-family: "OpenSans";
 }
 
 #head-logo {
@@ -49,20 +50,70 @@ nav a, a:link, a:visited {
 
 .menu-list {
     height: 100%;
+    display: inline-block;
     padding: 0;
-    margin: 0 30% 0 0;
+    margin: 0 2% 0 0;
 }
 
 .menu-listitem {
     cursor: pointer;
     display: inline-block;
     height: 100%;
-    padding: 6% 4%;
+    padding: 2em 0.7em 0 0.7em;
     transition: 300ms;
 }
 
 .menu-listitem:hover {
-    background-color: #252525;
+    background-color: #bc423b;
+}
+
+.menu-listitem:active {
+    background-color: #bc423b;
+    border-bottom: 2px solid #fff;
+    height: 110%;
+}
+
+.submenu-list {
+    display: none;
+    padding: 0;
+    position: absolute;
+    margin: 0.7em 0 0 -0.7em;
+    padding: 1em 0 0 0;
+    transition: 300ms;
+}
+
+.menu-listitem:hover .submenu-list {
+    display: block;
+    padding: 0.3em 0 0 0;
+}
+
+.submenu-listitem {
+    background-color: #343434;
+    border-top: 0.15em solid #bc423b;
+    padding: 1.5em 0.6em 0.5em 0.6em;
+    text-align: left;
+    transition: 300ms;
+}
+
+.submenu-listitem:last-child {
+    border-bottom: 0.5em solid #bc423b;
+}
+
+
+.submenu-listitem:hover {
+    background-color: #bc423b;
+}
+
+.submenu-listitem:active {
+    background-color: #bc423b;
+}
+
+.label {
+    font-size: 0.7em;
+    background-color: #f88637;
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    font-weight: bold;
 }
 
 /* Dhika: aku mau nambahin penanda menu yang lagi aktif... tapi gimana caranya nambahin class ke menu kalau menu nya diinclude otomatis pake javascript? */
