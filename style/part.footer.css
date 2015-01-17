@@ -7,11 +7,7 @@
     padding: 1em 0;
 }
 
-<<<<<<< HEAD
 #closing h1 {
-=======
-#closing h2 {
->>>>>>> origin/master
     font-size: 2em;
     margin: 8px 0;
 }
@@ -39,11 +35,7 @@
 }
 
 #closing .closing-medsos {
-<<<<<<< HEAD
     padding: 0 2em;
-=======
-    padding: 0 2em 0 2em;
->>>>>>> origin/master
 }
 
 #closing .closing-sponsor {
@@ -51,14 +43,10 @@
 }
 
 #closing .make-footer-border {
-<<<<<<< HEAD
-    border-right: solid;
-    border-left: solid;
-=======
     height: 100%;
     margin: 0 0 auto 0;
     border-right: solid;
->>>>>>> origin/master
+    border-left: solid;
     border-color: white;
 }
 
