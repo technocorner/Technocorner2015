@@ -27,6 +27,7 @@
 
 body, html {
     min-height: 100%;
+    height: 100%;
     margin: 0;
     font-size: 12pt;
     font-family: "OpenSans";
@@ -76,6 +77,8 @@ h2 {
  * fullPage Style
  */
 .section {
+    min-height: 100%;
+    padding: 20px;
 }
 
 .slide {
@@ -171,26 +174,17 @@ h2 {
     background-size: cover;
     text-align: center;
     color: #f0f0f0;
+    height: 100%;
 }
 
-#subevent-lf {
-    background-image: url('../img/background-lf.jpg');
+#excerpt, #excerpt .slide, .event-container {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-#subevent-sdc {
-    background-image: url('../img/background-sdc.jpg');
-}
-
-#subevent-eec {
-    background-image: url('../img/background-eec.jpg');
-}
-
-#subevent-expo {
-    background-image: url('../img/background-semnas.jpg');
-}
-
-#subevent-semnas {
-    background-image: url('../img/background-semnas.jpg');
+#excerpt .event-container {
+    min-height: 500px;
 }
 
 /* News */
@@ -261,7 +255,7 @@ h2 {
     transition: all 200ms ease;
 }
 
-.see-button: hover {
+.see-button:hover {
 	background-color: white;
     color: #323232;
 }
