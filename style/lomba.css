@@ -126,56 +126,56 @@ header div{
 }
 
 /* Heading */
-h1, h2, h3 {
+.article h1, .article h2, .article h3 {
    margin-bottom: 0.1em;
 }
 
-h1 {
+.article h1 {
         font-size: 1.5em;
 }
 
-h2 {
+.article h2 {
         font-size: 1.3em;
 }
 
-h3 {
+.article h3 {
         font-size: 1em;
 }
 
 /* Unordered List and Level Definition */
-ul {
+.article ul {
    font-family: OpenSans-Bold;
     /* text-indent: -43px; */
    list-style-image: url("../img/bullet.gif");
 }
 
-ul li {
+.article ul li {
    font-family: OpenSans-Light;
    text-indent: 0px;
    line-height: 140%;
    margin-bottom: 15px;
 }
 
-ul.lvl1 li {
+.article ul.lvl1 li {
     font-size: 0.8em;
 }
 
-ul.lvl2 li {
+.article ul.lvl2 li {
     font-size: 0.7em;
     font-weight: 200;
 }
 
-ul.lvl3 li {
+.article ul.lvl3 li {
     font-size: 0.6em;
     font-weight: 100;
 }
 
-    table{
+    .article table{
         margin-top: 15px;
         border-collapse: collapse;
 
     }
-    table, td, td {
+    .article table, .article table td {
         border: 1px solid black;
         padding: 8px
     }
