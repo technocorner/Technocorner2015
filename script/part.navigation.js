@@ -21,9 +21,14 @@ $(document).ready(function() {
             $('nav#headbar').css('opacity', 0).animate({opacity: 1}, 500);
         }
     });
+
+    // Scroll to them
+
 });
 
 headbar = {
+    // Active
+    active: 'index',
     // Height of headbar
     height: 70,
     // Headbar is it visible?
@@ -40,11 +45,23 @@ function headbarInit() {
     // Event handler
     $('.menu-item').click(function () {
         headbarActivateMenu($(this));
-        headbarGetKeyLocation();
+        headbar.active = headbarGetKeyLocation();
     });
 
     $('.submenu-item').click(function () {
         headbarActivateSubMenu($(this));
+    });
+
+    anchor = $('.menu-item-active').attr('class')
+                                   .replace('menu-item', '')
+                                   .replace('menu-item-active', '')
+                                   .replace(/\s/g, '');             // Remove space
+
+    smoothScroll.animateScroll(null, '#' + anchor, {
+        speed: 500,               // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        updateURL: true,          // Boolean. Whether or not to update the URL with the anchor hash on scroll
+        offset: 70,               // Integer. How far to offset the scrolling anchor location in pixels
     });
 }
 
