@@ -175,23 +175,24 @@
           -->
           <div class="article register" id="pendaftaran">
             <!-- SDC Registration Form -->
-            <form id="sdc-reg" class="registration" name="registration"
+            <form id="sdc-reg" class="registration" name="registration" action=""
                   method="POST" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
 
               <h1>Pendaftaran</h1>
               <label for="regid">Nama (Kapten) :</label>
-              <input type="text" name="name" />
+              <input type="text" name="name" required />
 
               <label for="file_uploader">Formulir Pendaftaran :</label>
-              <input type="file" id="formulir-uploader" name="formulir-uploader" />
+              <input type="file" id="formulir-uploader" name="formulir-uploader" required />
 
               <label for="file_uploader">Kartu Tanda Mahasiswa / Kartu Pelajar :</label>
-              <input type="file" id="card-uploader" name="card-uploader" />
+              <input type="file" id="card-uploader" name="card-uploader" required />
 
               <label for="file_uploader">Bukti Pembayaran :</label>
-              <input type="file" id="paycheck-uploader" name="paycheck-uploader" />
+              <input type="file" id="paycheck-uploader" name="paycheck-uploader" required />
 
+              <br/>
               <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
 
               <br/>

@@ -13,23 +13,23 @@ function toggleElement(element, status) {
 
 $(document).ready(function () {
     alertify.set('notifier','delay', 10);
-    alertify.set('notifier','position', 'top-right');
-});
+    alertify.set('notifier','position', 'bottom-right');
 
-/*
- * Set submit form callback
- */
-$('form').submit(function(event){
-    event.preventDefault();
+    /*
+     * Set submit form callback
+     */
+    $('form').submit(function(event){
+        event.preventDefault();
 
-    // Captcha response is either blank or true
-    // If captcha blank (wrong)
-    if (grecaptcha.getResponse() == "") {
-        alertify.error('Captcha wajib diisi');
-        return;
-    }
+        // Captcha response is either blank or true
+        // If captcha blank (wrong)
+        if (grecaptcha.getResponse() == "") {
+            alertify.error('Captcha wajib diisi');
+            return;
+        }
 
-    submitForm('#' + $(this)[0].id);
+        submitForm('#' + $(this)[0].id);
+    });
 });
 
 function submitForm(form) {
