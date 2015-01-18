@@ -112,20 +112,21 @@ header div{
  */
 /* Article Global style */
 .article{
-    background-color: white;    
+    background-color: white;
     width: 900px;
     height: 850px;
     text-align: left;
-    padding:10%;    
+    padding: 1em 5em 2em 5em;
     overflow-y: scroll;
 }
 
 .article {
-        font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 /* Heading */
 .article h1, .article h2, .article h3 {
+   margin-top: 1.5em;
    margin-bottom: 0.1em;
 }
 
@@ -156,28 +157,38 @@ header div{
 }
 
 .article ul.lvl1 li, p {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .article ul.lvl2 li {
-    font-size: 0.7em;
+    font-size: 0.88em;
     font-weight: 200;
 }
 
 .article ul.lvl3 li {
-    font-size: 0.6em;
+    font-size: 0.86em;
     font-weight: 100;
 }
 
-    .article table{
-        margin-top: 15px;
-        border-collapse: collapse;
+.article table {
+    margin-top: 15px;
+    border-collapse: collapse;
 
-    }
-    .article table, .article table td {
-        border: 1px solid black;
-        padding: 8px
-    }
+}
+.article table, .article table td {
+    border: 1px solid black;
+    padding: 8px
+}
+
+.article a {
+    color: #A2353A;
+}
+
+.article a:hover {
+    color: #f88637;
+
+}
+
     #download-isi{
         text-align: center;
         padding-top: 10%;
