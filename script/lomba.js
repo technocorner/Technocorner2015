@@ -33,6 +33,9 @@ $(document).ready(function() {
 
         // Activate clicked menu-item
         $(this).addClass('lomba-menu-item-click');
+
+        // Modify address displayed
+        history.pushState({/* Empty Object */}, "", "#" + sectionClass.replace('.', ''));
     });
 
     // Hide all section immediately on load
