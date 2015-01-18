@@ -4,6 +4,7 @@ $(document).ready(function () {
         thumbs:false,
     });
 
-    $('nav#headbar').load('part.navigation.html #head-inner');
+    // Load navigator headbar and footer
+    headbarAttachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
 });
