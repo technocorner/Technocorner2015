@@ -10,14 +10,7 @@ $(document).ready(function() {
         easing: 'easeInQuart',
 
         fixedElements: 'header',
-        // anchors: [landing, video, news],
-
-        responsive: 768,
-        resize: false,
-
-        afterLoad: function (anchorLink, index) {},
-        onLeave: function (index, nextIndex, direction) {},
-        afterResize: function () {}
+        resize: false
     });
 
     $('.galeri-photobox').photobox('a', {
