@@ -10,6 +10,8 @@
 #closing h2 {
     font-style: OpenSans;
     margin: 8px 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #closing p {
@@ -47,6 +49,14 @@
     margin: 0 0 auto 0;
     border-right: solid;
     border-color: white;
+}
+
+#closing .more-contact {
+    font-weight: bold;
+}
+
+#closing a:hover {
+    text-decoration: underline;
 }
 
 #copyright {

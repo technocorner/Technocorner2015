@@ -10,6 +10,12 @@ body {
 
 #landing {
     padding: 3em;
+    widows: 37%;
+    background: url('../img/galeri/header-galeri.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #galeri {
