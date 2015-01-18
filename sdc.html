@@ -9,6 +9,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="lib/yahoo.pure/pure-min.css" />
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
 
     <!-- Library Script -->
     <!--[if IE]>
@@ -20,15 +22,20 @@
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="lib/alertifyjs/alertify.min.js"></script>
+
     <!-- Our Stlye -->
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/lomba.css" />
     <link rel="stylesheet" href="style/part.navigation.css" />
     <link rel="stylesheet" href="style/part.footer.css" />
+    <link rel="stylesheet" href="style/part.form.css" />
 
     <!-- Our Script -->
     <script src="script/lomba.js"></script>
     <script src="script/part.navigation.js"></script>
+    <script src="script/part.form.js"></script>
   </head>
 
   <body>
@@ -59,32 +66,24 @@
             <div class="lomba-menu-item registration" >PENDAFTARAN</div>
             <div class="lomba-menu-item rules" >PERATURAN</div>
             <div class="lomba-menu-item download" >DOWNLOAD</div>
+            <div class="lomba-menu-item register" >DAFTAR</div>
         </nav>
         <div>
           <!--
           # Brief information section
           -->
           <div class="article eventdetail" id="pendaftaran-isi">
-            <p>Software Development Competition (SDC) pada Technocorner 2015 merupakan
-kompetisi pengembangan perangkat lunak yang dapat memberikan solusi praktis atas
-permasalahan yang ada di masyarakat serta inovasi di bidang teknologi. <br><br>SDC
-Technocorner 2015 diharapkan dapat mencetak generasi muda pengembang aplikasi
-yang mampu memberikan solusi permasalahan yang ada di masyarakat serta inovasi
-di dalam bidang teknologi informasi. SDC diperuntukkan bagi mahasiswa program
-sarjana dan diploma seluruh Indonesia. <br><br>Peserta berkompetisi dalam tim yang
-beranggotakan maksimal tiga orang. Pada babak penyisihan, peserta mengirimkan
-proposal dan video aplikasi yang akan dikembangkan. <br><br>Peserta yang lolos seleksi
-proposal dan video selanjutnya melakukan presentasi pada babak semifinal. Pada
-babak semifinal akan dipilih lima tim terbaik yang berhak maju ke babak final untuk
-presentasi di depan dewan juri dan penonton serta menampilkan karya mereka di
-Technoexpo 2015.</p> 
+            <p><strong>Software Development Competition (SDC)</strong> pada <strong>Technocorner</strong> 2015 merupakan kompetisi pengembangan perangkat lunak yang dapat memberikan solusi praktis atas permasalahan yang ada di masyarakat serta inovasi di bidang teknologi.</p>
+            <p>SDC Technocorner 2015 diharapkan dapat mencetak generasi muda pengembang aplikasi yang mampu memberikan solusi permasalahan yang ada di masyarakat serta inovasi di dalam bidang teknologi informasi. SDC diperuntukkan bagi mahasiswa program sarjana dan diploma seluruh Indonesia.</p>
+            <p>Peserta berkompetisi dalam tim yang beranggotakan maksimal tiga orang. Pada babak penyisihan, peserta mengirimkan proposal dan video aplikasi yang akan dikembangkan.</p>
+            <p>Peserta yang lolos seleksi proposal dan video selanjutnya melakukan presentasi pada babak semifinal. Pada babak semifinal akan dipilih lima tim terbaik yang berhak maju ke babak final untuk presentasi di depan dewan juri dan penonton serta menampilkan karya mereka di Technoexpo 2015.</p>
           </div>
 
           <!--
           # Registration section
           -->
           <div class="article registration" id="pendaftaran-isi">
-              
+
             <!-- Pendaftaran -->
             <h1>Pendaftaran</h1>
             <ul class="lvl1">
@@ -129,7 +128,7 @@ Technoexpo 2015.</p>
                 <li>Pengumpulan semua administrasi pendaftaran dan pembayaran biaya pendaftaran paling lambat tanggal 11 Februari 2015 secara langsung (pendaftaran offline) atau melalui rekening bank yang telah ditentukan oleh panitia (pendaftaran online)</li>
                 <li>Penggantian anggota tim serta revisi nama anggota atau tim harus dikonfirmasikan kepada panitia paling lambat tanggal 11 Februari 2015. Jika tidak melakukan konfirmasi penggantian maka perubahan tidak diakui</li>
             </ul>
-              
+
             <h1>Persyaratan Karya</h1>
             <ul class="lvl1">
                 <li>Karya merupakan perangkat lunak yang dikembangkan di atas platform web</li>
@@ -169,6 +168,36 @@ Technoexpo 2015.</p>
               <img id="download-pict" src="img/back28.png">
               <p>DOWNLOAD HERE</p>
               </a>
+          </div>
+
+          <!--
+          # Register form section
+          -->
+          <div class="article register" id="pendaftaran">
+            <!-- SDC Registration Form -->
+            <form id="sdc-reg" class="registration" name="registration" action=""
+                  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+              <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+
+              <h1>Pendaftaran</h1>
+              <label for="regid">Nama (Kapten) :</label>
+              <input type="text" name="name" required />
+
+              <label for="file_uploader">Formulir Pendaftaran :</label>
+              <input type="file" id="formulir-uploader" name="formulir-uploader" required />
+
+              <label for="file_uploader">Kartu Tanda Mahasiswa / Kartu Pelajar :</label>
+              <input type="file" id="card-uploader" name="card-uploader" required />
+
+              <label for="file_uploader">Bukti Pembayaran :</label>
+              <input type="file" id="paycheck-uploader" name="paycheck-uploader" required />
+
+              <br/>
+              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
+
+              <br/>
+              <input type="submit" value="Kirim" />
+            </form>
           </div>
         </div>
         <div></div>

@@ -33,11 +33,32 @@ $(document).ready(function() {
 
         // Activate clicked menu-item
         $(this).addClass('lomba-menu-item-click');
+
+        // Modify address displayed
+        history.pushState({/* Empty Object */}, "", "#" + sectionClass.replace('.', ''));
     });
 
     // Hide all section immediately on load
     $('.article').hide();
+    triggerSectionClick();
 
-    // Then simulate first time click to show one section only
-    $('.lomba-menu-item.eventdetail').click();
+    // Bind to url hash (e.g. index.html#overview) change
+    $(window).bind('hashchange', triggerSectionClick);
 });
+
+/*
+ * It is a specific function to handle initial section show and hashtag change
+ */
+function triggerSectionClick() {
+    /* Handling url hashtag */
+    hash = window.location.hash.replace('#', '');
+    target = '.lomba-menu-item.' + hash;
+
+    if (hash == "" || $(target).length == 0) {  // When no hashtag
+        // Then simulate first time click to show one section only
+        $('.lomba-menu-item.eventdetail').click();
+    } else if ($(target).length != 0) {  // Or when hash tag specified
+        // Trigger hash target click
+        $('.lomba-menu-item.' + hash).click();
+    }
+}
