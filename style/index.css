@@ -168,6 +168,18 @@ h2 {
     background-image: url('../img/background-semnas.jpg');
 }
 
+.text-of-interest {
+    font-size: 2em;
+}
+
+.emphasize {
+    font-family: OpenSans-Bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
 /* News */
 #news {
     /* Color theme now using .dark / .light class, OK? */
