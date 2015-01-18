@@ -3,12 +3,6 @@ $(document).ready(function() {
      * Headbar : Upper (floating) element contains menu
      */
     // Headbar menu object, contains it's properties
-    headbar = {
-        // Height of headbar
-        height: 70,
-        // Headbar is it visible?
-        visible: false
-    };
 
     /* When scrolled, headbar menu transform into fixed mode */
     $(window).scroll(function(e) {
@@ -28,3 +22,64 @@ $(document).ready(function() {
         }
     });
 });
+
+headbar = {
+    // Height of headbar
+    height: 70,
+    // Headbar is it visible?
+    visible: false
+};
+
+function headbarAttachTo(elem) {
+    $(elem).load('part.navigation.html #head-inner', null, headbarInit);
+}
+
+function headbarInit() {
+    headbarActivateMenu('.' + headbarGetKeyLocation());
+
+    // Event handler
+    $('.menu-item').click(function () {
+        headbarActivateMenu($(this));
+        headbarGetKeyLocation();
+    });
+
+    $('.submenu-item').click(function () {
+        headbarActivateSubMenu($(this));
+    });
+}
+
+function headbarGetKeyLocation() {
+    /* Auto detect based on location / URL */
+    // Filter suffix
+    keyLocation = document.location.toString().split('/');
+    keyLocation = keyLocation[keyLocation.length - 1];
+
+    // Filter html
+    keyLocation = keyLocation.replace('.html', '');
+
+    // Filter 'file#part' => 'part'
+    if (keyLocation.contains('#')) {
+        keyLocation = keyLocation.split('#')[1];
+    }
+
+    return keyLocation;
+}
+
+function headbarActivateMenu(item) {
+    // Activate only one
+    $(item).addClass('menu-item-active');
+
+    // Deactivate all
+    $("li[class*='menu-item']").not(item).removeClass('menu-item-active');
+}
+
+function headbarActivateSubMenu(item) {
+    parent = $(item).parent('menu-item');
+
+    // Activate only one
+    $(item).addClass('submenu-item-active');
+    parent.addClass('menu-item-active');
+
+    // Deactivate all
+    $("li[class*='menu-item']").not(item).not(parent).removeClass('submenu-item-active');
+}
