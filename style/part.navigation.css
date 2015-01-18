@@ -100,7 +100,7 @@ nav a, a:link, a:visited {
     transition: 300ms;
 }
 
-.submenu-item:last-child {
+.submenu-list a:last-child .submenu-item {
     border-bottom: 0.5em solid #bc423b;
 }
 
