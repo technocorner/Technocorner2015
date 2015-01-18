@@ -145,7 +145,6 @@ header div{
 /* Unordered List and Level Definition */
 .article ul {
    font-family: OpenSans-Bold;
-    /* text-indent: -43px; */
    list-style-image: url("../img/bullet.gif");
 }
 
@@ -168,6 +167,12 @@ header div{
 .article ul.lvl3 li {
     font-size: 0.86em;
     font-weight: 100;
+}
+
+.article ol {
+    font-family: OpenSans-Bold;
+    list-style-image: unset;
+    list-style: unset;
 }
 
 .article table {
