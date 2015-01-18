@@ -5,13 +5,13 @@
 
 
 @font-face {
-    font-family: "OpenSans Bold";
+    font-family: "OpenSans-Bold";
     src: url("../font/OpenSans-Bold.ttf");
 }
 
 
 @font-face {
-    font-family: "OpenSans Light";
+    font-family: "OpenSans-Light";
     src: url("../font/OpenSans-Light.ttf");
 }
 
@@ -28,8 +28,8 @@ body, html {
     font-family: "OpenSans";
 }
 
-h1, h2, h3, {
-    font-family: "OpenSans Light", sans-serif;
+h1, h2, h3, h4 {
+    font-family: "OpenSans-Light", sans-serif;
 }
 
 p {
@@ -44,6 +44,11 @@ h1 {
 
 h2 {
     font-size: 1.25em;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 1.15em;
     font-weight: 200;
 }
 
@@ -69,3 +74,4 @@ h2 {
 .light {
     background-color: #d4543b;
 }
+

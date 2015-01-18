@@ -40,7 +40,7 @@ nav a, a:link, a:visited {
 }
 
 .head-logo-text {
-    font-family: "OpenSans Bold";
+    font-family: "OpenSans-Bold";
 }
 
 #head-menu {
@@ -70,6 +70,7 @@ nav a, a:link, a:visited {
 /*
  * Dhika: aku mau nambahin penanda menu yang lagi aktif... tapi gimana caranya nambahin class ke menu kalau menu nya diinclude otomatis pake javascript?
  * Abdilillah: Pakai kayak gini + js
+ * Dhika: ajaib
  */
 .menu-item:active, .menu-item-active {
     background-color: #bc423b;

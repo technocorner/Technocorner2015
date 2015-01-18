@@ -1,5 +1,11 @@
 
 /*
+ * Halooo!
+ * Aku cut sebagian besar style di sini ke main.css, biar lebih... **modular**
+ * ttd Dhika
+ */
+
+/*
  * General Style
  */
 @font-face {
@@ -75,8 +81,6 @@ h2 {
 /*
  * fullPage Style
  */
-.section {
-}
 
 .slide {
     background-size: cover;
@@ -137,7 +141,7 @@ h2 {
 }
 
 #quote small {
-    padding-left: 22px;
+    text-align: center;
     font-size: 1em;
 }
 
@@ -185,6 +189,7 @@ h2 {
     /* Color theme now using .dark / .light class, OK? */
     /* Ok.. I see... light and dark forces */
     color: white;
+    padding: 20px;
 }
 
 #news h1 {
@@ -197,6 +202,16 @@ h2 {
 #news p {
 
 }
+
+#new-info-holder {
+    margin-top: 2em;
+    overflow-y: hidden;
+}
+
+#new-info-holder:hover {
+    overflow-y: auto;
+}
+
 
 /* Gallery */
 #galeri {
@@ -365,13 +380,4 @@ h2 {
 #logo4 {
 	border: 0.5px solid #323232;
 	margin-left: 15em;
-}
-
-#new-info-holder {
-    margin-top: 2em;
-	overflow-y: hidden;
-}
-
-#new-info-holder:hover {
-	overflow-y: auto;
 }
