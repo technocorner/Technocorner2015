@@ -26,6 +26,7 @@ $(document).ready(function() {
     '<h4>Gedung Kantor Pusat Fakultas Teknik</h4>' +
     '<ul>' +
         '<li>Lokasi Opening Technocorner 2015</li>' +
+        '<li>Lokasi <a href="expo.html" class="link-peta">TechnoExpo</a></li>' +
         '<li>Lokasi Final <a href="eec.html" class="link-peta">Lomba Electro Engineering Competition</a></li>' +
         '<li>Lokasi <a href="sdc.html" class="link-peta">Lomba Software Development Competition</a></li>' +
         '<li>Lokasi <a href="lf.html" class="link-peta">Lomba Line Follower</a></li>' +
@@ -42,7 +43,7 @@ $(document).ready(function() {
     contentString =
     '<h4>Gedung Purna Budaya UGM</h4>' +
     '<ul>' +
-        '<li>Lokasi <a href="semnas.html" class="link-peta">Seminar Nasional Technocorner</a></li>' +
+        '<li>Lokasi <a href="ns.html" class="link-peta">Seminar Nasional Technocorner</a></li>' +
     '</ul>';
     map.addMarker({
       lat: -7.771979,

@@ -48,6 +48,16 @@ header div{
     color: blue;
 }
 
+#kontak {
+    border-collapse:collapse;
+    border : none;
+}
+
+#kontak td {
+   border:none;
+   outline:none;
+   padding-left: 0;
+}
 
 #header-img{
     width: 80%;
