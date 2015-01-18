@@ -58,7 +58,7 @@ function headbarGetKeyLocation() {
     keyLocation = keyLocation.replace('.html', '');
 
     // Filter 'file#part' => 'part'
-    if (keyLocation.contains('#')) {
+    if (keyLocation.search('#') != -1) {
         keyLocation = keyLocation.split('#')[1];
     }
 
