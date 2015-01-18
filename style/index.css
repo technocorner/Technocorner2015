@@ -369,5 +369,9 @@ h2 {
 
 #new-info-holder {
     margin-top: 2em;
-	overflow-y: scroll;
+	overflow-y: hidden;
+}
+
+#new-info-holder:hover {
+	overflow-y: auto;
 }
