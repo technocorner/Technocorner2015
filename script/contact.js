@@ -3,7 +3,8 @@ $(document).ready(function() {
       el: '#gmap',
       lat: -7.7657304,
       lng: 110.3782668,
-      zoom: 15
+      zoom: 15,
+      scrollwheel: false
     });
 
     var contentString =
