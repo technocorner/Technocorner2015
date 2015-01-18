@@ -5,6 +5,6 @@ $(document).ready(function () {
     });
 
     // Load navigator headbar and footer
-    headbarAttachTo('nav#headbar');
+    headbar.attachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
 });
