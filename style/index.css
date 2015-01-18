@@ -1,8 +1,8 @@
 /*
  * Pure Style
  */
-.pure-g {
-    padding: 0 1em 0 3em;
+.section .pure-g {
+    padding: 1em 1em 1em 3em;
 }
 
 /* responsive mode */
@@ -21,6 +21,9 @@
 /*
  * fullPage Style
  */
+.section {
+    height: auto;
+}
 
 .slide {
     background-size: cover;
