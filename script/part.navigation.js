@@ -1,9 +1,8 @@
-$(document).ready(function() {
-    /*
-     * Headbar : Upper (floating) element contains menu
-     */
-    // Headbar menu object, contains it's properties
+/*
+ * Headbar : Upper (floating) element contains menu
+ */
 
+$(document).ready(function() {
     /* When scrolled, headbar menu transform into fixed mode */
     $(window).scroll(function(e) {
         // Threshold position to transform headbar menu
@@ -22,81 +21,131 @@ $(document).ready(function() {
         }
     });
 
-    // Scroll to them
+    $(window).scroll(function(e) {
+        $('.section').each(function () {
+            var top = window.pageYOffset;
+            var distance = top - $(this).offset().top;
 
-});
+            if (distance < 70 && distance > -80) {
+                headbar.activateMenu('.' + $(this).attr('id'));
+            }
+        });
+    });
 
-headbar = {
-    // Active
-    active: 'index',
-    // Height of headbar
-    height: 70,
-    // Headbar is it visible?
-    visible: false
-};
+    $(window).bind('hashchange', headbar.onHashtagChanged);
 
-function headbarAttachTo(elem) {
-    $(elem).load('part.navigation.html #head-inner', null, headbarInit);
-}
-
-function headbarInit() {
-    headbarActivateMenu('.' + headbarGetKeyLocation());
-
-    // Event handler
     $('.menu-item').click(function () {
-        headbarActivateMenu($(this));
-        headbar.active = headbarGetKeyLocation();
+        headbar.activateMenu($(this));
     });
 
     $('.submenu-item').click(function () {
-        headbarActivateSubMenu($(this));
+        headbar.activateSubMenu($(this));
     });
+});
 
-    anchor = $('.menu-item-active').attr('class')
-                                   .replace('menu-item', '')
-                                   .replace('menu-item-active', '')
-                                   .replace(/\s/g, '');             // Remove space
-
-    smoothScroll.animateScroll(null, '#' + anchor, {
+/*
+ * An object responsible for headbar operation
+ */
+var headbar = {
+    // Field or member variable
+    active: 'landing', // Active menu
+    height: 70,      // Height of headbar
+    visible: false,  // Headbar is it visible?
+    scrollOpt: {
         speed: 500,               // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         updateURL: true,          // Boolean. Whether or not to update the URL with the anchor hash on scroll
         offset: 70,               // Integer. How far to offset the scrolling anchor location in pixels
-    });
-}
+    },
+    hashMap: {
+        front: 'landing',
+        info: 'news',
+        subevent: 'excerpt'
+    },
 
-function headbarGetKeyLocation() {
-    /* Auto detect based on location / URL */
-    // Filter suffix
-    keyLocation = document.location.toString().split('/');
-    keyLocation = keyLocation[keyLocation.length - 1];
+    // Methods or Functions
+    attachTo: function (elem) {
+        $(elem).load('part.navigation.html #head-inner', null, headbar.init);
+    },
 
-    // Filter html
-    keyLocation = keyLocation.replace('.html', '');
+    /*
+     * External constructor
+     */
+    init: function () {
+        headbar._init();
+    },
 
-    // Filter 'file#part' => 'part'
-    if (keyLocation.search('#') != -1) {
-        keyLocation = keyLocation.split('#')[1];
+    /*
+     * Internal constructor
+     */
+    _init: function() {
+        // Init properties
+        this.scrollOpt.offset = this.height;
+
+        // Detect crumpy url with hashtag
+        anchor = window.location.hash.replace('#', '');
+
+        // Is it a section
+        if ($('#' + anchor).hasClass('section')) {
+            // Yes, activate this
+            this.activateMenu('.' + anchor);
+        } else {
+            // No, activate the saved menu
+            this.activateMenu('.' + this.active);
+        }
+
+        // Scroll to it! Let set sail
+        smoothScroll.animateScroll(null, '#' + this.active, headbar.scrollOpt);
+    },
+
+    activateMenu: function (item) {
+        // Activate only one
+        $(item).addClass('menu-item-active');
+
+        // Save the new active menu
+        this.active = this.getMenuClass(item)? this.getMenuClass(item) : this.active;
+
+        // Deactivate all
+        $("li[class*='menu-item']").not(item).removeClass('menu-item-active');
+    },
+
+    activateSubMenu: function (item) {
+        parent = $(item).parent('menu-item');
+
+        // Activate only one
+        $(item).addClass('submenu-item-active');
+        parent.addClass('menu-item-active');
+
+        // Deactivate all
+        $("li[class*='menu-item']").not(item).not(parent).removeClass('submenu-item-active');
+    },
+
+    getMenuClass: function (item) {
+        if ($(item).length == 0) {
+            return '';
+        }
+
+        return $(item).attr('class').replace('menu-item', '')
+                                    .replace('menu-item-active', '')
+                                    .replace(/\s/g, '');
+    },
+
+    onHashtagChanged: function (e) {
+        e.preventDefault();
+
+        // Get hash
+        hash = window.location.hash.replace('#', '');
+
+        // Don't response on wrong type
+        if ($('#' + hash).length == 0) {
+            return;
+        }
+
+        // Check is it a section
+        if ($('#' + hash).hasClass('section')) {
+            console.log('success ' + hash);
+            smoothScroll.animateScroll(null, '#' + hash, headbar.scrollOpt);
+            return true;
+        }
     }
-
-    return keyLocation;
-}
-
-function headbarActivateMenu(item) {
-    // Activate only one
-    $(item).addClass('menu-item-active');
-
-    // Deactivate all
-    $("li[class*='menu-item']").not(item).removeClass('menu-item-active');
-}
-
-function headbarActivateSubMenu(item) {
-    parent = $(item).parent('menu-item');
-
-    // Activate only one
-    $(item).addClass('submenu-item-active');
-    parent.addClass('menu-item-active');
-
-    // Deactivate all
-    $("li[class*='menu-item']").not(item).not(parent).removeClass('submenu-item-active');
-}
+};
