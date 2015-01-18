@@ -52,12 +52,12 @@ $(document).ready(function() {
 function triggerSectionClick() {
     /* Handling url hashtag */
     hash = window.location.hash.replace('#', '');
-    target = $('.lomba-menu-item.' + hash);
+    target = '.lomba-menu-item.' + hash;
 
-    if (hash == "" || target.length == 0) {  // When no hashtag
+    if (hash == "" || $(target).length == 0) {  // When no hashtag
         // Then simulate first time click to show one section only
         $('.lomba-menu-item.eventdetail').click();
-    } else if (target.length != 0) {  // Or when hash tag specified
+    } else if ($(target).length != 0) {  // Or when hash tag specified
         // Trigger hash target click
         $('.lomba-menu-item.' + hash).click();
     }
