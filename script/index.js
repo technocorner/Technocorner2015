@@ -9,7 +9,7 @@ $(document).ready(function() {
         easingcss3: 'ease-in-out',
         easing: 'easeInQuart',
 
-        fixedElements: 'header',
+        /* fixedElements: 'header', */
         resize: false
     });
 

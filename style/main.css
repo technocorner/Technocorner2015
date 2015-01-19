@@ -55,16 +55,28 @@ h3 {
     font-weight: 200;
 }
 
-#landing {
+/*
+ * Pure Style
+ */
+.section .pure-g {
+    padding: 1em 1em 1em 3em;
+}
+
+header {
     background-color: #d4543b; /* #BF423C */
     background-size: 100% 100%;
     margin-top: 70px;
 }
 
-#landing img {
+header img {
     margin: 0 auto;
     display: block;
     size: 100% 100%;
+}
+
+header .caption {
+    text-align: center;
+    color: #fff;
 }
 
 .dark {
