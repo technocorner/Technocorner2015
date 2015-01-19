@@ -23,8 +23,7 @@ body {
 
 /* HEADER STYLE */
 
-header{
-    height: 32%;
+header {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
