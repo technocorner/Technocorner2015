@@ -127,6 +127,11 @@ header div{
         color: #A2353A;
     }
 
+.lomba-menu-separator {
+    height: 0.1em;
+    background-color: #92252A;
+}
+
 /*
  * Article Style
  */
