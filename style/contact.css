@@ -1,0 +1,24 @@
+#bagian-peta {
+    height: 100%;
+    width: 100%;
+}
+
+#gmap {
+    height: 100%;
+    width: 100%;
+}
+
+#gmap a.link-peta, #gmap a.link-peta:hover, #gmap a.link-peta:visited, #gmap a.link-peta:link {
+    color: blue;
+}
+
+#kontak {
+    border-collapse:collapse;
+    border : none;
+}
+
+#kontak td {
+   border:none;
+   outline:none;
+   padding-left: 0;
+}

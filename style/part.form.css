@@ -1,0 +1,50 @@
+/*
+ * Input Form Style
+ */
+label {
+    display: block;
+    padding: 5px;
+}
+
+/* Field */
+input[type="text"], input[type="email"],
+input[type="password"] {
+    background-color: light-gray;
+    border: 3px solid #343434;
+    border-radius: 2px;
+    box-shadow: unset;
+    color: #343434;
+    padding: 3px 6px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: white;
+    color: #343434;
+}
+
+/* Button */
+input[type="submit"], input[type="button"], button {
+    background-color: #343434;
+    border: unset;
+    border-radius: 2px;
+    box-shadow: unset;
+    color: white;
+    padding: 3px 6px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #d42;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+}
+
+/* File Uploader */
+input[type="file"] {
+    display: block;
+    border: 3px solid #343434;
+    padding: 3px 6px;
+}

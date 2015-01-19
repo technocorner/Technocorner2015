@@ -1,0 +1,245 @@
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: OpenSans-Light;
+    src: url(../font/OpenSans-Light.ttf);
+}
+
+/* GENERAL STYLE */
+
+body {
+    height: 1700px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12pt;
+}
+
+
+/* MENU STYLE */
+
+/* sudah ada di css yang lain */
+
+/* HEADER STYLE */
+
+header{
+    height: 32%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+header.sdc {
+    background-image: url(../img/background-sdc.jpg);
+}
+
+header.lfc {
+    background-image: url(../img/background-lf.jpg);
+}
+
+header.eec {
+    background-image: url(../img/background-eec.jpg);
+}
+
+header.ns {
+    background-image: url(../img/background-semnas.jpg);
+}
+
+header.expo {
+    background-image: url(../img/background-expo.jpg);
+}
+
+#header-inner{
+    margin: 15% 15% 0 15%;
+    text-align: center;
+}
+
+#header-img{
+    width: 80%;
+}
+
+/* QUOTE STYLE */
+
+#quote{
+    height: 4%;
+    background-color: #343434;
+}
+
+
+/* LOMBA STYLE */
+
+#lomba{
+    height: 50%;
+    background-color: #A2353A;
+    display: flex;
+    align-items: flex-start;
+}
+
+#menu-lomba{
+    background-color: transparent;
+    padding-top: 40px;
+}
+
+    #logo-lomba{
+        width: inherit;
+        text-align: center;
+    }
+    #nama-lomba{
+        font-family: OpenSans-Bold;
+        font-size: 1.5em;
+        color: white;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .lomba-menu-item{
+        background-color: transparent;
+        width: 300px;
+        text-align: left;
+        text-indent: 10px;
+        cursor: pointer;
+        font-family: OpenSans-Bold;
+        font-size: 1.5em;
+        color: white;
+        align-items: center;
+        transition: ease 300ms;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .lomba-menu-item:hover{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
+    .lomba-menu-item-click{
+        background-color: white;
+        transition: ease 300ms;
+        color: #A2353A;
+    }
+
+.lomba-menu-separator {
+    height: 0.1em;
+    background-color: #92252A;
+    margin-left: 1em;
+}
+
+/*
+ * Article Style
+ */
+/* Article Global style */
+.article{
+    background-color: white;
+    width: 900px;
+    height: 850px;
+    text-align: left;
+    padding: 1em 5em 2em 5em;
+    overflow-y: scroll;
+}
+
+.article {
+    font-size: 1.5em;
+}
+
+/* Heading */
+.article h1, .article h2, .article h3 {
+   margin-top: 1.5em;
+   margin-bottom: 0.1em;
+}
+
+.article h1 {
+        font-size: 1.5em;
+}
+
+.article h2 {
+        font-size: 1.3em;
+}
+
+.article h3 {
+        font-size: 1em;
+}
+
+/* Unordered List and Level Definition */
+.article ul {
+   font-family: OpenSans-Bold;
+   list-style-image: url("../img/bullet.gif");
+}
+
+.article ul li, p {
+   font-family: OpenSans-Light;
+   text-indent: 0px;
+   line-height: 140%;
+   margin-bottom: 15px;
+}
+
+.article ul.lvl1 li, p {
+    font-size: 0.9em;
+}
+
+.article ul.lvl2 li {
+    font-size: 0.88em;
+    font-weight: 200;
+}
+
+.article ul.lvl3 li {
+    font-size: 0.86em;
+    font-weight: 100;
+}
+
+.article ol {
+    font-family: OpenSans-Bold;
+    list-style-image: unset;
+    list-style: unset;
+}
+
+.article table {
+    margin-top: 15px;
+    border-collapse: collapse;
+
+}
+.article table, .article table td {
+    border: 1px solid black;
+    padding: 8px
+}
+
+.article a {
+    color: #A2353A;
+}
+
+.article a:hover {
+    color: #f88637;
+
+}
+
+    #download-isi{
+        text-align: center;
+        padding-top: 10%;
+    }
+    #download-isi ul li{
+        list-style: none;
+        margin-bottom: 10%;
+    }
+    #download-here{
+        color: #A2353A;
+        line-height: 0%;
+    }
+    #download-here:hover #download-pict{
+        width:16%;
+        transition: ease 300ms;
+    }
+    #download-here p{
+        font-family: OpenSans-Bold;
+        font-size: 1.5em;
+    }
+    #download-pict{
+        width: 15%;
+        transition: ease 300ms;
+    }
+
+/* FOOTER STYLE */
+
+#footer{
+    height: 24%;
+    background-color: grey;
+}

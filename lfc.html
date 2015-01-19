@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>Technocorner 2015 </title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="lib/yahoo.pure/pure-min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
+
+    <!-- Library Script -->
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-old-ie-min.css">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/jquery/jquery.easings.min.js"></script>
+    <script src="lib/jquery/jquery.slimscroll.min.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="lib/alertifyjs/alertify.min.js"></script>
+
+    <!-- Our Stlye -->
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/lomba.css" />
+    <link rel="stylesheet" href="style/part.navigation.css" />
+    <link rel="stylesheet" href="style/part.footer.css" />
+    <link rel="stylesheet" href="style/part.form.css" />
+
+    <!-- Our Script -->
+    <script src="script/lomba.js"></script>
+    <script src="script/part.navigation.js"></script>
+    <script src="script/part.form.js"></script>
+  </head>
+
+  <body>
+    <!--
+    # Navigation, load from other file
+    -->
+    <nav class="headbar" id="headbar"></nav>
+
+    <!--
+    # Header
+    -->
+    <header class="lfc">
+      <div></div>
+      <a id="header-inner">
+        <img id="header-img" src="img/header-content.png">
+      </a>
+      <div></div>
+    </header>
+
+    <div id="quote"></div>
+
+    <div id="lomba">
+        <nav id="menu-lomba">
+            <div id="logo-lomba"><img src="img/logo-lfc-polygon.png"></div>
+            <div id="nama-lomba">LINE<br>FOLLOWER<br>COMPETITION</div>
+            <div class="lomba-menu-item eventdetail" >SELAYANG PANDANG</div>
+            <div class="lomba-menu-item requirement" >PERSYARATAN</div>
+            <div class="lomba-menu-item registration" >PENDAFTARAN</div>
+            <div class="lomba-menu-item rules" >PERLOMBAAN</div>
+            <div class="lomba-menu-item download" >DOWNLOAD</div>
+            <!-- <div class="lomba-menu-item register" >DAFTAR</div> -->
+        </nav>
+        <div>
+          <!--
+          # Brief information section
+          -->
+          <div class="article eventdetail">
+            <h1>Deskripsi</h1>
+            <p><strong>Line Follower Competition (LFC)</strong> merupakan ajang adu cepat dan adu strategi robot dalam mengikuti garis sebagai lintasan. Line Follower Competition Technocorner hadir dengan tantangan  dan peraturan yang lain daripada yang lain. Dalam lintasan akan dihadirkan sejumlah rintangan yang memiliki tingkat kesulitan tersendiri dan selalu memberikan keunikan di setiap tahunnya. Peserta juga harus mengatur strategi bermain mereka sendiri agar bisa mengalahkan tim lain sehingga kontestan akan selalu tertantang untuk kembali berpartisipasi di ajang lomba berikutnya.</p>
+
+            <h1>Biaya Pendaftaran</h1>
+            <ul>
+              <li>Rp 160.000 per tim Mulai pendaftaran dibuka sampai seminggu sebelum penutupan pendaftaran</li>
+              <li>Rp 180.000 per tim Seminggu sebelum pendaftaran ditutup</li>
+            </ul>
+
+            <h1>Peserta</h1>
+            <p>Setiap tim terdiri 1 robot maksimal 3 orang dari perguruan tinggi atau sekolah yang sama. Peserta merupakan mahasiswa SI/D4/D3/D2/D1 khususnya. Namun, siswa SMA/Sederajat juga diperbolehkan mengikuti lomba. Kuota maksimal adalah 150 tim.</p>
+
+            <h1>Waktu dan Tempat Pelaksanaan</h1>
+            <p>Sabtu – Minggu, 14-15 Maret 2015 pukul 07.00 WIB – selesai,</p>
+            <p>di Selasar Gedung KPFT (Kantor Pusat Fakultas Teknik) UGM</p>
+
+            <h1>Fasilitas</h1>
+            <p>Makan siang, pin, sertifikat, konsumsi hari kedua hanya disediakan bagi tim yang lolos ke babak 32 besar, Kaos (*dengan ketentuan).</p>
+
+            <h1>Hadiah</h1>
+            <ul>
+              <li>Juara I: Hadiah Senilai Rp5.000.000 + trophy</li>
+              <li>Juara II: Hadiah Senilai Rp3.500.000 + trophy</li>
+              <li>Juara III: Hadiah Senilai Rp1.500.000 + trophy</li>
+              <li>Juara IV : Hadiah Senilai Rp 1.000.000 + trophy</li>
+              <li>Best Design: Hadiah Senilai Rp 750.000 + souvenir</li>
+            </ul>
+          </div>
+
+          <!--
+          # Requirement section
+          -->
+          <div class="article requirement">
+          <!-- Persyaratan -->
+          <h1>Persyaratan</h1>
+          <ul class="lvl1">
+            <li>Peserta masih berstatus sebagai mahasiswa dengan jenjang D1, D2, D3, D4 dan  S1 dalam lingkup perguruan tinggi di seluruh Indonesia. Namun, siswa SMA/Sederajat juga diperbolehkan mengikuti lomba.</li>
+            <li>Jumlah peserta (tim) dari tiap perguruan tinggi/sekolah tidak dibatasi.</li>
+            <li>Setiap tim maksimal terdiri dari 3 orang yang berasal dari perguruan tinggi/sekolah yang sama.</li>
+            <li>Setiap individu dan robot hanya diperbolehkan terdaftar pada satu tim.</li>
+            <li>Pendaftaran (online /offline) dimulai pada tanggal 1 Februari 2015 dan paling lambat tanggal 1 Maret 2015 atau jika kuota terpenuhi.</li>
+            <li>Semua administrasi pendaftaran dan pembayaran biaya pendaftaran online paling lambat tanggal 1 Maret 2015 melalui rekening bank yang telah ditentukan (oleh panitia) atau langsung.</li>
+            <li>Penggantian anggota tim, revisi nama anggota dan tim harus dikonfirmasikan kepada panitia paling lambat tanggal 1 Maret 2015, jika tidak melakukan konfirmasi penggantian maka peserta yang bersangkutan tidak diakui. Kuota maksimal peserta terbatas, hanya untuk 150 tim.</li>
+          </ul>
+        </div>
+
+          <!--
+          # Registration section
+          -->
+          <div class="article registration">
+            <!-- Pendaftaran -->
+            <h1>Pendaftaran</h1>
+            <p>Pendaftaran dapat dilakukan melalui dua cara, yaitu secara offline dan online.</p>
+
+            <h2>Online</h2>
+            <ol class="lvl1">
+              <li>Buka website http://www.technocornerugm.com lalu cermati peraturan-peraturannya. Klik http://www.technocornerugm.com/lfc</li>
+              <li>Transfer Biaya Pendaftaran sebersar Rp. 160.000 untuk pendaftaran tanggal 1 Februari sampai 22 Februari 2015 dan Rp. 180.000 untuk pendaftaran tanggal 22 Februari-1 Maret 2015 ke Rekening Bank Mandiri 137 001 078 8640 a.n. Ridha Bella Ayanda dan simpan bukti transfer.</li>
+              <li>Klik Tab Line Follower pada halaman website, kemudian unduh dan isi formulir pendaftaran dan upload semua kelengkapan pendaftaran. Kelengkapan pendaftaran antara lain:
+                <ul>
+                  <li>Semua informasi yang dibutuhkan pada formulir pendaftaran</li>
+                  <li>Pas Foto 3x4 masing-masing anggota Tim</li>
+                  <li>Scan Kartu Tanda Mahasiswa atau Kartu Tanda Pelajar masing-masing anggota Tim.</li>
+                  <li>Scan bukti transfer biaya pendaftaran</li>
+                </ul>
+              </li>
+              <li>Jika pendaftaran sudah diverifikasi, peserta akan diberi email pemberitahuan ke alamat ketua tim.</li>
+            </ol>
+
+            <h2>Offline</h2>
+            <ol class="lvl1">
+              <li>Siapkan Kelengkapan pendaftaran :
+                <ul>
+                  <li>Formilir pendaftaran yang telah diisi, Formulir dapan diunduh di http://www.technocornerugm.com atau diambil langsung di Sekertariat Technocorner Lobby Jurusan Teknik Elektro dan Teknologi Informasi Fakultas Teknik UGM.</li>
+                  <li>Pas Foto 3x4 masing-masing ketua dan anggota tim.</li>
+                  <li>Fotokopi Kartu Tanda Mahasiswa atau Kartu Tanda Pelajar masing-masing anggota Tim.</li>
+                </ul>
+              </li>
+              <li>Kumpulkan kelengkapan dan uang pendaftaran sebersar Rp. 160.000 untuk pendaftaran tanggal 1 Februari sampai 22 Februari 2015 dan Rp. 180.000 untuk pendaftaran tanggal 22 Februari-1 Maret 2015 di Sekertariat Technocorner Lobby Jurusan Teknik Elektro dan Teknologi Informasi Fakultas Teknik UGM. Pendaftaran dilayani hari Senin-Jumat jam 09.00-16.00 WIB.</li>
+              <li>Peserta mendapatkan bukti pembayaran berupa kuitansi yang nantinya harus dibawa saat hari pelaksanaan lomba.</li>
+            </ol>
+          </div>
+
+          <!--
+          # Rules section article
+          -->
+          <div class="article rules">
+            <h1>Spesifikasi Robot</h1>
+            <ul class="lvl1">
+              <li>Dimensi maksimal robot :
+                <ul>
+                  <li>Panjang : 20 cm </li>
+                  <li>Lebar : 20 cm </li>
+                  <li>Tinggi : 15 cm  </li>
+                  <li>Direkomendasikan dimensi seminimal mungkin. </li>
+                </ul>
+              </li>
+              <li>Robot tidak diperkenankan menggunakan kit robot rakitan atau mainan seperti LEGO dan merk serupa dan harus merupakan hasil kreativitas tim sendiri. Pengecualian untuk mainan seperti TAMIYA, penggunaannya maksimal yang diperbolehkan hanya bagian ban, gearbox dan motor DC.</li>
+              <li>Bobot maksimum robot adalah 3 kg (termasuk baterai).</li>
+              <li>Fungsi utama robot adalah mengikuti jejak garis serta melewati rintangan pada track yang dipergunakan dalam perlombaan.</li>
+              <li>Robot tidak boleh merusak permukaan lintasan.</li>
+              <li>Robot tidak boleh membahayakan penonton, panitia dan atau robot tim lain. </li>
+              <li>Robot bebas dari unsur eksplosif seperti bensin, butane, helium, dll. </li>
+              <li>Robot berjalan secara otomatis tanpa bantuan operator atau sistem control lainnya. </li>
+              <li>Robot membawa sumber energi sendiri. </li>
+              <li>Robot menggunakan Baterai maksimal 13 volt. </li>
+              <li>Nama tim atau robot tidak diperkenankan mengandung unsur penghinaan, pelecehan dan yang dapat menyinggung perasaan orang lain. </li>
+              <li>Jika terdapat nama tim atau robot yang sama, maka diutamakan yang telah menyelesaikan administrasinya lebih awal. </li>
+              <li>Peserta hanya diperbolehkan menggunakan satu robot selama seluruh pertandingan. </li>
+              <li>Poin-poin di atas otomatis berlaku sebagai peraturan yang wajib ditaati peserta dan apabila dilanggar akan dikenakan sanksi dari panitia.</li>
+            </ul>
+
+            <h1>Sistem Pertandingan</h1>
+	        <h2>GENERAL</h2>
+            <ul class="lvl1">
+              <li>Perlombaan akan diadakan selama 2 hari.</li>
+              <li>Babak penyisihan 64 besar dan Babak 64 Besar akan dilaksanakan pada hari pertama.</li>
+              <li>Sedangkan hari kedua akan dilaksanakan babak 32 besar, 16 Besar dan final.</li>
+              <li>Untuk hari kedua akan ada perubahan track. Track akan dipublikasikan setelah rangkaian acara hari pertama selesai.</li>
+              <li>Saat registrasi robot akan di cek uji kelayakan antara lain:
+                <ul>
+                  <li>Pengecekan dimensi robot.</li>
+                  <li>Penimbangan berat robot</li>
+                  <li>Pengukuruan tegangan supply robot</li>
+                  <li>Pengambilan foto</li>
+                </ul>
+              </li>
+              <li>Setelah robot yang lolos dari uji kelayakan, akan mendapatkan tanda lolos uji kelayakan berupa stiker.</li>
+              <li>Sebelum masuk arena pertandingan, tegangan supply robot akan dicek lagi. Apabila mencurigakan, akan dilakukan juga pengecekan dimensi dan penimbangan berat robot.</li>
+              <li>Pada hari pertama, setiap pertandingan terdapat 4 robot yang akan bertanding secara bersamaan.</li>
+              <li>Pada hari kedua, setiap pertandingan terdapat 2 robot yang akan bertanding secara bersamaan.</li>
+              <li>Pada setiap pertandingan akan dialokasikan waktu 3 menit untuk waktu pertandingan.</li>
+              <li>Parameter yang akan dinilai pada pertandingan Penyisihan 64 Besar dan 64 Besar adalah waktu tempuh saat mencapai finish. Jika robot tidak mampu mencapai garis finish maka yang dinilai adalah jarak terjauh yang dilampaui robot</li>
+              <li>Sistem penilaian pada babak 32 Besar, 16 Besar adalah menggunakan point.</li>
+              <li>Sistem penilaian Final menggunakan sistem point akan tetapi berbeda dengan babak 32 besar dan 16 besar.</li>
+              <li>Ketentuan mengenai sistem point ada pada halaman tambahan.</li>
+              <li>Sedangkan untuk best design, parameter yang akan dinilai adalah sebagai berikut:
+                <ul>
+                  <li>Kerapian</li>
+                  <li>Kreatifitas</li>
+                  <li>Inovasi</li>
+                  <li>Orisinalitas</li>
+                </ul>
+              </li>
+              <li>Hasil setiap pertandingan akan diupdate terus menerus dan dapat dilihat pada viewer yang disediakan oleh panitia.</li>
+              <li>Keputusan juri tidak dapat diganggu gugat.</li>
+            </ul>
+
+            <h2>BABAK PENYISIHAN 64 BESAR</h2>
+            <ul class="lvl1">
+              <li>Keseluruhan tim akan dibagi  menjadi 12 group yang isi setiap grup akan ditentukan dari hasil technical meeting.</li>
+              <li>Masing-masing tim memiliki hak bertanding sebanyak 2 kali.</li>
+              <li>Posisi start robot ditentukan dari hasil technical meeting. Untuk pertandingan selanjutnya posisi start tidak akan sama dengan posisi start pertandingan pertama.</li>
+              <li>Penilaian merupakan hasil akumulasi dari 2 pertandingan.</li>
+              <li>Penentuan tim yang lolos ke babak selanjutnya didasarkan pada 5 tim terbaik dari masing-masing grup dan 4 tim lainnya merupakan, 4 tim yang memiliki point tertinggi diantara tim-tim yang berada pada posisi ke 6 dari setiap grup.</li>
+            </ul>
+
+            <h2>BABAK 64 BESAR</h2>
+            <ul class="lvl1">
+              <li>Masih menggunakan track yang sama.</li>
+              <li>Untuk sistem pertandingan 64 besar menggunakan Rangkingan poin.</li>
+              <li>Tim yang lolos adalah tim yang berada pada rangking 32 besar secara universal.</li>
+              <li>Masing masing tim memiliki kesempatan bertanding sebanyak 1 kali.</li>
+            </ul>
+
+            <h2>BABAK 32 BESAR</h2>
+            <ul class="lvl1">
+              <li>Pada babak ini track yang digunakan adalah track baru.</li>
+              <li>Untuk sistem pertandingan 32 besar menggunakan sistem ambil point pada track.</li>
+              <li>Tim yang lolos adalah tim yang berada pada rangking 16 besar secara universal.</li>
+              <li>Masing-masing tim memiliki hak bertanding sebanyak 2 kali.</li>
+            </ul>
+
+            <h2>BABAK 16 BESAR</h2>
+            <ul class="lvl1">
+              <li>Pada babak ini track yang digunakan sama dengan babak 32 besar.</li>
+              <li>Untuk sistem pertandingan 16 besar menggunakan sistem ambil point pada track.</li>
+              <li>Tim yang lolos adalah tim yang berada pada rangking 6 besar secara universal.</li>
+              <li>Masing-masing tim memiliki hak bertanding sebanyak 2 kali.</li>
+            </ul>
+
+            <h2>BABAK FINAL</h2>
+            <ul class="lvl1">
+              <li>Pada babak ini track yang digunakan sama dengan babak 16 besar tetapi ada beberapa tambahan yang akan diberitahu saat penguman tim yang lolos ke final.</li>
+              <li>Masing-masing tim memilik hak tanding sebanyak 5 kali</li>
+              <li>Juara akan ditentukan dengan sistem point yang ada pada bagian general sistem pertandingan.</li>
+            </ul>
+
+            <h1>Sistem Point</h1>
+            <h2>Babak 32 dan 16 Besar</h2>
+            <ul>
+              <li>Pada babak ini point diperoleh dengan cara menyelesaikan tantangan yang telah ditentukan oleh panitia. Setiap tantangan memiliki point sendiri-sendiri, untuk garis final mempunyai point terbesar.</li>
+            </ul>
+
+            <h2>Babak Final</h2>
+            <ul>
+              <li>Pada babak ini point diperoleh dengan cara menyelesaikan tantangan yang telah ditentukan oleh panitia. Setiap tantangan memiliki point sendiri-sendiri, untuk garis final mempunyai point terbesar.</li>
+              <li>Sistem penilaian Final ada dengan membandingkan jumlah point yang didapat antar 2 robot yang bertanding. Peserta dinyatakan menang jika ia memiliki point yang lebih tinggi dari lawannya, dan akan mendapat nilai sesuai dengan ketentuan-ketentuan berikut. :
+                <ul>
+                  <li>Jika peserta mampu finis dan menjadi pemenang pada 1 kali pertandingan, peserta akan mendapat nilai 3</li>
+                  <li>Jika peserta menjadi pemenang pada 1 kali pertandingan akan tetapi tidak mampu finis, peserta akan mendapat nilai 2</li>
+                  <li>Jika peserta mampu finis akan tetapi kalah dalam 1 kali pertandingan, peserta akan mendapat nilai 1</li>
+                  <li>Jika peserta tidak mampu finis dan kalah dalam 1 kali pertandingan, peserta akan mendapat nilai 0.</li>
+                  <li>Jika point yang didapat sama maka akan dilakukan tanding ulang antar peserta yang memiliki point sama.</li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+
+          <!--
+          # Download section
+          -->
+          <div class="article download" id="download-isi">
+            <h1>Petunjuk Teknis</h1>
+            <ul class="lvl1">
+              <li>Penjelasan teknis lomba Line Follower Competition (LFC)</li>
+            </ul>
+            <a id="download-here" href="data/lfc-panduan-penyisihan_tc_2015.pdf">
+              <img id="download-pict" src="img/back28.png">
+              <p>DOWNLOAD HERE</p>
+            </a>
+          </div>
+
+          <!--
+          # Register form section
+          -->
+          <div class="article register" id="pendaftaran">
+            <!-- SDC Registration Form -->
+            <form id="lfc-reg" class="registration" name="registration" action=""
+                  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+              <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+
+              <h1>Pendaftaran</h1>
+              <label for="regid">Nama (Kapten) :</label>
+              <input type="text" name="name" required />
+
+              <label for="file_uploader">Formulir Pendaftaran :</label>
+              <input type="file" id="formulir-uploader" name="formulir-uploader" required />
+
+              <label for="file_uploader">Kartu Tanda Mahasiswa / Kartu Pelajar :</label>
+              <input type="file" id="card-uploader" name="card-uploader" required />
+
+              <label for="file_uploader">Bukti Pembayaran :</label>
+              <input type="file" id="paycheck-uploader" name="paycheck-uploader" required />
+
+              <br/>
+              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
+
+              <br/>
+              <input type="submit" value="Kirim" />
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <!--
+    # Footer, load from other file
+    -->
+    <footer></footer>
+  </body>
+</html>
