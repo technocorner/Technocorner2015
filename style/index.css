@@ -96,7 +96,11 @@
 /* Competition */
 #excerpt {
     background-size: cover;
-    text-shadow: 1px 1px 1px #323232;
+    text-shadow:
+        -1px -1px 0px #323232,
+        -1px 1px 0px #323232,
+        1px -1px 0px #323232,
+        1px 1px 0px #323232;
     text-align: center;
 }
 
@@ -213,17 +217,13 @@
 .see-button:hover {
     background-color: white;
     color: #323232;
+    text-shadow: none;
 }
 
 .see-button {
 	padding: 0.5em;
     border: 1px solid white;
-    transition: all 200ms ease;
-}
-
-.see-button: hover {
-	background-color: white;
-    color: #323232;
+    transition: all 300ms ease;
 }
 
 .event-box {
