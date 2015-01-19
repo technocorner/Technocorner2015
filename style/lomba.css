@@ -25,12 +25,32 @@ body {
 
 header{
     height: 32%;
-    background-image: url(../img/background-eec-ori.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
 }
+
+header.sdc {
+    background-image: url(../img/background-sdc.jpg);
+}
+
+header.lfc {
+    background-image: url(../img/background-lf.jpg);
+}
+
+header.eec {
+    background-image: url(../img/background-eec.jpg);
+}
+
+header.ns {
+    background-image: url(../img/background-semnas.jpg);
+}
+
+header.expo {
+    background-image: url(../img/background-expo.jpg);
+}
+
 header div{
     flex: 1;
 }
