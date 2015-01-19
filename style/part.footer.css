@@ -18,8 +18,9 @@
     margin: 5px 0;
 }
 
-#closing a, a:visited {
-    color: white;
+#closing a,
+#closing a:hover,
+#closing a:visited {
     text-decoration: none;
 }
 
@@ -52,11 +53,7 @@
 }
 
 #closing .more-contact {
-    font-weight: bold;
-}
-
-#closing a:hover {
-    text-decoration: underline;
+    /* font-weight: bold; */
 }
 
 #copyright {
