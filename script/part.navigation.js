@@ -22,12 +22,20 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function(e) {
-        $('.section.fp-section').each(function () {
+        $('.nav-anchor').each(function () {
             var top = window.pageYOffset;
             var distance = top - $(this).offset().top;
+            var anchor = null;
 
             if (distance < 70 && distance > -80) {
-                headbar.activateMenu('.' + $(this).attr('id'));
+                if ($(this).attr('anchor')) {
+                    anchor = $(this).attr('anchor');
+                    console.log(anchor);
+                }
+
+                if (anchor) {
+                    headbar.activateMenu('.' + $(this).attr('anchor'));
+                }
             }
         });
     });
@@ -86,8 +94,6 @@ var headbar = {
         hash = window.location.hash.replace('#', '');
         anchor = hash;
 
-        console.log("ANCHOR h : " + anchor);
-
         // Is it a section
         if ($('#' + anchor).hasClass('section')) {
             // Yes, activate this
@@ -95,7 +101,6 @@ var headbar = {
         } else {
             // No, use filename
             filename = this.getUrlFileName(window.location.pathname);
-            console.log("ANCHOR f : " + filename);
             this.activateMenuOrSub('.' + filename);
         }
 
