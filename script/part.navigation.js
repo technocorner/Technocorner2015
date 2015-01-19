@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function(e) {
-        $('.section').each(function () {
+        $('.section.fp-section').each(function () {
             var top = window.pageYOffset;
             var distance = top - $(this).offset().top;
 
@@ -83,24 +83,37 @@ var headbar = {
         this.scrollOpt.offset = this.height;
 
         // Detect crumpy url with hashtag
-        anchor = window.location.hash.replace('#', '');
+        hash = window.location.hash.replace('#', '');
+        anchor = hash;
+
+        console.log("ANCHOR h : " + anchor);
 
         // Is it a section
         if ($('#' + anchor).hasClass('section')) {
             // Yes, activate this
-            this.activateMenu('.' + anchor);
+            this.activateMenuOrSub('.' + anchor);
         } else {
-            // No, activate the saved menu
-            this.activateMenu('.' + this.active);
+            // No, use filename
+            filename = this.getUrlFileName(window.location.pathname);
+            console.log("ANCHOR f : " + filename);
+            this.activateMenuOrSub('.' + filename);
         }
 
         // Scroll to it! Let set sail
         smoothScroll.animateScroll(null, '#' + this.active, headbar.scrollOpt);
     },
 
+    activateMenuOrSub: function (item) {
+        if ($(item).hasClass('submenu-item')) {
+            this.activateSubMenu(item);
+        } else if ($(item).hasClass('menu-item')) {
+            this.activateMenu(item);
+        }
+    },
+
     activateMenu: function (item) {
         // Activate only one
-        $(item).addClass('menu-item-active');
+        $(item).filter('.menu-item').addClass('menu-item-active');
 
         // Save the new active menu
         this.active = this.getMenuClass(item)? this.getMenuClass(item) : this.active;
@@ -110,12 +123,13 @@ var headbar = {
     },
 
     activateSubMenu: function (item) {
-        parent = $(item).parent('menu-item');
+        parent = $(item).filter('.submenu-item').parents('.menu-item');
 
         // Activate only one
-        $(item).addClass('submenu-item-active');
+        $(item).filter('.submenu-item').addClass('submenu-item-active');
         parent.addClass('menu-item-active');
 
+        console.log("Parent %o : Child %o", parent, $(item));
         // Deactivate all
         $("li[class*='menu-item']").not(item).not(parent).removeClass('submenu-item-active');
     },
@@ -128,6 +142,14 @@ var headbar = {
         return $(item).attr('class').replace('menu-item', '')
                                     .replace('menu-item-active', '')
                                     .replace(/\s/g, '');
+    },
+
+    getUrlFileName: function (path) {
+        var name = path.split("/").pop()
+                       .split('#')[0]
+                       .split('.');
+        name.splice(-1, 1);
+        return name;
     },
 
     onHashtagChanged: function (e) {
