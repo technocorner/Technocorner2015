@@ -82,6 +82,11 @@ header .caption {
 .dark {
     background-color: #323232;
 }
+
+.darker {
+    background-color: #000;
+}
+
 .light {
     background-color: #d4543b;
 }
