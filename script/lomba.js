@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Load navigator headbar and footer
-    $('nav#headbar').load('part.navigation.html #head-inner');
+    headbar.attachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
 
     /*
