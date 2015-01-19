@@ -62,6 +62,11 @@ h3 {
     padding: 1em 1em 1em 3em;
 }
 
+
+/*
+ * Widget / Part
+ */
+/* Header */
 header {
     background-color: #d4543b; /* #BF423C */
     background-size: 100% 100%;
@@ -77,6 +82,25 @@ header img {
 header .caption {
     text-align: center;
     color: #fff;
+}
+
+/* Unique Button */
+.see-button {
+    color: white;
+    padding: 0.5em;
+    border: 1px solid white;
+    text-align: center;
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+
+.see-button:hover {
+    background-color: white;
+    color: #323232;
+}
+
+.see-button:hover * {
+    color: #323232;
 }
 
 .dark {
