@@ -55,8 +55,8 @@ function triggerSectionClick() {
     target = '.lomba-menu-item.' + hash;
 
     if (hash == "" || $(target).length == 0) {  // When no hashtag
-        // Then simulate first time click to show one section only
-        $('.lomba-menu-item.eventdetail').click();
+        // Then simulate first time click to show the first section only
+        $('.lomba-menu-item')[0].click();
     } else if ($(target).length != 0) {  // Or when hash tag specified
         // Trigger hash target click
         $('.lomba-menu-item.' + hash).click();
