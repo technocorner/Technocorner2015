@@ -35,3 +35,6 @@ Besok dah release, jadi pastikan :
 2. Rapikan semua pekerjaan
 3. Tes halaman pekerjaan kalian di browser lain semacam IE, Chrome, Firefox, Opera. Kalau lihat kesalahan langsung laporkan.
 4. Untuk mobile kita tunda dulu..
+
+
+Hai halo aku sebuah kalimat.
