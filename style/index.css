@@ -42,7 +42,6 @@
  */
 /* Landing */
 #landing {
-    background-color: #d4543b; /* #BF423C */
     background-size: 100% 100%;
     margin-top: 70px;
 }
@@ -296,14 +295,6 @@
         text-align: center;
         padding: 5px;
     }
-}
-
-.dark {
-    background-color: #323232;
-}
-
-.light {
-    background-color: #d4543b
 }
 
 #font {
