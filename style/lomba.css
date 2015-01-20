@@ -172,24 +172,27 @@ header.expo {
    margin-bottom: 15px;
 }
 
-.article ul.lvl1 li, p {
+.article ol {
+    font-family: OpenSans-Bold;
+    list-style-type: decimal;
+}
+
+.article ul.lvl1 li,
+.article ol.lvl1 li,
+p {
     font-size: 0.9em;
 }
 
-.article ul.lvl2 li {
+.article ul.lvl2 li,
+.article ol.lvl2 li {
     font-size: 0.88em;
     font-weight: 200;
 }
 
-.article ul.lvl3 li {
+.article ul.lvl3 li,
+.article ol.lvl3 li {
     font-size: 0.86em;
     font-weight: 100;
-}
-
-.article ol {
-    font-family: OpenSans-Bold;
-    list-style-image: unset;
-    list-style: unset;
 }
 
 .article table {
