@@ -101,13 +101,17 @@ header .caption {
     transition: all 200ms ease;
 }
 
+.see-button a {
+    color: white;
+}
+
 .see-button:hover {
     background-color: white;
     color: #323232;
 }
 
 .see-button:hover * {
-    color: #323232;
+    color: #323232 !important;
 }
 
 .dark {
