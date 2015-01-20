@@ -18,7 +18,9 @@ nav#headbar.fixed-mode {
     z-index: 1000;
 }
 
-nav a, a:link, a:visited {
+nav a,
+nav a:link,
+nav a:visited {
     text-decoration: none;
     color: white;
 }
