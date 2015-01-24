@@ -18,7 +18,8 @@ $ajax_response = array(
     'card' => 0,
     'regform' => 0,
     'mailed' => 0,
-    'success' => 0
+    'success' => 0,
+    'error' => 'None'
 );
 
 class UserInfo {
@@ -125,6 +126,8 @@ class UserInfo {
      * Convert this obj field into csv (comma-separated value)
      */
     function toCsv() {
+        global $ajax_response;
+
         $str = $this->regid . ', '
              . $this->name . ', '
              . $this->email . ', '
@@ -133,9 +136,13 @@ class UserInfo {
              . $this->department . ', '
              . 'bukti, ' . $this->paycheck_uploaded . ', '
              . 'formulir, ' . $this->regform_uploaded . ', '
-             . 'card' . $this->card_uploaded;
+             . 'card' . $this->card_uploaded . PHP_EOL;
 
-        $global_folder = PARTY_DATA . "data/" . $subevent[0] . "/";
+        $global_folder = PARTY_DATA . "data/" . $this->subevent[0] . "/";
+
+        if (!mkdir($global_folder)) {
+            $ajax_response['error'] = 'Failed to create folder: ' . $global_folder;
+        }
 
         file_put_contents($global_folder . 'summary.csv', $str, FILE_APPEND);
     }
@@ -144,21 +151,20 @@ class UserInfo {
      * Serialize (write) UserInfo into file.
      */
     function saveUserInfo() {
+        global $ajax_response;
+
         $user_file = $this->folder . "user.json";
         // Get JSON string format
         $jstr = json_encode($this, JSON_PRETTY_PRINT | JSON_FORCE_OBJECT);
 
         // Is the folder not yet exist?
         if (!file_exists($this->folder)) {
-            if (!mkdir($this->folder, 0770, true)) {
+            if (!mkdir($this->folder, 0771, true)) {
+                $ajax_response['error'] = 'Failed to create folder: ' . $this->folder;
                 return false;
-            } else {
-                // TODO: change this!
-                chgrp($this->folder, "abdillah");
-                chgrp($this->folder, "abdillah");
             }
         }
-
+        
         // Write it to file
         if (!file_put_contents($user_file, $jstr)) {
             return false;
@@ -173,6 +179,7 @@ class UserInfo {
      *                          fail or produce error
      */
     function saveUploadedFile($file, $shortname, $unexist_callback) {
+        global $ajax_response;
         // Is the file already uploaded? With no error?
         if (file_exists($file['tmp_name'])
             && is_uploaded_file($file['tmp_name'])
@@ -194,6 +201,7 @@ class UserInfo {
 
             // Move uploaded file from temporary storage
             if (!move_uploaded_file ($file['tmp_name'], $file_path)) {
+                $ajax_response['error'] = 'Failed to move file: ' . $file_path;
                 return false;
             }
 
@@ -486,6 +494,7 @@ function main() {
     if (!$resp->success) {
         // the CAPTCHA was entered incorrectly
         $ajax_response['captcha'] = 0;
+        $ajax_response['error'] = 'Captcha auth failed';
         return null;
     }
     $ajax_response['captcha'] = 1;
