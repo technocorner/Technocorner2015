@@ -3,12 +3,13 @@
  * File upload facility into server. Should be secure!
  */
 
+define( 'ROOTDIR',  $_SERVER['DOCUMENT_ROOT'] . '/tc/' );
 define( 'PARTY_DATA',  $_SERVER['DOCUMENT_ROOT'] . '/participant/' );
 define( 'SUBEVENT',  'National Seminar' );
 define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
 
-require 'lib/phpmailer/PHPMailerAutoload.php';
-require_once('lib/google.recaptcha/recaptchalib.php');
+require(ROOTDIR . 'lib/phpmailer/PHPMailerAutoload.php');
+require_once(ROOTDIR . 'lib/google.recaptcha/recaptchalib.php');
 
 $ajax_response = array(
     'subevent' => array("semnas", "Seminar Nasional"),
