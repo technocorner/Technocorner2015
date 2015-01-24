@@ -3,7 +3,7 @@
  * File upload facility into server. Should be secure!
  */
 
-define( 'ROOTDIR',  '/home/abdillah/workspace/org/kmteti/Technocorner/Website/tc-oweb/' );
+define( 'PARTY_DATA',  $_SERVER['DOCUMENT_ROOT'] . '/participant/' );
 define( 'SUBEVENT',  'National Seminar' );
 define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
 
@@ -51,7 +51,7 @@ class UserInfo {
     var $regform_uploaded;  // Has current user upload a registration form?
     var $card_uploaded;     // Has current user upload a card?
 
-    var $subevent;          // What subevent this user assigned 
+    var $subevent;          // What subevent this user assigned
     var $folder;            // Where this userinfo stored
 
     var $mail;
@@ -61,7 +61,7 @@ class UserInfo {
         $this->name = $name;
         $this->subevent = $subevent;
         $this->paycheck_uploaded = false;
-        $this->folder = ROOTDIR . "data/" . $subevent[0] . "/" . $this->regid . "/";
+        $this->folder = PARTY_DATA . "data/" . $subevent[0] . "/" . $this->regid . "/";
 
         $ajax_response['subevent'] = $subevent;
 
@@ -71,7 +71,7 @@ class UserInfo {
     static function buildFromRegId($regid, $subevent = UserInfo::SUBEVENT_NS) {
         $user = new UserInfo("", $subevent);
         $user->regid = $regid;
-        $user->folder = ROOTDIR . "data/" . $subevent[0] . "/" .  $user->regid . "/";
+        $user->folder = PARTY_DATA . "data/" . $subevent[0] . "/" .  $user->regid . "/";
 
         $ajax_response['subevent'] = $subevent;
 
@@ -117,6 +117,25 @@ class UserInfo {
         }
 
         // Binary check? Later..
+    }
+
+    /*
+     * Convert this obj field into csv (comma-separated value)
+     */
+    function toCsv() {
+        $str = $this->regid . ', '
+             . $this->name . ', '
+             . $this->email . ', '
+             . $this->address . ', '
+             . $this->phone . ', '
+             . $this->department . ', '
+             . 'bukti, ' . $this->paycheck_uploaded . ', '
+             . 'formulir, ' . $this->regform_uploaded . ', '
+             . 'card' . $this->card_uploaded;
+
+        $global_folder = PARTY_DATA . "data/" . $subevent[0] . "/";
+
+        file_put_contents($global_folder . 'summary.csv', $str, FILE_APPEND);
     }
 
     /*
@@ -341,6 +360,7 @@ function nsRegisterUser() {
     $user->department = $_POST['department'];
 
     $user->saveUserInfo();
+    $user->toCsv();
 
     if ($_POST['upload_chk'] == "upload_y") {
         $user->savePaycheck();
@@ -400,6 +420,7 @@ function formSDC() {
 
     $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_SDC);
     $user->saveUserInfo();
+    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
@@ -416,6 +437,7 @@ function formEEC() {
 
     $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_EEC);
     $user->saveUserInfo();
+    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
@@ -432,6 +454,7 @@ function formLF() {
 
     $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_LF);
     $user->saveUserInfo();
+    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
@@ -451,6 +474,7 @@ function main() {
 
     // Test for recaptcha
     $privatekey = "6Lf1WwATAAAAADa0MEgI5iXEfvZ7HByT6wXikKCt";
+    // $privatekey = "6LcP6AATAAAAAI-5S-W2XGSBPYsQKFmawam88Gnj";
     $resp = null;
 
     $reCaptcha = new ReCaptcha($privatekey);
