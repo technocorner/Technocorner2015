@@ -34,7 +34,7 @@ class UserInfo {
 
     const FILE_PAYCHECK = "paycheck-uploader";
     const FILE_CARD = "card-uploader";
-    const FILE_FORMULIR = "formulir-uploader";
+    const FILE_REGFORM = "formulir-uploader";
 
     const SUCCESS_PAYCHECK = 0b001;
     const SUCCESS_CARD = 0b010;
