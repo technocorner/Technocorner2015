@@ -33,6 +33,7 @@ $(document).ready(function () {
 });
 
 function submitForm(form) {
+    alertify.notify('Formulir sedang dikirim dan diproses...');
     var formData = new FormData($(form)[0]);
     formData.append("formId", form);
 
