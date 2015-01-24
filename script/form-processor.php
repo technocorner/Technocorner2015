@@ -25,6 +25,7 @@ class UserInfo {
     const ERROR_FILE_SIZE = 121;
 
     const SUBEVENT_NS = array("semnas", "Seminar Nasional");
+    const SUBEVENT_SDC = array("sdc", "Software Development Competition");
     const SUBEVENT_LF = array("lf", "Line Follower");
     const SUBEVENT_EEC = array("eec", "Electrical Engineering Competition");
     const SUBEVENT_EXPO = array("expo", "Technocorner Expo");
