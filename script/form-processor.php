@@ -60,13 +60,15 @@ class UserInfo {
     var $mail;
 
     function __construct($name, $subevent) {
+        global $ajax_response;
+
         $this->regid = UserInfo::generateRegistrationId($name);
         $this->name = $name;
         $this->subevent = $subevent;
         $this->paycheck_uploaded = false;
         $this->folder = PARTY_DATA . "data/" . $subevent[0] . "/" . $this->regid . "/";
 
-        $ajax_response['subevent'] = $subevent;
+        $ajax_response['subevent'] = $this->subevent;
 
         $this->initMail();
     }
