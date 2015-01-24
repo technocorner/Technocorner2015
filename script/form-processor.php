@@ -3,7 +3,7 @@
  * File upload facility into server. Should be secure!
  */
 
-define( 'ROOTDIR',  $_SERVER['DOCUMENT_ROOT'] );
+define( 'ROOTDIR',  $_SERVER['DOCUMENT_ROOT'] . '/');
 define( 'PARTY_DATA',  $_SERVER['DOCUMENT_ROOT'] . '/participant/' );
 define( 'SUBEVENT',  'National Seminar' );
 define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
