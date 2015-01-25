@@ -4,7 +4,7 @@
  */
 
 define( 'ROOTDIR',  $_SERVER['DOCUMENT_ROOT'] . '/');
-define( 'PARTY_DATA',  $_SERVER['DOCUMENT_ROOT'] . '/participant/' );
+define( 'PARTY_DATA',  '/participant/' );
 define( 'SUBEVENT',  'National Seminar' );
 define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
 
