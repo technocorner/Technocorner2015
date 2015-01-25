@@ -3,17 +3,19 @@
  * File upload facility into server. Should be secure!
  */
 
-define( 'ROOTDIR',  $_SERVER['DOCUMENT_ROOT'] . '/');
-define( 'PARTY_DATA',  '/participant/' );
+define( 'ROOT', dirname ($_SERVER['DOCUMENT_ROOT']) . '/' );
+define( 'ROOT_PUBLIC_HTTP',  $_SERVER['DOCUMENT_ROOT'] . '/' );
+define( 'PARTY_DATA',  ROOT . 'participant/' );
 define( 'SUBEVENT',  'National Seminar' );
 define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
 
-require(ROOTDIR . 'lib/phpmailer/PHPMailerAutoload.php');
-require_once(ROOTDIR . 'lib/google.recaptcha/recaptchalib.php');
+require(ROOT_PUBLIC_HTTP . 'lib/phpmailer/PHPMailerAutoload.php');
+require_once(ROOT_PUBLIC_HTTP . 'lib/google.recaptcha/recaptchalib.php');
 
 $ajax_response = array(
     'subevent' => array("semnas", "Seminar Nasional"),
     'captcha' => 0,
+    'uinfo' => 0,
     'paycheck' => 0,
     'card' => 0,
     'regform' => 0,
@@ -170,8 +172,11 @@ class UserInfo {
 
         // Write it to file
         if (!file_put_contents($user_file, $jstr)) {
+            $ajax_response['error'] = 'Failed to put userinfo: ' . $user_file;
             return false;
         }
+
+        $ajax_response['uinfo'] = 1;
     }
 
     /*
