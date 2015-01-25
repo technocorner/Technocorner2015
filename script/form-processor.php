@@ -23,28 +23,28 @@ $ajax_response = array(
 );
 
 class UserInfo {
-    const ERROR_FILE_TYPE = 120;
-    const ERROR_FILE_SIZE = 121;
+    static $ERROR_FILE_TYPE = 120;
+    static $ERROR_FILE_SIZE = 121;
 
     // TODO: Change into serialized array soon, for compatibility to v5.4
-    const SUBEVENT_NS = serialize(array("semnas", "Seminar Nasional"));
-    const SUBEVENT_SDC = serialize(array("sdc", "Software Development Competition"));
-    const SUBEVENT_LF = serialize(array("lf", "Line Follower"));
-    const SUBEVENT_EEC = serialize(array("eec", "Electrical Engineering Competition"));
-    const SUBEVENT_EXPO = serialize(array("expo", "Technocorner Expo"));
+    static $SUBEVENT_NS = array("semnas", "Seminar Nasional");
+    static $SUBEVENT_SDC = array("sdc", "Software Development Competition");
+    static $SUBEVENT_LF = array("lf", "Line Follower");
+    static $SUBEVENT_EEC = array("eec", "Electrical Engineering Competition");
+    static $SUBEVENT_EXPO = array("expo", "Technocorner Expo");
 
-    const FILE_PAYCHECK = "paycheck-uploader";
-    const FILE_CARD = "card-uploader";
-    const FILE_REGFORM = "formulir-uploader";
+    static $FILE_PAYCHECK = "paycheck-uploader";
+    static $FILE_CARD = "card-uploader";
+    static $FILE_REGFORM = "formulir-uploader";
 
-    const SUCCESS_PAYCHECK = 0b001;
-    const SUCCESS_CARD = 0b010;
-    const SUCCESS_REGFORM = 0b100;
+    static $SUCCESS_PAYCHECK = 0b001;
+    static $SUCCESS_CARD = 0b010;
+    static $SUCCESS_REGFORM = 0b100;
 
     var $regid;    // Unique id
     var $name;     // Sign name, usual name
 
-    // Sign up data, mostly for SUBEVENT_NS
+    // Sign up data, mostly for $SUBEVENT_NS
     var $email;
     var $address;
     var $phone;
@@ -74,7 +74,7 @@ class UserInfo {
         $this->initMail();
     }
 
-    static function buildFromRegId($regid, $subevent = UserInfo::SUBEVENT_NS) {
+    static function buildFromRegId($regid, $subevent = array("semnas", "Seminar Nasional")) {
         $user = new UserInfo("", $subevent);
         $user->regid = $regid;
         $user->folder = PARTY_DATA . "data/" . unserialize($subevent)[0] . "/" .  $user->regid . "/";
@@ -102,16 +102,16 @@ class UserInfo {
      */
     private function checkUploadedFile($file) {
         /* Check it's size: */
-        $FILE_SIZE_LIMIT = 3000000; // byte
+        $$FILE_SIZE_LIMIT = 3000000; // byte
 
         // It's recorded size
-        if ($file['size'] > FILE_SIZE_LIMIT) {
-            return ERROR_FILE_SIZE;
+        if ($file['size'] > $FILE_SIZE_LIMIT) {
+            return $ERROR_FILE_SIZE;
         }
 
         // It's real size
-        if (filesize($file['size']) > FILE_SIZE_LIMIT) {
-            return ERROR_FILE_SIZE;
+        if (filesize($file['size']) > $FILE_SIZE_LIMIT) {
+            return $ERROR_FILE_SIZE;
         }
 
         /* Check it's type, an image or docs? */
@@ -119,7 +119,7 @@ class UserInfo {
         $fileext = explode('.', $file['name']);
         // Filter dangerous php script
         if (in_array("php", $fileext)) {
-            return ERROR_FILE_TYPE;
+            return $ERROR_FILE_TYPE;
         }
 
         // Binary check? Later..
@@ -147,7 +147,7 @@ class UserInfo {
             $ajax_response['error'] = 'Failed to create folder: ' . $global_folder;
         }
 
-        file_put_contents($global_folder . 'summary.csv', $str, FILE_APPEND);
+        file_put_contents($global_folder . 'summary.csv', $str, $FILE_APPEND);
     }
 
     /*
@@ -223,7 +223,7 @@ class UserInfo {
      */
     function savePaycheck() {
         $shortname = "paycheck";
-        $file = $_FILES[UserInfo::FILE_PAYCHECK];
+        $file = $_FILES[UserInfo::$FILE_PAYCHECK];
         $unexist_callback = null;
 
         // Mark paycheck uploaded
@@ -235,7 +235,7 @@ class UserInfo {
      */
     function saveCard() {
         $shortname = "card";
-        $file = $_FILES[UserInfo::FILE_CARD];
+        $file = $_FILES[UserInfo::$FILE_CARD];
         $unexist_callback = null;
 
         $this->card_uploaded = $this->saveUploadedFile($file, $shortname, $unexist_callback);
@@ -246,7 +246,7 @@ class UserInfo {
      */
     function saveRegForm() {
         $shortname = "formulir";
-        $file = $_FILES[UserInfo::FILE_REGFORM];
+        $file = $_FILES[UserInfo::$FILE_REGFORM];
         $unexist_callback = null;
 
         $this->regform_uploaded = $this->saveUploadedFile($file, $shortname, $unexist_callback);
@@ -261,17 +261,17 @@ class UserInfo {
 
         // Check uploaded progress
         if ($this->regform_uploaded) {
-            $ret |= UserInfo::SUCCESS_REGFORM;
+            $ret |= UserInfo::$SUCCESS_REGFORM;
             $ajax_response['regform'] = 1;
         }
 
         if ($this->card_uploaded) {
-            $ret |= UserInfo::SUCCESS_CARD;
+            $ret |= UserInfo::$SUCCESS_CARD;
             $ajax_response['card'] = 1;
         }
 
         if ($this->paycheck_uploaded) {
-            $ret |= UserInfo::SUCCESS_PAYCHECK;
+            $ret |= UserInfo::$SUCCESS_PAYCHECK;
             $ajax_response['paycheck'] = 1;
         }
 
@@ -366,7 +366,7 @@ class UserInfo {
 function nsRegisterUser() {
     global $ajax_response;
 
-    $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_NS);
+    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_NS);
     $user->email = $_POST['email'];
     $user->phone = $_POST['phone'];
     $user->address = $_POST['address'];
@@ -378,7 +378,7 @@ function nsRegisterUser() {
     if ($_POST['upload_chk'] == "upload_y") {
         $user->savePaycheck();
 
-        if ($user->checkUploadRequirement(UserInfo::SUCCESS_PAYCHECK))
+        if ($user->checkUploadRequirement(UserInfo::$SUCCESS_PAYCHECK))
         {
             $ajax_response['paycheck'] = 1;
         } else {
@@ -407,7 +407,7 @@ function nsVerifyUser() {
     $user = UserInfo::buildFromRegId($_POST['regid']);
     $user->savePaycheck();
 
-    $user->checkUploadRequirement(UserInfo::SUCCESS_PAYCHECK);
+    $user->checkUploadRequirement(UserInfo::$SUCCESS_PAYCHECK);
 }
 
 /*
@@ -431,7 +431,7 @@ function formNatSeminar() {
 function formSDC() {
     global $ajax_response;
 
-    $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_SDC);
+    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_SDC);
     $user->saveUserInfo();
     $user->toCsv();
     $user->saveCard();
@@ -439,16 +439,16 @@ function formSDC() {
     $user->savePaycheck();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::SUCCESS_PAYCHECK
-        | UserInfo::SUCCESS_REGFORM
-        | UserInfo::SUCCESS_CARD
+        UserInfo::$SUCCESS_PAYCHECK
+        | UserInfo::$SUCCESS_REGFORM
+        | UserInfo::$SUCCESS_CARD
     );
 }
 
 function formEEC() {
     global $ajax_response;
 
-    $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_EEC);
+    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_EEC);
     $user->saveUserInfo();
     $user->toCsv();
     $user->saveCard();
@@ -456,16 +456,16 @@ function formEEC() {
     $user->savePaycheck();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::SUCCESS_PAYCHECK
-        | UserInfo::SUCCESS_REGFORM
-        | UserInfo::SUCCESS_CARD
+        UserInfo::$SUCCESS_PAYCHECK
+        | UserInfo::$SUCCESS_REGFORM
+        | UserInfo::$SUCCESS_CARD
     );
 }
 
 function formLF() {
     global $ajax_response;
 
-    $user = new UserInfo($_POST['name'], UserInfo::SUBEVENT_LF);
+    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_LF);
     $user->saveUserInfo();
     $user->toCsv();
     $user->saveCard();
@@ -473,9 +473,9 @@ function formLF() {
     $user->savePaycheck();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::SUCCESS_PAYCHECK
-        | UserInfo::SUCCESS_REGFORM
-        | UserInfo::SUCCESS_CARD
+        UserInfo::$SUCCESS_PAYCHECK
+        | UserInfo::$SUCCESS_REGFORM
+        | UserInfo::$SUCCESS_CARD
     );
 }
 
