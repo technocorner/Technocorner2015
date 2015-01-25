@@ -22,7 +22,6 @@
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="lib/alertifyjs/alertify.min.js"></script>
 
     <!-- Our Stlye -->
@@ -37,6 +36,9 @@
     <script src="script/lomba.js"></script>
     <script src="script/part.navigation.js"></script>
     <script src="script/part.form.js"></script>
+
+    <!-- Special API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
@@ -249,7 +251,8 @@
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" required />
 
               <br/>
-              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
+              <div id="captcha" class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC" data-theme="dark"></div>
+              <!-- <div class="g-recaptcha" data-sitekey="6LcP6AATAAAAAJhqZmxRtzFRRqXQQK6hU71bNvdP"></div> -->
 
               <br/>
               <input type="submit" value="Kirim" />
