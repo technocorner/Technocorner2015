@@ -67,7 +67,7 @@ class UserInfo {
         $this->name = $name;
         $this->subevent = $subevent;
         $this->paycheck_uploaded = false;
-        $this->folder = PARTY_DATA . "data/" . unserialize($subevent)[0] . "/" . $this->regid . "/";
+        $this->folder = PARTY_DATA . "data/" . $subevent[0] . "/" . $this->regid . "/";
 
         $ajax_response['subevent'] = $this->subevent;
 
@@ -77,7 +77,7 @@ class UserInfo {
     static function buildFromRegId($regid, $subevent = array("semnas", "Seminar Nasional")) {
         $user = new UserInfo("", $subevent);
         $user->regid = $regid;
-        $user->folder = PARTY_DATA . "data/" . unserialize($subevent)[0] . "/" .  $user->regid . "/";
+        $user->folder = PARTY_DATA . "data/" . $subevent[0] . "/" .  $user->regid . "/";
 
         $ajax_response['subevent'] = $subevent;
 
@@ -141,7 +141,7 @@ class UserInfo {
              . 'formulir, ' . $this->regform_uploaded . ', '
              . 'card' . $this->card_uploaded . PHP_EOL;
 
-        $global_folder = PARTY_DATA . "data/" . unserialize($this->subevent)[0] . "/";
+        $global_folder = PARTY_DATA . "data/" . $this->subevent[0] . "/";
 
         if (!mkdir($global_folder)) {
             $ajax_response['error'] = 'Failed to create folder: ' . $global_folder;
@@ -345,7 +345,7 @@ class UserInfo {
         //Set who the message is to be sent to
         $this->mail->addAddress( $this->email,  $this->name);
         //Set the subject line
-        $this->mail->Subject = 'Technocorner 2015 ' . unserialize($this->subevent)[1] . ': Notification';
+        $this->mail->Subject = 'Technocorner 2015 ' . $this->subevent[1] . ': Notification';
 
         // Send HTML Markup message
         $this->mail->msgHTML($msg_body);
@@ -386,8 +386,8 @@ function nsRegisterUser() {
         }
     } else if ($_POST['upload_chk'] == "upload_n") {
         $msg_body    = "Hai ". $user->name . ",<br/>"
-                     . "Anda telah terdaftar sebagai peserta " . unserialize($user->subevent)[1] . " Technocorner 2015. "
-                     . "Dimohon melakukan konfirmasi dengan <i>upload</i> bukti pembayaran di " . WEB . unserialize($user->subevent)[0] . ".html" . "#verifikasi."
+                     . "Anda telah terdaftar sebagai peserta " . $user->subeven[1] . " Technocorner 2015. "
+                     . "Dimohon melakukan konfirmasi dengan <i>upload</i> bukti pembayaran di " . WEB . $user->subevent[0] . ".html" . "#verifikasi."
                      . "<br/>"
                      . "Mohon cantumkan nomor registrasi anda, yakni <b>" . $user->regid . "</b> pada saat upload bukti pembayaran."
                      . "<br/><br/><br/>"
