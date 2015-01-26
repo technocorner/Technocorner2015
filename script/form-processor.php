@@ -145,11 +145,11 @@ class UserInfo {
 
         $global_folder = PARTY_DATA . "data/" . $this->subevent[0] . "/";
 
-        if (!mkdir($global_folder)) {
+        if (!(file_exists($global_folder) or mkdir($global_folder))) {
             $ajax_response['error'] = 'Failed to create folder: ' . $global_folder;
         }
 
-        file_put_contents($global_folder . 'summary.csv', $str, $FILE_APPEND);
+        file_put_contents($global_folder . 'summary.csv', $str, FILE_APPEND);
     }
 
     /*
