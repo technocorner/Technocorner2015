@@ -133,15 +133,15 @@ class UserInfo {
     function toCsv() {
         global $ajax_response;
 
-        $str = $this->regid . ', '
-             . $this->name . ', '
-             . $this->email . ', '
-             . $this->address . ', '
-             . $this->phone . ', '
-             . $this->department . ', '
-             . 'bukti, ' . $this->paycheck_uploaded . ', '
-             . 'formulir, ' . $this->regform_uploaded . ', '
-             . 'card' . $this->card_uploaded . PHP_EOL;
+        $str = $this->regid . '; '
+             . $this->name . '; '
+             . $this->email . '; '
+             . $this->address . '; '
+             . $this->phone . '; '
+             . $this->department . '; '
+             . 'bukti, ' . var_export($this->paycheck_uploaded, true); . '; '
+             . 'formulir, ' . var_export($this->regform_uploaded, true) . '; '
+             . 'card' . var_export($this->card_uploaded, true) . PHP_EOL;
 
         $global_folder = PARTY_DATA . "data/" . $this->subevent[0] . "/";
 
