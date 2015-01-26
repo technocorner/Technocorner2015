@@ -15,6 +15,8 @@ $(document).ready(function () {
     alertify.set('notifier','delay', 10);
     alertify.set('notifier','position', 'bottom-right');
 
+    $('#captcha').slideToCAPTCHA();
+
     /*
      * Set submit form callback
      */

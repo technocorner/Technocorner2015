@@ -496,15 +496,23 @@ function main() {
     $resp = null;
 
     $reCaptcha = new ReCaptcha($privatekey);
-    $resp = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"],
-                                       $_POST["g-recaptcha-response"]);
+    // $resp = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"],
+    //                                    $_POST["g-recaptcha-response"]);
 
-    if (!$resp->success) {
+    // if (!$resp->success) {
+    //     // the CAPTCHA was entered incorrectly
+    //     $ajax_response['captcha'] = 0;
+    //     $ajax_response['error'] = 'Captcha auth failed';
+    //     return null;
+    // }
+
+    if (!$_POST['captcha']) {
         // the CAPTCHA was entered incorrectly
         $ajax_response['captcha'] = 0;
         $ajax_response['error'] = 'Captcha auth failed';
         return null;
     }
+
     $ajax_response['captcha'] = 1;
 
     // Get initial name of event
