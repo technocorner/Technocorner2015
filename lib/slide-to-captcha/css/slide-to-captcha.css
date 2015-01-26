@@ -59,5 +59,11 @@
 }
 
 .slide-to-captcha.valid .slide-to-captcha-handle {
-    background-color: #bbb;
+    background-color: transparent;
+    transform: translateX(10px) rotate(45deg);
+    height: 25px;
+    border: unset;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    width: 10px;
 }
