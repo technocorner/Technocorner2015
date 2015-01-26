@@ -11,16 +11,19 @@
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
     <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
     <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
+    <link rel="stylesheet" href="lib/slide-to-captcha/css/slide-to-captcha.css" />
 
     <!-- Library Script -->
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-old-ie-min.css">
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="lib/slide-to-captcha/js/modernizr.custom.20910.js"></script>
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/slide-to-captcha/js/slide-to-captcha.js"></script>
 
     <script src="lib/alertifyjs/alertify.min.js"></script>
 
@@ -38,7 +41,7 @@
     <script src="script/part.form.js"></script>
 
     <!-- Special API -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
   </head>
 
   <body>
@@ -251,7 +254,11 @@
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" required />
 
               <br/>
-              <div id="captcha" class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC" data-theme="dark"></div>
+              <div id="captcha" class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC" data-theme="dark">
+                slide to continue..
+                <input type="hidden" name="captcha" value="" />
+                <div class="handle"></div>
+              </div>
               <!-- <div class="g-recaptcha" data-sitekey="6LcP6AATAAAAAJhqZmxRtzFRRqXQQK6hU71bNvdP"></div> -->
 
               <br/>
