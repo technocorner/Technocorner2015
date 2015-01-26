@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         // Captcha response is either blank or true
         // If captcha blank (wrong)
-        if (grecaptcha.getResponse() == "") {
+        if ($(this).attr('data-valid') === 'true') {
             alertify.error('Captcha wajib diisi');
             return;
         }
