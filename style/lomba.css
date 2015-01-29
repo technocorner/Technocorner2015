@@ -225,9 +225,14 @@ p {
     #download-here{
         color: #A2353A;
         line-height: 0%;
+        text-decoration: none;
+    }
+    #download-here #download-pict{
+        transform: translateY(1em);
+        transition: ease 300ms;
     }
     #download-here:hover #download-pict{
-        width:16%;
+        transform: translateY(1em) scale(1.1);
         transition: ease 300ms;
     }
     #download-here p{
@@ -235,7 +240,7 @@ p {
         font-size: 1.5em;
     }
     #download-pict{
-        width: 15%;
+        width: 10%;
         transition: ease 300ms;
     }
 
