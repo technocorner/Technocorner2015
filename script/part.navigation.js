@@ -30,6 +30,7 @@ $(document).ready(function() {
             if (distance < 70 && distance > -80) {
                 if ($(this).attr('anchor')) {
                     anchor = $(this).attr('anchor');
+                    console.log(anchor);
                 }
 
                 if (anchor) {
@@ -133,6 +134,7 @@ var headbar = {
         $(item).filter('.submenu-item').addClass('submenu-item-active');
         parent.addClass('menu-item-active');
 
+        console.log("Parent %o : Child %o", parent, $(item));
         // Deactivate all
         $("li[class*='menu-item']").not(item).not(parent).removeClass('submenu-item-active');
     },
