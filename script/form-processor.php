@@ -139,7 +139,7 @@ class UserInfo {
              . $this->address . '; '
              . $this->phone . '; '
              . $this->department . '; '
-             . 'bukti, ' . var_export($this->paycheck_uploaded, true); . '; '
+             . 'bukti, ' . var_export($this->paycheck_uploaded, true) . '; '
              . 'formulir, ' . var_export($this->regform_uploaded, true) . '; '
              . 'card' . var_export($this->card_uploaded, true) . PHP_EOL;
 
