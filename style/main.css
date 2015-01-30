@@ -104,6 +104,7 @@ header .subcaption {
 
 /* Unique Button */
 .see-button {
+    display: inline-block;
     color: white;
     padding: 0.5em;
     border: 1px solid white;
@@ -114,6 +115,7 @@ header .subcaption {
 
 .see-button a {
     color: white;
+    text-decoration: none;
 }
 
 .see-button:hover {
