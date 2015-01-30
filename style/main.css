@@ -68,10 +68,15 @@ h3 {
  */
 /* Header */
 header {
-    background-color: #ed6333; /* #BF423C */
+    background-color: #343434;
     background-size: 100% 100%;
     height: 85vh;
     margin-top: 70px;
+    transition: 1000ms;
+}
+
+header:hover {
+    background-color: #ed6333;
 }
 
 header img {
@@ -115,7 +120,7 @@ header .caption {
 }
 
 .dark {
-    background-color: #323232;
+    background-color: #343434;
 }
 
 .darker {
@@ -125,8 +130,4 @@ header .caption {
 .light {
     background-color: #ed6333;
     transition: 500ms;
-}
-
-.light:hover {
-    background-color: #d4543b;
 }
