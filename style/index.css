@@ -49,7 +49,6 @@
 #landing img {
     margin: 0 auto;
     display: block;
-    size: 100% 100%;
 }
 
 /* Video */
@@ -83,7 +82,7 @@
 }
 
 #quote small {
-    align: right;
+    text-align: right;
     font-size: 1em;
 }
 
@@ -257,7 +256,6 @@
     h1 {
         font-size: 2em;
         font-weight: 300;
-        font-style: bold;
     }
     h2 {
         font-size: 1.1em;
