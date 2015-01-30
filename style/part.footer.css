@@ -52,14 +52,35 @@
 #closing .make-footer-border {
     height: 100%;
     margin: 0 0 auto 0;
-    border-right: solid;
-    border-color: white;
 }
 
 #closing .more-contact {
     /* font-weight: bold; */
 }
 
+/* Sponsor side */
+.closing-sponsor {
+    border-left: 5px dotted #fff;
+}
+
+.closing-sponsor img.bronze {
+    height: 5em;
+}
+
+.closing-sponsor img.silver {
+    height: 7em;
+}
+
+.closing-sponsor img.gold {
+    height: 9em;
+}
+
+.closing-sponsor #icio-logo img {
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+/* Copyright */
 #copyright {
     color: white;
 }
