@@ -11,11 +11,16 @@ function toggleElement(element, status) {
     }
 }
 
+var captcha;
+
 $(document).ready(function () {
     alertify.set('notifier','delay', 10);
     alertify.set('notifier','position', 'bottom-right');
 
-    $('#captcha').slideToCAPTCHA();
+    captcha = new SliderCaptcha('#captcha', {
+        authValue: "Anda bukan robot :)",
+        hintText: "Geser ke kanan"
+    });
 
     /*
      * Set submit form callback
@@ -62,9 +67,10 @@ function onFormSuccessSubmission(response) {
         alertify.error('Mohon ulangi pengiriman');
     }
 
-    grecaptcha.reset();
+    captcha.reset();
 }
 
 function onFormErrorSubmission(msg) {
     alertify.error('Mohon ulangi pengiriman');
+    captcha.reset();
 }
