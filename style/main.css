@@ -96,6 +96,13 @@ header .caption {
     color: #fff;
 }
 
+header .subcaption {
+    color: #fff;
+    font-size: 1.5em;
+    font-family: OpenSans-Bold;
+    text-align: center;
+}
+
 /* Unique Button */
 .see-button {
     color: white;

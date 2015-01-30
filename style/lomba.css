@@ -55,6 +55,17 @@ header.expo {
     text-align: center;
 }
 
+.header-inner {
+    width: 100%;
+    text-align: center;
+}
+
+.header-inner img {
+    height: 20em;
+    margin-bottom: 5em;
+    opacity: 0.8;
+}
+
 #header-img{
     width: 80%;
 }
