@@ -156,10 +156,14 @@
     text-align: center;
 }
 
-#news h2 {
+.news-item {
+    margin: 10px 0;
+}
+
+.news-item h2 {
     font-size: 2em;
 }
-#news p {
+.news-item p {
 
 }
 
