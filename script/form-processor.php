@@ -3,6 +3,10 @@
  * File upload facility into server. Should be secure!
  */
 
+if ($_SERVER['DOCUMENT_ROOT'] == '/srv/http') {
+    $_SERVER['DOCUMENT_ROOT'] = '/srv/http/home/technoco/public_html';
+}
+
 define( 'ROOT', dirname ($_SERVER['DOCUMENT_ROOT']) . '/' );
 define( 'ROOT_PUBLIC_HTTP',  $_SERVER['DOCUMENT_ROOT'] . '/' );
 define( 'PARTY_DATA',  ROOT . 'participant/' );
@@ -139,9 +143,9 @@ class UserInfo {
              . $this->address . '; '
              . $this->phone . '; '
              . $this->department . '; '
-             . 'bukti, ' . var_export($this->paycheck_uploaded, true) . '; '
-             . 'formulir, ' . var_export($this->regform_uploaded, true) . '; '
-             . 'card' . var_export($this->card_uploaded, true) . PHP_EOL;
+             . 'bukti: ' . var_export($this->paycheck_uploaded, true) . '; '
+             . 'formulir: ' . var_export($this->regform_uploaded, true) . '; '
+             . 'card: ' . var_export($this->card_uploaded, true) . PHP_EOL;
 
         $global_folder = PARTY_DATA . "data/" . $this->subevent[0] . "/";
 
@@ -202,6 +206,12 @@ class UserInfo {
 
             $file_path = $this->folder . $shortname . "." . $fileext;
 
+            // Dir not exist
+            if (!file_exists(dirname($file_path))) {
+                // Create new dir when not exist
+                mkdir(dirname($file_path), 0751, true);
+            }
+
             // Delete file when already exist
             if (file_exists($file_path)) {
                 unlink($file_path);
@@ -227,34 +237,40 @@ class UserInfo {
      * Catch uploaded paycheck
      */
     function savePaycheck() {
+        global $ajax_response;
         $shortname = "paycheck";
         $file = $_FILES[UserInfo::$FILE_PAYCHECK];
         $unexist_callback = null;
 
         // Mark paycheck uploaded
         $this->paycheck_uploaded = $this->saveUploadedFile($file, $shortname, $unexist_callback);
+        $ajax_response[$shortname] = $this->paycheck_uploaded;
     }
 
     /*
      * Catch uploaded KTM / Kartu Pelajar
      */
     function saveCard() {
+        global $ajax_response;
         $shortname = "card";
         $file = $_FILES[UserInfo::$FILE_CARD];
         $unexist_callback = null;
 
         $this->card_uploaded = $this->saveUploadedFile($file, $shortname, $unexist_callback);
+        $ajax_response[$shortname] = $this->card_uploaded;
     }
 
     /*
      * Catch uploaded Registration form
      */
     function saveRegForm() {
-        $shortname = "formulir";
+        global $ajax_response;
+        $shortname = "regform";
         $file = $_FILES[UserInfo::$FILE_REGFORM];
         $unexist_callback = null;
 
         $this->regform_uploaded = $this->saveUploadedFile($file, $shortname, $unexist_callback);
+        $ajax_response[$shortname] = $this->regform_uploaded;
     }
 
     /*
@@ -378,7 +394,6 @@ function nsRegisterUser() {
     $user->department = $_POST['department'];
 
     $user->saveUserInfo();
-    $user->toCsv();
 
     if ($_POST['upload_chk'] == "upload_y") {
         $user->savePaycheck();
@@ -406,6 +421,8 @@ function nsRegisterUser() {
 
         $user->mailInbox($msg_body);
     }
+
+    $user->toCsv();
 }
 
 function nsVerifyUser() {
@@ -438,10 +455,10 @@ function formSDC() {
 
     $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_SDC);
     $user->saveUserInfo();
-    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
+    $user->toCsv();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
         UserInfo::$SUCCESS_PAYCHECK
@@ -455,10 +472,10 @@ function formEEC() {
 
     $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_EEC);
     $user->saveUserInfo();
-    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
+    $user->toCsv();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
         UserInfo::$SUCCESS_PAYCHECK
@@ -472,10 +489,10 @@ function formLF() {
 
     $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_LF);
     $user->saveUserInfo();
-    $user->toCsv();
     $user->saveCard();
     $user->saveRegForm();
     $user->savePaycheck();
+    $user->toCsv();
 
     $ajax_response['success'] = $user->checkUploadRequirement(
         UserInfo::$SUCCESS_PAYCHECK
