@@ -36,7 +36,7 @@
             SetEnvIf Origin ":" IS_CORS
             Header set Access-Control-Allow-Origin "*" env=IS_CORS
         </FilesMatch>
-    </IfModule>
+    </IfModule>h
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -255,6 +255,13 @@ AddDefaultCharset utf-8
 #    RewriteCond %{SERVER_ADDR} !=::1
 #    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([^\.]+)$ $1.php [NC,L]
+	RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
 
 
 # ##############################################################################
