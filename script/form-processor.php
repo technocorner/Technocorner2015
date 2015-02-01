@@ -3,11 +3,8 @@
  * File upload facility into server. Should be secure!
  */
 
-if ($_SERVER['DOCUMENT_ROOT'] == '/srv/http') {
-    $_SERVER['DOCUMENT_ROOT'] = '/srv/http/home/technoco/public_html';
-}
 
-define( 'ROOT', dirname ($_SERVER['DOCUMENT_ROOT']) . '/' );
+define( 'ROOT', dirname($_SERVER['DOCUMENT_ROOT']) . '/' );
 define( 'ROOT_PUBLIC_HTTP',  $_SERVER['DOCUMENT_ROOT'] . '/' );
 define( 'PARTY_DATA',  ROOT . 'participant/' );
 define( 'SUBEVENT',  'National Seminar' );
