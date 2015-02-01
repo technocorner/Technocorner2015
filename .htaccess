@@ -36,7 +36,7 @@
             SetEnvIf Origin ":" IS_CORS
             Header set Access-Control-Allow-Origin "*" env=IS_CORS
         </FilesMatch>
-    </IfModule>h
+    </IfModule>
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -255,6 +255,27 @@ AddDefaultCharset utf-8
 #    RewriteCond %{SERVER_ADDR} !=::1
 #    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Redirects domain.com/file.html → domain.com/file
+
+RewriteEngine on
+# Is not directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# Is an existing html file
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# Rewrite index to index.html
+RewriteRule ^(.*)$ $1.html
+
+# Is not directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# Is an existing html file
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# Request URI ends with .html
+RewriteCond %{REQUEST_URI} ^(.+)\.html$
+# Redirect from index.html to index
+RewriteRule (.*)\.html$ /$1 [R=301,L]
 
 # ##############################################################################
 # # SECURITY                                                                   #
