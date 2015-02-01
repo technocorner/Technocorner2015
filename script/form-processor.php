@@ -545,7 +545,7 @@ function main() {
                 formNatSeminar();
                 break;
         }
-        case 'lf': {
+        case 'lfc': {
                 formLF();
                 break;
         }
