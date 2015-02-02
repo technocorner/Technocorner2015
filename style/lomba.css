@@ -152,6 +152,10 @@ header.expo {
 .article {
     font-size: 1.5em;
 }
+.reg-flow{
+    width: 100%;
+    text-indent: 0;
+}
 
 /* Heading */
 .article h1, .article h2, .article h3 {
