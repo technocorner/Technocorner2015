@@ -29,10 +29,19 @@ $(document).ready(function() {
     headbar.attachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
 
-    // Show notification
-    alertify.alert("Batas Waktu Pendaftaran",
-                   "Pendaftaran <strong>Software Development Competition (SDC)</strong> diperpanjang hingga 8 Februari 2014.");
+    var sdcNotifCount = localStorage.getItem('sdc note #1');
 
-    // Hide after 10s
-    setTimeout(alertify.closeAll, 5000);
+    // Display only three times
+    if (sdcNotifCount <= 3) {
+        sdcNotifCount++;
+
+        // Show notification
+        alertify.alert("Batas Waktu Pendaftaran",
+                       "Pendaftaran <strong>Software Development Competition (SDC)</strong> diperpanjang hingga 8 Februari 2014.");
+
+        // Hide after 10s
+        setTimeout(alertify.closeAll, 5000);
+
+        localStorage.setItem('sdc note #1', sdcNotifCount);
+    }
 });
