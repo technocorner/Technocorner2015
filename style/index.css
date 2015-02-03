@@ -176,6 +176,26 @@
     overflow-y: auto;
 }
 
+#font {
+	color: white;
+	font-weight: bold;
+}
+
+#box {
+	background: blue;
+	border-radius: 10px;
+	color: white;
+}
+
+#logo-link-holder {
+    margin: 2em 0 0 0;
+    text-align: center;
+}
+
+.logo-fill-1-2 {
+	margin-right: 5em;
+	margin-left: 5em;
+}
 
 /* Gallery */
 #gallery {
@@ -297,32 +317,4 @@
         text-align: center;
         padding: 5px;
     }
-}
-
-#font {
-	color: white;
-	font-weight: bold;
-}
-
-#box {
-	background: blue;
-	border-radius: 10px;
-	color: white;
-}
-
-#logo1 {
-	margin-left: 15em;
-	margin-top: 2em;
-}
-
-#logo2 {
-	margin-left: 5em;
-}
-
-#logo3 {
-	margin-left: 10em;
-}
-
-#logo4 {
-	margin-left: 15em;
 }

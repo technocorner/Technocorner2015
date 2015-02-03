@@ -18,9 +18,9 @@
 
     <!-- Library Script -->
     <!--[if IE]>
-        <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-old-ie-min.css">
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-old-ie-min.css">
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
@@ -120,18 +120,20 @@
             </div>
 		  </div>
 
-		  <div class="pure-u-md-1-2">
+		  <div id="event-list" class="pure-u-md-1-2">
 			<h1>OUR <strong>EVENT</strong></h1>
-			<div>
-			  <a href="lfc.html"><img id="logo1" src="img/logo-lfc-polygon.png"/></a>
-			</div>
-			<div>
-              <a href="sdc.html"><img id="logo2" src="img/logo-sdc-polygon.png"/></a>
-			  <a href="eec.html"><img id="logo3" src="img/logo-eec-polygon.png"/></a>
-			</div>
-			<div>
-			  <a href="ns.html"><img id="logo4" src="img/logo-semnas-polygon.png"/></a>
-			</div>
+            <div id="logo-link-holder">
+			  <div>
+			    <a href="lfc.html"><img src="img/logo-lfc-polygon.png"/></a>
+			  </div>
+			  <div>
+                <a href="sdc.html"><img class="logo-fill-1-2" src="img/logo-sdc-polygon.png"/></a>
+			    <a href="eec.html"><img class="logo-fill-1-2" src="img/logo-eec-polygon.png"/></a>
+			  </div>
+			  <div>
+			    <a href="ns.html"><img src="img/logo-semnas-polygon.png"/></a>
+			  </div>
+            </div>
 		  </div>
         </div>
       </div>
