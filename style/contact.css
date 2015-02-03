@@ -22,3 +22,15 @@
    outline:none;
    padding-left: 0;
 }
+
+.socmed-link {
+    margin: 0.3em;
+    text-decoration: none;
+    display: block;
+}
+
+.socmed-link img {
+    border-radius: 1em;
+    margin-right: 0.4em;
+    height: 20px;
+}
