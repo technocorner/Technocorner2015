@@ -139,3 +139,10 @@ header .subcaption {
     background-color: #ed6333;
     transition: 500ms;
 }
+
+/* responsive mode */
+@media screen and (max-width: 768px) {
+    html, body {
+        font-size: 10pt;
+    }
+}
