@@ -6,13 +6,19 @@
 }
 
 /* responsive mode */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
+    .section .pure-g {
+        padding: 1em 1em 1em 1em;
+    }
+
     .pure-g {
         letter-spacing: -0.05em;
     }
+
     .l-box {
         width: 100% !important;
     }
+
     .j-box {
         padding: 1em;
     }
@@ -29,10 +35,14 @@
     background-size: cover;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
     .section {
         height: auto !important;
-        padding-bottom: 56px;
+    }
+
+    .fp-slide, .fp-slidesContainer {
+        height: 900px;
+        display: block;
     }
 }
 
@@ -43,6 +53,7 @@
 /* Landing */
 #landing {
     background-size: 100% 100%;
+    border-bottom: 2px dotted rgb(237, 99, 51);
     margin-top: 70px;
 }
 
@@ -284,12 +295,11 @@
     h2 {
         font-size: 1.1em;
     }
-    .section {
-        padding : 50px 0 50px 0;
-    }
+
     .slogan {
         font-size: 1em
     }
+
     .mobile-slide {
         padding-top: 50px;
     }
@@ -303,6 +313,10 @@
         margin: 0 auto;
         display: block;
         width: 100%;
+    }
+
+    #event-list {
+        display: none;
     }
 
     #closing {

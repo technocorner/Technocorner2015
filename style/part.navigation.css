@@ -139,3 +139,7 @@ nav a:visited {
     border-radius: 0.3em;
     font-weight: bold;
 }
+
+@media screen and (max-width: 660px) {
+
+}
