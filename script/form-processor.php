@@ -135,11 +135,11 @@ class UserInfo {
         global $ajax_response;
 
         $str = $this->regid . '; '
-             . $this->name . '; '
-             . $this->email . '; '
-             . $this->address . '; '
-             . $this->phone . '; '
-             . $this->department . '; '
+             . 'name: ' . $this->name . '; '
+             . 'email: ' . $this->email . '; '
+             . 'addr: ' . $this->address . '; '
+             . 'phone: ' . $this->phone . '; '
+             . 'dept: ' . $this->department . '; '
              . 'bukti: ' . var_export($this->paycheck_uploaded, true) . '; '
              . 'formulir: ' . var_export($this->regform_uploaded, true) . '; '
              . 'card: ' . var_export($this->card_uploaded, true) . PHP_EOL;
