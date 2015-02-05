@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="lib/photobox/photobox.css">
     <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
     <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
+    <link rel="stylesheet" href="lib/jquery.jscrollpane/style/jquery.jscrollpane.css" />
+    <link rel="stylesheet" href="lib/jquery.jscrollpane/theme/technocorner/style/jquery.jscrollpane.technocorner.css" />
 
     <!-- Library Script -->
     <!--[if IE]>
@@ -24,6 +26,8 @@
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
+    <script src="lib/jquery/jquery.mousewheel.js"></script>
+    <script src="lib/jquery.jscrollpane/script/jquery.jscrollpane.min.js"></script>
     <script src="lib/jquery.fullpage/jquery.fullPage.js"></script>
     <script src="lib/smoothscroll/smooth-scroll.js"></script>
     <script src="lib/photobox/photobox.js"></script>
@@ -59,72 +63,73 @@
       <!-- # Ini adalah bagian news -->
       <div class="section dark nav-anchor" id="news" anchor="news">
         <div class="pure-g">
-          <div class="pure-u-md-1-2">
+          <div id="news-list-holder" class="pure-u-md-1-2">
 			<h1>NEW <strong>INFO</strong></h1>
-            <div id="new-info-holder">
-			  <div class="news-item">
-			    <h2>LFC	: Track Penyisihan LF</h2>
-			    <p>Track tahap Penyisihan LF sudah bisa di download</p>
-                <div class="see-button">
-                  <a href="lfc.html#download"><strong>Download</strong> Di Sini</a>
-                </div>
-              </div>
-			  
-              <div class="news-item">
-			    <h2>SDC : Waktu Pendaftaran diperpanjang</h2>
-			    <p>Pendaftaran Software Development Competition jalur online diperpanjang hingga tanggal <strong>8 Februari 2015</strong></p>
-                <div class="see-button">
-                  <a href="sdc.html#register"><strong>Daftar</strong> Di Sini</a>
-                </div>
-              </div>
-
-              <div class="news-item">
-			    <h2>LFC : Pendaftaran telah dibuka</h2>
-			    <p>Pendaftaran Line Follower Competition jalur online telah dibuka. Ayo buruan daftar sebelum ditutup pada tanggal <strong>1 Maret 2015!</strong></p>
-                <div class="see-button">
-                  <a href="lfc.html#register"><strong>Daftar</strong> Di Sini</a>
-                </div>
-              </div>
-
-              <div class="news-item">
-			    <h2>SDC : Pendaftaran telah dibuka</h2>
-			    <p>Pendaftaran Software Development Competition jalur online telah dibuka. Ayo buruan daftar sebelum ditutup pada tanggal <strong>4 Februari 2015!</strong></p>
-                <div class="see-button">
-                  <a href="sdc.html#register"><strong>Daftar</strong> Di Sini</a>
-                </div>
-              </div>
-
-              <div class="news-item">
-			    <h2>EEC : Tersedia refensi soal EEC 2014</h2>
-			    <p>Referensi soal telah tersedia.</p>
-                <div class="see-button">
-                  <a href="eec.html#download"><strong>Download</strong> Di Sini</a>
-                </div>
-              </div>
-
-              <div class="news-item">
-                <h2>Grand Launching Website Official Technocorner!</h2>
-                <p>Akhirnya web official ini sudah diluncurkan.</p>
-                <p>Ayo temukan berbagai informasi penting dan menarik seputar Technocorner UGM di website ini~</p>
-              </div>
-              <!--
-                  <div>
-                    <a class="see-button" href="#"><strong>READ MORE</strong></a>
+            <div class="news-scrollbar">
+              <div id="new-info-holder">
+                <div class="news-item">
+			      <h2>LFC : Track Penyisihan LF</h2>
+			      <p>Track tahap Penyisihan LF sudah bisa di download</p>
+                  <div class="see-button">
+                    <a href="lfc.html#download"><strong>Download</strong> Di Sini</a>
                   </div>
-                  -->
-              <!-- <h2>Pembicara Seminar Nasional</h2>
-      		       <p>Berikut adalah pembicara-pembicara yang akan mengisi Seminar Nasional Technocorner :D</p>
-                   <ol>
-                     <li>Bapak Menkominfo Rudiantara</li>
-                     <li>Ibu Dian Siswarini - Deputi CEO XL / Wapresdir </li>
-                     <li>Ongki Kurniawan - CIO XL </li>
-                     <li>Pak Satriyo Dharmanto - calon ketua IEEE Section Chair</li>
-                   </ol> -->
-              <!--
-      			  <div>
-                    <a class="see-button" href="#"><strong>READ MORE</strong></a>
+                </div>
+                <div class="news-item">
+			      <h2>SDC : Waktu Pendaftaran diperpanjang</h2>
+			      <p>Pendaftaran Software Development Competition jalur online diprpanjang hingga tanggal <strong>8 Februari 2015</strong></p>
+                  <div class="see-button">
+                    <a href="sdc.html#register"><strong>Daftar</strong> Di Sini</a>
                   </div>
-                  -->
+                </div>
+
+                <div class="news-item">
+			      <h2>LFC : Pendaftaran telah dibuka</h2>
+			      <p>Pendaftaran Line Follower Competition jalur online telah dibuka. Ayo buruan daftar sebelum ditutup pada tanggal <strong>1 Maret 2015!</strong></p>
+                  <div class="see-button">
+                    <a href="lfc.html#register"><strong>Daftar</strong> Di Sini</a>
+                  </div>
+                </div>
+
+                <div class="news-item">
+			      <h2>SDC : Pendaftaran telah dibuka</h2>
+			      <p>Pendaftaran Software Development Competition jalur online telah dibuka. Ayo buruan daftar sebelum ditutup pada tanggal <strong>4 Februari 2015!</strong></p>
+                  <div class="see-button">
+                    <a href="sdc.html#register"><strong>Daftar</strong> Di Sini</a>
+                  </div>
+                </div>
+
+                <div class="news-item">
+			      <h2>EEC : Tersedia refensi soal EEC 2014</h2>
+			      <p>Referensi soal telah tersedia.</p>
+                  <div class="see-button">
+                    <a href="eec.html#download"><strong>Download</strong> Di Sini</a>
+                  </div>
+                </div>
+
+                <div class="news-item">
+                  <h2>Grand Launching Website Official Technocorner!</h2>
+                  <p>Akhirnya web official ini sudah diluncurkan.</p>
+                  <p>Ayo temukan berbagai informasi penting dan menarik seputar Technocorner UGM di website ini~</p>
+                </div>
+                <!--
+                    <div>
+                      <a class="see-button" href="#"><strong>READ MORE</strong></a>
+                    </div>
+                    -->
+                <!-- <h2>Pembicara Seminar Nasional</h2>
+      		         <p>Berikut adalah pembicara-pembicara yang akan mengisi Seminar Nasional Technocorner :D</p>
+                     <ol>
+                       <li>Bapak Menkominfo Rudiantara</li>
+                       <li>Ibu Dian Siswarini - Deputi CEO XL / Wapresdir </li>
+                       <li>Ongki Kurniawan - CIO XL </li>
+                       <li>Pak Satriyo Dharmanto - calon ketua IEEE Section Chair</li>
+                     </ol> -->
+                <!--
+      			    <div>
+                      <a class="see-button" href="#"><strong>READ MORE</strong></a>
+                    </div>
+                    -->
+              </div>
             </div>
 		  </div>
 
