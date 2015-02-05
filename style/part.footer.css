@@ -51,7 +51,7 @@
     margin: 0 0 auto 0;
 }
 
-#closing .more-contact {
+.closing-contact .more-contact {
     /* font-weight: bold; */
 }
 
@@ -86,4 +86,21 @@
 
 #copyright img {
     display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    #closing {
+        text-align: center;
+    }
+
+    .closing-contact {
+        padding: 0 0 2em 0;
+    }
+
+    .closing-sponsor {
+        border-left: 0;
+        border-top: 2px solid #fff;
+        margin: 1em 0 0 0;
+        padding: 1em 0 0 0;
+    }
 }

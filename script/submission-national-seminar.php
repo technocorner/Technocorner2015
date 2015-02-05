@@ -447,57 +447,6 @@ function formNatSeminar() {
     }
 }
 
-function formSDC() {
-    global $ajax_response;
-
-    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_SDC);
-    $user->saveUserInfo();
-    $user->saveCard();
-    $user->saveRegForm();
-    $user->savePaycheck();
-    $user->toCsv();
-
-    $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::$SUCCESS_PAYCHECK
-        | UserInfo::$SUCCESS_REGFORM
-        | UserInfo::$SUCCESS_CARD
-    );
-}
-
-function formEEC() {
-    global $ajax_response;
-
-    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_EEC);
-    $user->saveUserInfo();
-    $user->saveCard();
-    $user->saveRegForm();
-    $user->savePaycheck();
-    $user->toCsv();
-
-    $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::$SUCCESS_PAYCHECK
-        | UserInfo::$SUCCESS_REGFORM
-        | UserInfo::$SUCCESS_CARD
-    );
-}
-
-function formLF() {
-    global $ajax_response;
-
-    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_LF);
-    $user->saveUserInfo();
-    $user->saveCard();
-    $user->saveRegForm();
-    $user->savePaycheck();
-    $user->toCsv();
-
-    $ajax_response['success'] = $user->checkUploadRequirement(
-        UserInfo::$SUCCESS_PAYCHECK
-        | UserInfo::$SUCCESS_REGFORM
-        | UserInfo::$SUCCESS_CARD
-    );
-}
-
 /*
  * Function earliest called
  */
@@ -529,28 +478,7 @@ function main() {
 
     $ajax_response['captcha'] = 1;
 
-    // Get initial name of event
-    $eventform = explode('-', $_POST['formId'])[0];
-    $eventform = str_replace('#', '', $eventform);
-
-    switch($eventform) {
-        case 'sdc': {
-                formSDC();
-                break;
-        }
-        case 'ns': {
-                formNatSeminar();
-                break;
-        }
-        case 'lfc': {
-                formLF();
-                break;
-        }
-        case 'eec': {
-                formEEC();
-                break;
-        }
-    }
+    formNatSeminar();
 }
 
 // Solo function call!

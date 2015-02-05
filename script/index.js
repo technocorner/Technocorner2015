@@ -25,6 +25,14 @@ $(document).ready(function() {
         offset: 70               // Integer. How far to offset the scrolling anchor location in pixels
     });
 
+    var nicescroll;
+
+    if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+        ;
+    } else {
+        nicescroll = $('.news-scrollbar').jScrollPane();
+    }
+
     // Load navigator headbar and footer
     headbar.attachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
