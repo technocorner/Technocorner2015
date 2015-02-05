@@ -172,17 +172,14 @@
 }
 
 .news-scrollbar {
-    height: 600px;
-    margin-top: 2em;
+    height: 610px;
+    margin: 2em 0 0 0;
+    padding: 0 0 2em 0;
+    overflow-y: auto;
 }
 
-/* #new-info-holder { */
-/*     overflow-y: hidden; */
-/* } */
-
-/* #new-info-holder:hover { */
-/*     overflow-y: auto; */
-/* } */
+#new-info-holder {
+}
 
 .news-item {
     padding: 0em 0px 0em 1em;
@@ -249,6 +246,10 @@
     transform:scale(1.1);
 
     opacity: 0.6;
+}
+
+.gallery-photobox .photolist {
+    justify-content: center;
 }
 
 .video-frame {

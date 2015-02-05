@@ -251,7 +251,7 @@ p {
 }
 
 .download-item:last-child {
-    border-bottom: unset;
+    border-bottom: 0;
     padding-bottom: 1em;
 }
 
