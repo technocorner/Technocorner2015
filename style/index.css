@@ -251,6 +251,11 @@
     opacity: 0.6;
 }
 
+.video-frame {
+    width: 800px;
+    height: 450px;
+}
+
 .see-button {
     padding: 0.5em;
     border: 1px solid white;
@@ -331,6 +336,10 @@
 
     #event-list {
         display: none;
+    }
+
+    .video-frame {
+        width: 80vw;
     }
 
     #closing {
