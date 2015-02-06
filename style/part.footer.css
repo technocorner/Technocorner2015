@@ -65,6 +65,15 @@
     height: 4em;
 }
 
+.closing-sponsor img.bronze-long {
+    height: 3em;
+}
+
+.closing-sponsor img.white-protect {
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
 .closing-sponsor img.silver {
     height: 7em;
 }
@@ -74,8 +83,6 @@
 }
 
 .closing-sponsor #icio-logo img {
-    background-color: #fff;
-    padding: 10px 15px;
 }
 
 /* Copyright */
