@@ -62,27 +62,24 @@
 }
 
 .closing-sponsor img.bronze {
-    height: 4em;
+    height: 3em;
 }
 
 .closing-sponsor img.bronze-long {
-    height: 3em;
+    height: 2.5em;
+}
+
+.closing-sponsor img.silver {
+    height: 4em;
+}
+
+.closing-sponsor img.gold {
+    height: 5em;
 }
 
 .closing-sponsor img.white-protect {
     background-color: #fff;
     padding: 10px 15px;
-}
-
-.closing-sponsor img.silver {
-    height: 7em;
-}
-
-.closing-sponsor img.gold {
-    height: 9em;
-}
-
-.closing-sponsor #icio-logo img {
 }
 
 /* Copyright */
