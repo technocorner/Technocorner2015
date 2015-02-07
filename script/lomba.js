@@ -55,15 +55,16 @@ function triggerSectionClick() {
     hash = window.location.hash.replace('#', '');
     target = '.lomba-menu-item.' + hash;
 
-    if (hash == "" || $(target).length == 0) {  // When no hashtag
+    if (hash == "") {  // When no hashtag
         // Then simulate first time click to show the first section only
         $('.lomba-menu-item')[0].click();
     } else if ($(target).length != 0) {  // Or when hash tag specified
         // Trigger hash target click
         $('.lomba-menu-item.' + hash).click();
-        if (('.lomba-menu-item.' + hash).length == 0) {
-            alertify.alert("Tautan tidak tersedia", "Mohon maaf, halaman yang berkaitan dengan tautan ini belum tersedia.");
-        }
+    } else {
+        // No matched hash (#) link, show a notif
+        alertify.alert("Tautan Tidak Tersedia", "Mohon maaf, halaman yang berkaitan dengan tautan ini belum tersedia.");
+        $('.lomba-menu-item')[0].click();
     }
 }
 ;
