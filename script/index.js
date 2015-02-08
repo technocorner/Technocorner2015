@@ -45,7 +45,7 @@ $(document).ready(function() {
 
         // Show notification
         alertify.alert("Batas Waktu Pendaftaran",
-                       "Pendaftaran <strong>Software Development Competition (SDC)</strong> diperpanjang hingga 8 Februari 2014.");
+                       "Pendaftaran <strong>Software Development Competition (SDC)</strong> diperpanjang hingga 15 Februari 2014.");
 
         // Hide after 10s
         setTimeout(alertify.closeAll, 5000);
