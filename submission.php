@@ -444,7 +444,7 @@ function nsVerifyUser() {
 
 function formNatSeminar() {
     switch($_POST['formId']) {
-        case 'ns-verify': {
+        case 'ns-verification': {
             nsVerifyUser();
             break;
         }
@@ -525,10 +525,14 @@ function event($ev) {
 
 function ns_check_email() {
     global $user;
-    
-    if (event("ns")) {
+
+    if (event("ns") && $_POST['formId'] == 'ns-registration' && !$user->paycheck_uploaded) {
 ?>
-  <p>Email telah di kirim ke alamat <i><? echo $user->email; ?></i>, jika belum menerima, mohon catat nomor registrasi di atas.</p>
+  <p>Email konfirmasi telah di kirim ke alamat <br/><span class="inline-info"><? echo $user->email; ?></span><br/>
+    Jika dalam waktu 1 menit email belum diterima (mohon periksa folder Spam juga), <br/>
+    Klik <span class="inline-action" onclick="location.reload()">di sini</span> untuk mengirim ulang atau daftarkan ulang diri anda.<br/>
+
+  </p>
 <?
     }
 }
@@ -555,6 +559,11 @@ function ns_check_email() {
         font-family: Monospace;
         font-weight: 700;
     }
+
+    .inline-action {
+        color: #09f;
+        cursor: pointer;
+    }
     </style>
   </head>
   <body>
@@ -562,8 +571,8 @@ function ns_check_email() {
     <div class="container">
       <h1>Terima Kasih</h1>
       <p>Anda telah berhasil mendaftar<br/><span class="inline-info"><? echo $user->subevent[1] ?>, Technocorner 2015</span></p>
-      <? ns_check_email() ?>
       <p>Nomor Registrasi Anda<br/><span class="inline-info"><? echo $user->regid; ?></span></p>
+      <? ns_check_email() ?>
       <p>Mohon untuk mencatat nomor registrasi di atas.</p>
       <button onclick="document.location = '<? echo $user->subevent[0] ?>.html'">Kembali</button>
     </div>
