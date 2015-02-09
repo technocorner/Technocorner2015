@@ -3,8 +3,16 @@
  * File upload facility into server. Should be secure!
  */
 
-if ($_SERVER['DOCUMENT_ROOT'] == '/srv/http') {
-    $_SERVER['DOCUMENT_ROOT'] = '/srv/http/home/technoco/public_html';
+define( 'DEBUG_ENABLE', false );
+
+if (DEBUG_ENABLE) {
+    ini_set('display_errors',1);
+    ini_set('display_startup_errors',1);
+    error_reporting( E_ALL );
+
+    if ($_SERVER['DOCUMENT_ROOT'] == '/srv/http') {
+        $_SERVER['DOCUMENT_ROOT'] = '/srv/http/home/technoco/public_html';
+    }
 }
 
 define( 'ROOT', dirname($_SERVER['DOCUMENT_ROOT']) . '/' );
