@@ -50,6 +50,6 @@ $(document).ready(function() {
         // Hide after 10s
         setTimeout(alertify.closeAll, 5000);
 
-        localStorage.setItem('sdc note #1', sdcNotifCount);
+        localStorage.setItem('sdc note #2', sdcNotifCount);
     }
 });
