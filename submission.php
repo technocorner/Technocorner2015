@@ -487,19 +487,72 @@ function main() {
 
     $ajax_response['captcha'] = 1;
 
-    formNatSeminar();
+        // Get initial name of event
+    $eventform = explode('-', $_POST['formId'])[0];
+    $eventform = str_replace('#', '', $eventform);
+
+    switch($eventform) {
+        case 'ns': {
+            formNatSeminar();
+            break;
+        }
+        case 'eec': {
+            formEEC();
+            break;
+        }
+    }
 }
 
 // Solo function call!
 main();
 ?>
 
+<?php
+/*
+ * Interface
+ */
+
+function event($ev) {
+    global $user;
+
+    if ($user->subevent[0] == $ev) {
+        return true;
+    }
+
+    return false;
+}
+
+function ns_check_email() {
+    global $user;
+    
+    if (event("ns")) {
+?>
+  <p>Email telah di kirim ke alamat <i><? echo $user->email; ?></i>, jika belum menerima, mohon catat nomor registrasi di atas.</p>
+<?
+    }
+}
+
+?>
 <html>
   <head>
     <style>
+    html, body {
+        font-size: 12pt;
+        padding: 0;
+        margin: 0;
+    }
+
     .container {
         text-align: center;
         margin: 25vh auto;
+        background-color: #343434;
+        padding: 1em 0;
+        color: #f0f0f0;
+    }
+
+    .inline-info {
+        font-family: Monospace;
+        font-weight: 700;
     }
     </style>
   </head>
@@ -507,10 +560,11 @@ main();
     <div></div>
     <div class="container">
       <h1>Terima Kasih</h1>
-      <p>Nomor Registrasi Anda : <? echo $user->regid; ?></p>
-      <p>Email telah di kirim ke alamat <i><? echo $user->email; ?></i>, jika belum menerima, mohon catat nomor registrasi di atas.</p>
-      <p>Anda telah berhasil mendaftar, mohon catat nomor registrasi di atas.</p>
-      <button onclick="document.location = 'ns.html'">Kembali</button>
+      <p>Anda telah berhasil mendaftar<br/><span class="inline-info"><? echo $user->subevent[1] ?>, Technocorner 2015</span></p>
+      <? ns_check_email() ?>
+      <p>Nomor Registrasi Anda<br/><span class="inline-info"><? echo $user->regid; ?></span></p>
+      <p>Mohon untuk mencatat nomor registrasi di atas.</p>
+      <button onclick="document.location = '<? echo $user->subevent[0] ?>.html'">Kembali</button>
     </div>
   </body>
 </html>
