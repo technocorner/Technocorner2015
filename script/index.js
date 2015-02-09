@@ -37,7 +37,7 @@ $(document).ready(function() {
     headbar.attachTo('nav#headbar');
     $('footer').load('part.footer.html #footer-inner');
 
-    var sdcNotifCount = localStorage.getItem('sdc note #1');
+    var sdcNotifCount = localStorage.getItem('sdc note #2');
 
     // Display only three times
     if (sdcNotifCount <= 3) {
