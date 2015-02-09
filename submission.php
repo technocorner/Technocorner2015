@@ -358,17 +358,17 @@ class UserInfo {
      /*
       * Send mail notification.
       */
-    function mailInbox($msg_body) {
+    function mailInbox($subject, $msg_body) {
         global $ajax_response;
 
         //Set who the message is to be sent from
-        $this->mail->setFrom('from@example.com', 'Technocorner 2015');
+        $this->mail->setFrom('registration@technocornerugm.com', 'Technocorner 2015');
         //Set an alternative reply-to address
-        $this->mail->addReplyTo('replyto@example.com', 'First Last');
+        $this->mail->addReplyTo('no-reply@technocornerugm.com', 'Technocorner 2015');
         //Set who the message is to be sent to
         $this->mail->addAddress( $this->email,  $this->name);
         //Set the subject line
-        $this->mail->Subject = 'Technocorner 2015 ' . $this->subevent[1] . ': Notification';
+        $this->mail->Subject = $subject;
 
         // Send HTML Markup message
         $this->mail->msgHTML($msg_body);
@@ -422,7 +422,8 @@ function nsRegisterUser() {
                      . "<hr/>"
                      . "No Reply : Email ini mohon untuk tidak dibalas.";
 
-        $user->mailInbox($msg_body);
+        $subject = 'Technocorner 2015 ' . $user->subevent[1] . ': Notification';
+        $user->mailInbox($subject, $msg_body);
     }
 
     $user->toCsv();
