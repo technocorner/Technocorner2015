@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
     <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
     <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
+    <link rel="stylesheet" href="lib/slide-to-captcha/css/slide-to-captcha.css" />
 
     <!-- Library Script -->
     <!--[if IE]>
@@ -21,8 +22,8 @@
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/slide-to-captcha/js/slide-to-captcha.js"></script>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="lib/alertifyjs/alertify.min.js"></script>
 
     <!-- Our Stlye -->
@@ -213,7 +214,10 @@
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
               <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
 
-              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
+              <div id="captcha" class="captcha">
+                <input type="hidden" name="captcha" value="" />
+                <div class="handle"></div>
+              </div>
 
               <br/><br/>
               <input type="submit" value="Kirim" />
