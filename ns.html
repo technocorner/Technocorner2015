@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="lib/yahoo.pure/grids-responsive-min.css">
     <link rel="stylesheet" href="lib/alertifyjs/css/alertify.min.css" />
     <link rel="stylesheet" href="lib/alertifyjs/css/themes/bootstrap.css" />
+    <link rel="stylesheet" href="lib/slide-to-captcha/css/slide-to-captcha.css" />
 
     <!-- Library Script -->
     <!--[if IE]>
@@ -21,8 +22,8 @@
     <script src="lib/jquery/jquery.easings.min.js"></script>
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/slide-to-captcha/js/slide-to-captcha.js"></script>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="lib/alertifyjs/alertify.min.js"></script>
 
     <!-- Our Stlye -->
@@ -35,7 +36,7 @@
     <!-- Our Script -->
     <script src="script/lomba.js"></script>
     <script src="script/part.navigation.js"></script>
-    <script src="script/part.form.js"></script>
+    <script src="script/part.form.alt.js"></script>
   </head>
 
   <body>
@@ -175,8 +176,9 @@
           <div class="article register" id="pendaftaran">
             <!-- SemNas Registration Form -->
             <form id="ns-registration" class="registration" name="registration"
-                  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+                  action="submission.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+              <input type="hidden" name="formId" value="ns-registration" />
 
               <legend>Pendaftaran</legend>
               <label for="name">Nama :</label>
@@ -196,40 +198,38 @@
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
               <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
 
-              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
-
               <br/><br/>
+              <div id="captcha" class="captcha">
+                <input type="hidden" name="captcha" value="" />
+                <div class="handle"></div>
+              </div>
+
+              <br/>
               <input type="submit" value="Kirim" />
             </form>
           </div>
 
           <div class="article verify" id="pendaftaran">
-            <!-- SemNas Registration Form -->
-            <form id="ns-registration" class="registration" name="registration"
-                  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+            <!-- SemNas Verification Form -->
+            <form id="ns-verification" class="registration" name="verification"
+                  method="POST"  action="submission.php" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+              <input type="hidden" name="formId" value="ns-verification" />
 
               <legend>Pendaftaran</legend>
-              <label for="name">Nama :</label>
-              <input type="text" name="name" required />
+              <label for="regid">Nomor Pendaftaran :</label>
+              <input type="text" name="regid" />
 
-              <label for=email"">Email :</label>
-              <input type="email" name="email" required />
+              <label for="file_uploader">Bukti Pembayaran :</label>
+              <input type="file" id="paycheck-uploader" name="paycheck-uploader" />
 
-              <label for="address">Alamat :</label>
-              <input type="text" cols=3  name="address" required />
+              <br/>
+              <div id="captcha-v" class="captcha">
+                <input type="hidden" name="captcha" value="" />
+                <div class="handle-verify"></div>
+              </div>
 
-              <label for="phone">Nomor Telepon/HP :</label><input type="tel" name="phone" required />
-              <label for="department">Instansi :</label><input type="text" name="department" required />
-
-              <label for="">Upload Bukti Transfer :</label>
-              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" />Sekarang
-              <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
-              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
-
-              <div class="g-recaptcha" data-sitekey="6Lf1WwATAAAAAPCT7P9s0A_x-6QfS4WPCqsLlxhC"></div>
-
-              <br/><br/>
+              <br/>
               <input type="submit" value="Kirim" />
             </form>
           </div>
