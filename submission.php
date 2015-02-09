@@ -358,9 +358,9 @@ class UserInfo {
         //Whether to use SMTP authentication
         $this->mail->SMTPAuth = true;
         //Username to use for SMTP authentication - use full email address for gmail
-        $this->mail->Username = "abdillah96.bu@gmail.com";
+        $this->mail->Username = "technocorner2015@gmail.com";
         //Password to use for SMTP authentication
-        $this->mail->Password = "namakufa'iz";
+        $this->mail->Password = "technocorner2015sukses";
     }
 
      /*
