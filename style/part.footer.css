@@ -55,6 +55,18 @@
     /* font-weight: bold; */
 }
 
+/* Present side */
+.closing-present {
+    margin: 0.5em 0;
+    padding: 0 0 1em 0;
+}
+
+.closing-present img {
+    height: 6em;
+    margin: 0.5em;
+}
+
+
 /* Sponsor side */
 .closing-sponsor {
     border-left: 5px dotted #fff;
