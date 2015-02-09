@@ -475,11 +475,22 @@ main();
 ?>
 
 <html>
-
+  <head>
+    <style>
+    .container {
+        text-align: center;
+        margin: 25vh auto;
+    }
+    </style>
+  </head>
   <body>
-    <h1>Terima Kasih</h1>
-    <p>Nomor Registrasi Anda : <? echo $user->regid; ?></p>
-    <p>Tekan tombol berikut untuk kembali</p>
-    <button onclick="document.location = 'ns.html'">Back</button>
+    <div></div>
+    <div class="container">
+      <h1>Terima Kasih</h1>
+      <p>Nomor Registrasi Anda : <? echo $user->regid; ?></p>
+      <p>Email telah di kirim ke alamat <i><? echo $user->email; ?></i>, jika belum menerima, mohon catat nomor registrasi di atas.</p>
+      <p>Anda telah berhasil mendaftar, mohon catat nomor registrasi di atas.</p>
+      <button onclick="document.location = 'ns.html'">Kembali</button>
+    </div>
   </body>
 </html>
