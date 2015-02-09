@@ -12,6 +12,7 @@ function toggleElement(element, status) {
 }
 
 var captcha;
+var captchaVerify;
 
 $(document).ready(function () {
     alertify.set('notifier','delay', 10);
@@ -22,6 +23,13 @@ $(document).ready(function () {
         hintText: "Geser ke kanan"
     });
 
+    captchaVerify = new SliderCaptcha('#captcha-v', {
+        authValue: "Anda bukan robot :)",
+        hintText: "Geser ke kanan",
+        handle: ".handle-verify"
+        // inputName: 'captcha'
+    });
+
     /*
      * Set submit form callback
      */
@@ -30,6 +38,7 @@ $(document).ready(function () {
         // If captcha blank (wrong)
         if ($(this).attr('data-valid') !== 'true') {
             alertify.error('Mohon geser slider terlebih dahulu');
+            event.preventDefault();
             return;
         }
     });
