@@ -23,7 +23,6 @@
     <script src="lib/jquery/jquery.slimscroll.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
     <script src="lib/slide-to-captcha/js/slide-to-captcha.js"></script>
-
     <script src="lib/alertifyjs/alertify.min.js"></script>
 
     <!-- Our Stlye -->
@@ -36,7 +35,7 @@
     <!-- Our Script -->
     <script src="script/lomba.js"></script>
     <script src="script/part.navigation.js"></script>
-    <script src="script/part.form.js"></script>
+    <script src="script/part.form.alt.js"></script>
   </head>
 
   <body>
@@ -255,9 +254,10 @@
           -->
           <div class="article register" id="pendaftaran">
             <!-- SDC Registration Form -->
-            <form id="eec-reg" class="registration" name="registration" action=""
+            <form id="eec-reg" class="registration" name="registration" action="submission.php"
                   method="POST" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+              <input type="hidden" name="formId" value="eec" />
 
               <h1>Pendaftaran</h1>
               <label for="regid">Nama (Kapten) :</label>

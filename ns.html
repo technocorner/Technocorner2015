@@ -36,7 +36,7 @@
     <!-- Our Script -->
     <script src="script/lomba.js"></script>
     <script src="script/part.navigation.js"></script>
-    <script src="script/part.form.js"></script>
+    <script src="script/part.form.alt.js"></script>
   </head>
 
   <body>
@@ -193,8 +193,9 @@
           <div class="article verify" id="pendaftaran">
             <!-- SemNas Registration Form -->
             <form id="ns-registration" class="registration" name="registration"
-                  method="POST" enctype="multipart/form-data" accept-charset="utf-8">
+                  method="POST"  action="submission.php" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+              <input type="hidden" name="formId" value="ns" />
 
               <legend>Pendaftaran</legend>
               <label for="name">Nama :</label>
