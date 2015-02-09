@@ -11,16 +11,18 @@ define( 'ROOT', dirname($_SERVER['DOCUMENT_ROOT']) . '/' );
 define( 'ROOT_PUBLIC_HTTP',  $_SERVER['DOCUMENT_ROOT'] . '/' );
 define( 'PARTY_DATA',  ROOT . 'participant/' );
 define( 'SUBEVENT',  'National Seminar' );
-define( 'WEB',  'http://kmteti.ft.ugm.ac.id/technocorner/' );
+define( 'WEB',  'http://technocornerugm.com/' );
 
 require(ROOT_PUBLIC_HTTP . 'lib/phpmailer/PHPMailerAutoload.php');
 require_once(ROOT_PUBLIC_HTTP . 'lib/google.recaptcha/recaptchalib.php');
 
 $ajax_response = array(
-    'subevent' => array("semnas", "Seminar Nasional"),
+    'subevent' => array("ns", "Seminar Nasional"),
     'captcha' => 0,
     'uinfo' => 0,
     'paycheck' => 0,
+    'card' => 0,
+    'regform' => 0,
     'mailed' => 0,
     'success' => 0,
     'error' => 'None'
@@ -33,7 +35,7 @@ class UserInfo {
     static $ERROR_FILE_SIZE = 121;
 
     // TODO: Change into serialized array soon, for compatibility to v5.4
-    static $SUBEVENT_NS = array("semnas", "Seminar Nasional");
+    static $SUBEVENT_NS = array("ns", "Seminar Nasional");
     static $SUBEVENT_SDC = array("sdc", "Software Development Competition");
     static $SUBEVENT_LF = array("lf", "Line Follower");
     static $SUBEVENT_EEC = array("eec", "Electrical Engineering Competition");
@@ -80,7 +82,7 @@ class UserInfo {
         $this->initMail();
     }
 
-    static function buildFromRegId($regid, $subevent = array("semnas", "Seminar Nasional")) {
+    static function buildFromRegId($regid, $subevent = array("ns", "Seminar Nasional")) {
         $user = new UserInfo("", $subevent);
         $user->regid = $regid;
         $user->folder = PARTY_DATA . "data/" . $subevent[0] . "/" .  $user->regid . "/";
@@ -108,7 +110,7 @@ class UserInfo {
      */
     private function checkUploadedFile($file) {
         /* Check it's size: */
-        $$FILE_SIZE_LIMIT = 3000000; // byte
+        $FILE_SIZE_LIMIT = 3000000; // byte
 
         // It's recorded size
         if ($file['size'] > $FILE_SIZE_LIMIT) {
@@ -116,7 +118,7 @@ class UserInfo {
         }
 
         // It's real size
-        if (filesize($file['size']) > $FILE_SIZE_LIMIT) {
+        if (filesize($file['tmp_name']) > $FILE_SIZE_LIMIT) {
             return $ERROR_FILE_SIZE;
         }
 
@@ -407,7 +409,7 @@ function nsRegisterUser() {
         }
     } else if ($_POST['upload_chk'] == "upload_n") {
         $msg_body    = "Hai ". $user->name . ",<br/>"
-                     . "Anda telah terdaftar sebagai peserta " . $user->subeven[1] . " Technocorner 2015. "
+                     . "Anda telah terdaftar sebagai peserta " . $user->subevent[1] . " Technocorner 2015. "
                      . "Dimohon melakukan konfirmasi dengan <i>upload</i> bukti pembayaran di " . WEB . $user->subevent[0] . ".html" . "#verifikasi."
                      . "<br/>"
                      . "Mohon cantumkan nomor registrasi anda, yakni <b>" . $user->regid . "</b> pada saat upload bukti pembayaran."
