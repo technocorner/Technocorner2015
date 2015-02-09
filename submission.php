@@ -454,6 +454,24 @@ function formNatSeminar() {
     }
 }
 
+function formEEC() {
+    global $ajax_response;
+    global $user;
+
+    $user = new UserInfo($_POST['name'], UserInfo::$SUBEVENT_EEC);
+    $user->saveUserInfo();
+    $user->saveCard();
+    $user->saveRegForm();
+    $user->savePaycheck();
+    $user->toCsv();
+
+    $ajax_response['success'] = $user->checkUploadRequirement(
+        UserInfo::$SUCCESS_PAYCHECK
+        | UserInfo::$SUCCESS_REGFORM
+        | UserInfo::$SUCCESS_CARD
+    );
+}
+
 /*
  * Function earliest called
  */
