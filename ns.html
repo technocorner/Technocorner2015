@@ -69,8 +69,8 @@
             <div class="lomba-menu-item registration" >PENDAFTARAN</div>
             <!-- <div class="lomba-menu-item rules" >PERLOMBAAN</div> -->
             <!-- <div class="lomba-menu-item download" >DOWNLOAD</div> -->
-            <div class="lomba-menu-item register" >DAFTAR</div>
-            <div class="lomba-menu-item verify" >VERIFIKASI</div>
+            <!-- <div class="lomba-menu-item register" >DAFTAR</div> -->
+            <!-- <div class="lomba-menu-item verify" >VERIFIKASI</div> -->
         </nav>
         <div>
           <!--
@@ -180,47 +180,38 @@
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
               <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
 
-              <div id="captcha" class="captcha">
-                <input type="hidden" name="captcha" value="aa" />
-                <div class="handle"></div>
-              </div>
-
               <br/><br/>
-              <input type="submit" value="Kirim" />
-            </form>
-          </div>
-
-          <div class="article verify" id="pendaftaran">
-            <!-- SemNas Registration Form -->
-            <form id="ns-registration" class="registration" name="registration"
-                  method="POST"  action="submission.php" enctype="multipart/form-data" accept-charset="utf-8">
-              <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-              <input type="hidden" name="formId" value="ns" />
-
-              <legend>Pendaftaran</legend>
-              <label for="name">Nama :</label>
-              <input type="text" name="name" required />
-
-              <label for=email"">Email :</label>
-              <input type="email" name="email" required />
-
-              <label for="address">Alamat :</label>
-              <input type="text" cols=3  name="address" required />
-
-              <label for="phone">Nomor Telepon/HP :</label><input type="tel" name="phone" required />
-              <label for="department">Instansi :</label><input type="text" name="department" required />
-
-              <label for="">Upload Bukti Transfer :</label>
-              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" />Sekarang
-              <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
-              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
-
               <div id="captcha" class="captcha">
                 <input type="hidden" name="captcha" value="" />
                 <div class="handle"></div>
               </div>
 
-              <br/><br/>
+              <br/>
+              <input type="submit" value="Kirim" />
+            </form>
+          </div>
+
+          <div class="article verify" id="pendaftaran">
+            <!-- SemNas Verification Form -->
+            <form id="ns-verification" class="registration" name="verification"
+                  method="POST"  action="submission.php" enctype="multipart/form-data" accept-charset="utf-8">
+              <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+              <input type="hidden" name="formId" value="ns-verification" />
+
+              <legend>Pendaftaran</legend>
+              <label for="regid">Nomor Pendaftaran :</label>
+              <input type="text" name="regid" />
+
+              <label for="file_uploader">Bukti Pembayaran :</label>
+              <input type="file" id="paycheck-uploader" name="paycheck-uploader" />
+
+              <br/>
+              <div id="captcha-v" class="captcha">
+                <input type="hidden" name="captcha" value="" />
+                <div class="handle-verify"></div>
+              </div>
+
+              <br/>
               <input type="submit" value="Kirim" />
             </form>
           </div>
