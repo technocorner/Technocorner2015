@@ -20,12 +20,12 @@ $(document).ready(function () {
 
     captcha = new SliderCaptcha('#captcha', {
         authValue: "Anda bukan robot :)",
-        hintText: "Geser ke kanan"
+        hintText: "Geser untuk verifikasi"
     });
 
     captchaVerify = new SliderCaptcha('#captcha-v', {
         authValue: "Anda bukan robot :)",
-        hintText: "Geser ke kanan",
+        hintText: "Geser untuk verifikasi",
         handle: ".handle-verify"
         // inputName: 'captcha'
     });
