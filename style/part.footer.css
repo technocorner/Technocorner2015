@@ -74,11 +74,7 @@
 }
 
 .closing-sponsor img.bronze {
-    height: 3em;
-}
-
-.closing-sponsor img.bronze-long {
-    height: 2.5em;
+    height: 4em;
 }
 
 .closing-sponsor img.silver {
@@ -87,6 +83,10 @@
 
 .closing-sponsor img.gold {
     height: 6em;
+}
+
+.closing-sponsor img.sponsor-group {
+    height: 4em;
 }
 
 .closing-sponsor img.white-protect {
