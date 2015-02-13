@@ -148,7 +148,7 @@ class UserInfo {
     function toCsv() {
         global $ajax_response;
 
-        $action = $this->paycheck_uploaded? 'Registration':'Verification';
+        $action = $this->paycheck_uploaded? 'Verification' : 'Registration';
         $str = $this->regid . '; '
              . $action . '; '
              . 'name: ' . $this->name . '; '
