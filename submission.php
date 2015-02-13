@@ -110,7 +110,7 @@ class UserInfo {
      * Generate user registration id based on time() and name hash sha1()
      */
     static function generateRegistrationId($name) {
-        return sha1($name);
+        return strtoupper(dechex(crc32($name)));
     }
 
     /*
