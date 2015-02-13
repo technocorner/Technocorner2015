@@ -551,6 +551,8 @@ function ns_check_email() {
 ?>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <title>Technocorner 2015 </title>
     <style>
     html, body {
         font-size: 12pt;

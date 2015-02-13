@@ -172,13 +172,13 @@
           # Register form section
           -->
           <div class="article register" id="pendaftaran">
+            <h1>Pendaftaran</h1>
             <!-- SemNas Registration Form -->
             <form id="ns-registration" class="registration" name="registration"
                   action="submission.php" method="POST" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
               <input type="hidden" name="formId" value="ns-registration" />
 
-              <legend>Pendaftaran</legend>
               <label for="name">Nama :</label>
               <input type="text" name="name" required />
 
@@ -192,13 +192,13 @@
               <label for="department">Instansi :</label><input type="text" name="department" required />
 
               <label for="ticket_type">Tipe Tiket :</label>
-              <input type="radio" name="ticket_type" value="vip" required />VIP
-              <input type="radio" name="ticket_type" value="regular" required />Reguler
+              <input type="radio" name="ticket_type" value="vip" required /> VIP
+              <input type="radio" name="ticket_type" value="regular" required /> Reguler
 
               <label for="">Upload Bukti Transfer :</label>
-              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" required />Sekarang
+              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" required /> Sekarang
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
-              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" required  />Tunda
+              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" required  /> Tunda
 
               <br/><br/>
               <div id="captcha" class="captcha">
@@ -212,13 +212,13 @@
           </div>
 
           <div class="article verify" id="pendaftaran">
+            <h1>Pendaftaran</h1>
             <!-- SemNas Verification Form -->
             <form id="ns-verification" class="registration" name="verification"
                   method="POST"  action="submission.php" enctype="multipart/form-data" accept-charset="utf-8">
               <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
               <input type="hidden" name="formId" value="ns-verification" />
 
-              <legend>Pendaftaran</legend>
               <label for="regid">Nomor Pendaftaran :</label>
               <input type="text" name="regid" />
 
