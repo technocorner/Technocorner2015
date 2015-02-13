@@ -11,7 +11,7 @@
     box-shadow: inset 0 0 7px rgba(0,0,0,.2), 1px 1px 7px rgba(0,0,0,.4);
     border: 2px solid #343434;
     color: #343434;
-    font-size: 0.5em;
+    font-size: 0.35em;
     height: 40px;
 
     overflow: hidden;
@@ -23,7 +23,7 @@
     -ms-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     transition: background-color 0.3s;
-    width: 300px;
+    width: 200px;
 }
 
 .slide-to-captcha:after {
@@ -45,6 +45,7 @@
 .slide-to-captcha-handle {
     background: #343434;
     /* border: 2px solid #aaa; */
+    box-shadow: 0 0 3px #333;
     height: 100%;
     position: relative;
     transition: 100ms;
@@ -77,6 +78,7 @@
 
 .slide-to-captcha.valid .slide-to-captcha-handle {
     background-color: transparent;
+    box-shadow: none;
     transform: translate(10px) rotate(45deg);
     height: 80%;
     border: unset;
