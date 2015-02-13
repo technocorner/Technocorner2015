@@ -419,21 +419,25 @@ function nsRegisterUser() {
             $ajax_response['paycheck'] = 0;
         }
     } else if ($_POST['upload_chk'] == "upload_n") {
-        $msg_body    = "Hai ". $user->name . ",<br/>"
-                     . "Anda telah terdaftar sebagai peserta " . $user->subevent[1] . " Technocorner 2015. "
-                     . "Dimohon melakukan konfirmasi dengan <i>upload</i> bukti pembayaran di " . WEB . $user->subevent[0] . ".html" . "#verifikasi."
+        $msg_body    = "Dear ". $user->name . ",<br/>"
+                     . "Terima kasih. Anda telah melakukan registrasi peserta Seminar Nasional Technocorner 2015 \"Restructuring Indonesia with 4G\" dengan rincian sebagai berikut,<br/>"
+                     . "Nama     : " . $user->name . "<br/>"
+                     . "Instansi : " . $user->department . "<br/>"
+                     . "Nomor HP : " . $user->phone . "<br/>"
+                     . "Email    : " . $user->email . "<br/>"
                      . "<br/>"
-                     . "Mohon cantumkan nomor registrasi anda, yakni <b>" . $user->regid . "</b> pada saat upload bukti pembayaran."
+                     . "Kelas Tiket : " . $user->ticket_type . "<br/>"
+                     . "No. Registrasi : " . $user->regid . "<br/>"
+                     . "Gunakan nomor registrasi untuk mengupload bukti pembayaran di halaman Verifikasi : " . WEB . $user->subevent[0] . ".html" . "#verifikasi." . "<br/>"
+                     . "Bila mengalami kesulitan, silahkan hubungi Sasmita 0812 1826 0083."
                      . "<br/><br/><br/>"
                      . "Terima Kasih."
-                     . "<br/>"
-                     . "Salam Teknologi,"
                      . "<br/><br/>"
                      . "<b>Technocorner 2015</b>"
                      . "<hr/>"
                      . "No Reply : Email ini mohon untuk tidak dibalas.";
 
-        $subject = 'Technocorner 2015 ' . $user->subevent[1] . ': Notification';
+        $subject = 'Technocorner 2015 ' . $user->subevent[1] . ': Mohon Lakukan Verifikasi';
         $user->mailInbox($subject, $msg_body);
     }
 
