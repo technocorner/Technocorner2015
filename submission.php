@@ -354,7 +354,7 @@ class UserInfo {
         //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
         $this->mail->Port = 587;
         //Set the encryption system to use - ssl (deprecated) or tls
-        $this->mail->SMTPSecure = 'tls';
+        $this->mail->SMTPSecure = 'ssl';
         //Whether to use SMTP authentication
         $this->mail->SMTPAuth = true;
         //Username to use for SMTP authentication - use full email address for gmail
