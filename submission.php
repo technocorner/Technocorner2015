@@ -148,7 +148,9 @@ class UserInfo {
     function toCsv() {
         global $ajax_response;
 
+        $action = $this->paycheck_uploaded? 'Registration':'Verification';
         $str = $this->regid . '; '
+             . $action . '; '
              . 'name: ' . $this->name . '; '
              . 'email: ' . $this->email . '; '
              . 'addr: ' . $this->address . '; '
@@ -450,6 +452,8 @@ function nsVerifyUser() {
     $user->savePaycheck();
 
     $user->checkUploadRequirement(UserInfo::$SUCCESS_PAYCHECK);
+    $user->saveUserInfo();
+    $user->toCsv();
 }
 
 /*
