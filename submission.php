@@ -554,6 +554,12 @@ function ns_check_email() {
   </p>
 <?
     }
+
+    if (event("ns") && ($_POST['formId'] == 'ns-registration' || $_POST['formId'] == 'ns-verification') && $user->paycheck_uploaded) {
+?>
+  <p>Verifikasi telah berhasil. Jika bukti pembayaran tidak valid, anda dapat mengulangi upload.</p>
+<?
+    }
 }
 
 ?>
