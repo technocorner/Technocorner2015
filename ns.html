@@ -191,10 +191,14 @@
               <label for="phone">Nomor Telepon/HP :</label><input type="tel" name="phone" required />
               <label for="department">Instansi :</label><input type="text" name="department" required />
 
+              <label for="ticket_type">Tipe Tiket :</label>
+              <input type="radio" name="ticket_type" value="vip" required />VIP
+              <input type="radio" name="ticket_type" value="regular" required />Reguler
+
               <label for="">Upload Bukti Transfer :</label>
-              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" />Sekarang
+              <input type="radio" id="upload_chk_y" name="upload_chk" value="upload_y" onclick="toggleElement('#paycheck-uploader', 'on')" required />Sekarang
               <input type="file" id="paycheck-uploader" name="paycheck-uploader" disabled />
-              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" />Tunda
+              <input type="radio" id="upload_chk_n" name="upload_chk" value="upload_n" onclick="toggleElement('#paycheck-uploader', 'off')" required  />Tunda
 
               <br/><br/>
               <div id="captcha" class="captcha">

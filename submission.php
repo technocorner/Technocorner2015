@@ -65,6 +65,7 @@ class UserInfo {
     var $address;
     var $phone;
     var $department; // Where the user belong to? JTETi UGM?
+    var $ticket_type;
 
     // Other metadata
     var $paycheck_uploaded; // Has current user upload a paymentcheck?
@@ -153,6 +154,7 @@ class UserInfo {
              . 'addr: ' . $this->address . '; '
              . 'phone: ' . $this->phone . '; '
              . 'dept: ' . $this->department . '; '
+             . 'tipe: ' . $this->ticket_type . '; '
              . 'bukti: ' . var_export($this->paycheck_uploaded, true) . '; '
              . 'formulir: ' . var_export($this->regform_uploaded, true) . '; '
              . 'card: ' . var_export($this->card_uploaded, true) . PHP_EOL;
@@ -403,6 +405,7 @@ function nsRegisterUser() {
     $user->phone = $_POST['phone'];
     $user->address = $_POST['address'];
     $user->department = $_POST['department'];
+    $user->ticket_type = $_POST['ticket_type'];
 
     $user->saveUserInfo();
 
