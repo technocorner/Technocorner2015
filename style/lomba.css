@@ -142,10 +142,10 @@ header.expo {
 /* Article Global style */
 .article{
     background-color: white;
-    width: 900px;
+    width: calc(100vw - 400px);
     height: 850px;
     text-align: left;
-    padding: 1em 5em 2em 2em;
+    padding: 1em 4em 2em 3em;
     overflow-y: scroll;
 }
 
