@@ -175,6 +175,10 @@ header.expo {
         font-size: 1em;
 }
 
+.article img.fullsize {
+	width: 100%;
+}
+
 /* Unordered List and Level Definition */
 .article ul {
    font-family: OpenSans-Bold;
@@ -287,4 +291,3 @@ p {
     height: 24%;
     background-color: grey;
 }
-
