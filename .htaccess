@@ -269,13 +269,13 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
 # Is not directory
-RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-d
 # Is an existing html file
-RewriteCond %{REQUEST_FILENAME}\.html -f
+#RewriteCond %{REQUEST_FILENAME}\.html -f
 # Request URI ends with .html
-RewriteCond %{REQUEST_URI} ^(.+)\.html$
+#RewriteCond %{REQUEST_URI} ^(.+)\.html$
 # Redirect from index.html to index
-RewriteRule (.*)\.html$ /$1 [R=301,L]
+#RewriteRule (.*)\.html$ /$1 [R=301,L]
 
 # ##############################################################################
 # # SECURITY                                                                   #
