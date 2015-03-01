@@ -89,7 +89,7 @@
     height: 10em; width: 1300px;
 }
 
-.closing-sponsor img.white-protect {
+.closing-sponsor .white-protect {
     background-color: #fff;
     padding: 10px 15px;
 }
